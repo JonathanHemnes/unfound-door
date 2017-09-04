@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `The Unfound Door`,
+    mainEmail: `ely@theunfounddoor.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

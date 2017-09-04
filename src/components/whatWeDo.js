@@ -1,5 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
+import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
 
 const header = css({
     display: `flex`,
@@ -26,7 +28,14 @@ const callToAction = css({
     justifyContent: `center`
 })
 
-const WhatWeDo = () => (
+const letsTalk = css({
+    textDecoration: `none`,
+    padding: `15px`,
+    border: `1px solid black`,
+    color: `black`
+})
+
+const WhatWeDo = ( props ) => (
     <div>
         <div {...header}>
             <h4 {...headerText}>Collaborate with the best, elevate your visuals</h4>
@@ -40,9 +49,13 @@ const WhatWeDo = () => (
             </p>
         </div>
         <div {...callToAction}>
-            <button>Lets Talk</button>
+            <a href={`mailto:${props.email}`} target="_blank" {...letsTalk}>Lets Talk</a>
         </div>
     </div>
 )
+
+WhatWeDo.PropTypes = {
+    email: PropTypes.string.isRequired
+}
 
 export default WhatWeDo

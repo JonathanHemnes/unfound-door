@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import { css, parent } from 'glamor'
 import './index.css'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
       title="The Unfound Door"
@@ -27,3 +27,4 @@ TemplateWrapper.propTypes = {
 }
 
 export default TemplateWrapper
+
