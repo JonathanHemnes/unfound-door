@@ -20,10 +20,10 @@ const PhotoLink = (props) => (
     <div {...container}>
         <Link to={props.to}>
             <img src={props.src} />
-            <div {...text}>
+            {props.text && <div {...text}>
                 <h3>{props.text}</h3>
                 <h4>{props.subText}</h4>
-            </div>
+            </div>}
         </Link>
     </div>
 )
