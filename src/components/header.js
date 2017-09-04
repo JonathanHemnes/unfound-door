@@ -1,26 +1,32 @@
 import React from 'react'
 import LinkToList from '../components/linkToList'
 import { css } from 'glamor'
+import StyleStandards from '../styleStandards'
+
+const headerStyle = css({
+  width: `100vw`,
+  height: `30px`,
+  position: `fixed`
+})
 
 const headerLinks = css({
-  position: `fixed`,
-  right: 0,
-  marginTop: 0,
+  margin: 0,
+  paddingTop: `5px`,
   display: `flex`,
   flexDirection: `row`,
-  listStyle: `none`
+  listStyle: `none`,
+  justifyContent: `flex-end`,
+  alignItems: `center`
 })
 
 const Header = () => (
-  <div>
-    <div>
-      <ul {...headerLinks}>
-        <LinkToList to="/">Home</LinkToList>
-        <LinkToList to="/expertise/">Expertise</LinkToList>
-        <LinkToList to="/our-story/">Our Story</LinkToList>
-        <LinkToList to="/contact/">Contact</LinkToList>
-      </ul>
-    </div>
+  <div {...headerStyle}>
+    <ul {...headerLinks}>
+      <LinkToList to="/">Home</LinkToList>
+      <LinkToList to="/expertise/">Expertise</LinkToList>
+      <LinkToList to="/our-story/">Our Story</LinkToList>
+      <LinkToList to="/contact/">Contact</LinkToList>
+    </ul>
   </div>
 )
 
