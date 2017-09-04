@@ -2,19 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import './index.scss'
+import Header from '../components/Header'
 
-const Header = () => (
-  <div>
-    <div>
-      <h1>
-        <Link to="/">
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -25,7 +15,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'photography, videography, construction, architecture, lifestyle, engineering' },
       ]}
     />
-    <Header />
+    <Header/>
     <div>
       {children()}
     </div>
