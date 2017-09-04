@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Splash from '../components/splash'
+import mainSplashLogo from '../../img/header/MainPageHeader.jpg'
 
 const IndexPage = () => (
   <div>
-    <Splash />
+    <Splash src={mainSplashLogo} />
     <div>
-      Hi people
+      this is the index page
   </div>
   </div>
 )

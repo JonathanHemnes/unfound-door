@@ -8,7 +8,7 @@ const listElement = css({
   marginRight: `1rem`,
   '& a': {
     textDecoration: `none`,
-    color: StyleStandards.colors.red
+    color: StyleStandards.colors.white
   } 
 })
 
