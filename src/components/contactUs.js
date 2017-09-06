@@ -14,15 +14,20 @@ const contact = css({
 })
 
 const address = css({
-    width: `400px`
+    width: `30%`
 })
 
 const socialIcons = css({
-    width: `400px`
+    width: `30%`
+})
+
+const padding = css({
+    paddingLeft: `5%`,
+    paddingRight: `5%`
 })
 
 const contactForm = css({
-    width: `400px`
+    width: `40%`
 })
 
 const ContactUs = props => (
@@ -33,13 +38,13 @@ const ContactUs = props => (
             <h4>We want to help you find the right path with the best creatives, begin the conversation today.</h4>
         </div>
         <div {...contact}>
-            <div {...address}>
+            <div {...address} {...padding}>
                 <p>address goes here</p>
             </div>
-            <div {...socialIcons}>
+            <div {...socialIcons} {...padding}>
                 <SocialIcons />
             </div>
-            <div {...contactForm}>
+            <div {...contactForm} {...padding}>
                 <p>contactForm</p>
             </div>
         </div>
