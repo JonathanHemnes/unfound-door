@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import SocialIcons from './socialIcons'
+import Address from './address'
 
 const headerText = css({
     textTransform: `uppercase`,
@@ -39,7 +40,7 @@ const ContactUs = props => (
         </div>
         <div {...contact}>
             <div {...address} {...padding}>
-                <p>address goes here</p>
+                <Address />
             </div>
             <div {...socialIcons} {...padding}>
                 <SocialIcons />
