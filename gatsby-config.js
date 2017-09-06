@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/unfound-door`,
   siteMetadata: {
     title: `The Unfound Door`,
     mainEmail: `ely@theunfounddoor.com`
