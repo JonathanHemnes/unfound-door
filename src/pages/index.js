@@ -6,7 +6,6 @@ import mainSplashLogo from '../img/header/MainPageHeader.jpg'
 import headerPhoto from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
 import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photolink'
-import ContactUs from '../components/contactUs'
 import Footer from '../components/footer'
 
 const photoArray = css({
@@ -26,8 +25,6 @@ const IndexPage = ({ data }) => (
     <div {...photoArray}>
       <PhotoLink to={'/'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
     </div>
-    <ContactUs />
-    <Footer />
   </div>
 )
 
