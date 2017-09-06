@@ -1,0 +1,2 @@
+webpackJsonp([0x81b8806e4260],{"./node_modules/json-loader/index.js!./.cache/json/index.json":function(e,o){e.exports={data:{site:{siteMetadata:{title:"The Unfound Door",mainEmail:"ely@theunfounddoor.com"}}},pathContext:{}}}});
+//# sourceMappingURL=path---index-234626c43876c0c394ee.js.map
