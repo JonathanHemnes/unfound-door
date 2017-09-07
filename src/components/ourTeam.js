@@ -52,8 +52,8 @@ const OurTeam = props => (
         </div>
         <div {...headshotStyles}>
             {
-                team.map(member => {
-                    return <TitledHeadshot src={member.src} name={member.name} title={member.title} />
+                team.map((member, i) => {
+                    return <TitledHeadshot key={i} src={member.src} name={member.name} title={member.title} />
                 })
             }
         </div>

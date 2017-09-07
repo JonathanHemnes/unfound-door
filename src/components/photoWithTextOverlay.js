@@ -19,14 +19,19 @@ const photoText = css({
 const PhotoWithTextOverlay = props => (
     <div {...photoWithText}>
         <img src={props.src} />
-        <p {...photoText} {...props.textStyle}>{props.text}</p>
+        <div {...photoText}>
+            <h5 {...props.textStyle}>{props.text}</h5>
+            <p>{props.subText}</p>
+        </div>
     </div>
 )
 
 PhotoWithTextOverlay.PropTypes = {
     src: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    textStyle: PropTypes.object
+    textStyle: PropTypes.object,
+    subText: PropTypes.string,
+    subTextStyle: PropTypes.object
 }
 
 export default PhotoWithTextOverlay
