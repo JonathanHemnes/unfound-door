@@ -5,7 +5,7 @@ import Splash from '../components/splash'
 import mainSplashLogo from '../img/header/MainPageHeader.jpg'
 import headerPhoto from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
 import WhatWeDo from '../components/whatWeDo'
-import PhotoLink from '../components/photolink'
+import PhotoLink from '../components/photoLink'
 
 const photoArray = css({
   display: `flex`,

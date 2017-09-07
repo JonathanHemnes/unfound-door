@@ -21,8 +21,8 @@ const StrategicPartnership = props => (
     <div>
         <PhotoWithTextOverlay src={strategicPartnershipPhoto} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} />
         <div {...partnersStyle}>
-            {partners.map(partner => {
-                return <PhotoLink src={partner.src} to={partner.url}/>
+            {partners.map((partner, i) => {
+                return <PhotoLink key={i} src={partner.src} to={partner.url}/>
             })}
         </div>
     </div>
