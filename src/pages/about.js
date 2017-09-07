@@ -3,6 +3,7 @@ import { css } from 'glamor'
 import Splash from '../components/splash'
 import mainSplashLogo from '../img/OurStoryHeader-TheUnfoundDoor.jpg'
 import Founder from '../components/founder'
+import OurTeam from '../components/ourTeam'
 
 
 const title = css({
@@ -21,6 +22,7 @@ const About = ({ data }) => (
       <h2 {...title}>About Us</h2>
       <p {...center}>Started by Ely Hemnes, realized their was a sinlge source focused on detail and service for companies and individuals to access amazing creatives....</p>
       <Founder />
+      <OurTeam />
     </div>
   </div>
 )
