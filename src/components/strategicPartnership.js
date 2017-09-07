@@ -10,11 +10,11 @@ const partnersStyle = css({
 })
 
 const partners = [
-    {src: strategicPartnershipPhoto, to: 'http://google.com'},
-    {src: strategicPartnershipPhoto, to: 'http://google.com'},
-    {src: strategicPartnershipPhoto, to: 'http://google.com'},
-    {src: strategicPartnershipPhoto, to: 'http://google.com'},
-    {src: strategicPartnershipPhoto, to: 'http://google.com'}
+    { src: strategicPartnershipPhoto, to: 'http://google.com' },
+    { src: strategicPartnershipPhoto, to: 'http://google.com' },
+    { src: strategicPartnershipPhoto, to: 'http://google.com' },
+    { src: strategicPartnershipPhoto, to: 'http://google.com' },
+    { src: strategicPartnershipPhoto, to: 'http://google.com' }
 ]
 
 const StrategicPartnership = props => (
@@ -22,7 +22,7 @@ const StrategicPartnership = props => (
         <PhotoWithTextOverlay src={strategicPartnershipPhoto} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} />
         <div {...partnersStyle}>
             {partners.map((partner, i) => {
-                return <PhotoLink key={i} src={partner.src} to={partner.url}/>
+                return <PhotoLink key={i} src={partner.src} to={partner.url} />
             })}
         </div>
     </div>
