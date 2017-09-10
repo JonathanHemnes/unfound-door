@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 import { css } from 'glamor'
 import StyleStandards from '../styleStandards'
 import logo from '../img/TUD_logo_white.png'
+import GreyImage from './greyImage'
 
 const imgWrapper = css({
     width: `100vw`,
     maxHeight: `100vh`,
     overflow: `hidden`,
     position: 'relative',
-})
-
-const imgStyle = css({
-    width: `100%`
+    maskImage: `rgba(0, 45, 55, 1.0)`
 })
 
 const logoStyle = css({
@@ -25,7 +23,7 @@ const logoStyle = css({
 
 const Splash = props => (
     <div {...imgWrapper}>
-        <img src={props.src} alt={props.alt} {...imgStyle} />
+        <GreyImage src={props.src} alt={props.alt} />
         <div {...logoStyle}>
             <img src={logo} />
         </div>
