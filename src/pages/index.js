@@ -6,6 +6,7 @@ import mainSplashLogo from '../img/header/MainPageHeader.jpg'
 import headerPhoto from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
 import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photoLink'
+import MainServices from '../components/mainServices'
 
 const photoArray = css({
   display: `flex`,
@@ -16,11 +17,7 @@ const IndexPage = ({ data }) => (
   <div>
     <Splash src={mainSplashLogo} />
     <WhatWeDo email={data.site.siteMetadata.mainEmail} />
-    <div {...photoArray}>
-      <PhotoLink to={'/'} src={headerPhoto} text={'Photography'} />
-      <PhotoLink to={'/'} src={headerPhoto}  text={'Videography'} />
-      <PhotoLink to={'/'} src={headerPhoto}  text={'Design & Strategy'} />
-    </div>
+    <MainServices />
     <div {...photoArray}>
       <PhotoLink to={'/'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
     </div>

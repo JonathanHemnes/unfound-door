@@ -6,7 +6,8 @@ import StyleStandards from '../styleStandards'
 const headerStyle = css({
   width: `100vw`,
   height: `30px`,
-  position: `fixed`
+  position: `fixed`,
+  zIndex: 400
 })
 
 const headerLinks = css({
