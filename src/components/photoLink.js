@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
+import GreyImage from './greyImage'
 
 const container = css({
     position: `relative`
@@ -19,7 +20,7 @@ const text = css({
 const PhotoLink = (props) => (
     <div {...container}>
         <Link to={props.to}>
-            <img src={props.src} />
+            <GreyImage src={props.src} />
             {props.text && <div {...text}>
                 <h3>{props.text}</h3>
                 <h4>{props.subText}</h4>
@@ -28,7 +29,7 @@ const PhotoLink = (props) => (
     </div>
 )
 
-PhotoLink.PropTypes = {
+PhotoLink.propTypes = {
     to: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     text: PropTypes.string,

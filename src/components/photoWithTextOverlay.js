@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import PropTypes from 'prop-types'
+import GreyImage from './greyImage'
 
 const photoWithText = css({
     width: `100%`,
@@ -18,7 +19,7 @@ const photoText = css({
 
 const PhotoWithTextOverlay = props => (
     <div {...photoWithText}>
-        <img src={props.src} />
+        <GreyImage src={props.src} />
         <div {...photoText}>
             <h5 {...props.textStyle}>{props.text}</h5>
             <p>{props.subText}</p>
@@ -26,7 +27,7 @@ const PhotoWithTextOverlay = props => (
     </div>
 )
 
-PhotoWithTextOverlay.PropTypes = {
+PhotoWithTextOverlay.propTypes = {
     src: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     textStyle: PropTypes.object,
