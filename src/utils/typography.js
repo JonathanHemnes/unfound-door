@@ -1,6 +1,6 @@
 import Typography from 'typography'
-import lawtonTheme from 'typography-theme-lawton'
+import alton from 'typography-theme-alton'
 
-const typography = new Typography(lawtonTheme)
+const typography = new Typography(alton)
 
 export default typography
