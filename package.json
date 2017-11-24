@@ -10,6 +10,7 @@
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sass": "^1.0.10",
     "gatsby-plugin-typography": "^1.7.9",
+    "gatsby-source-filesystem": "^1.5.8",
     "gh-pages": "^1.0.0",
     "typography-theme-alton": "^0.15.10",
     "typography-theme-lawton": "^0.15.10"
