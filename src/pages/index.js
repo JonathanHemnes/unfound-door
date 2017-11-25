@@ -39,7 +39,7 @@ export const query = graphql`
     },
     file (relativePath: {eq: "img/header/MainPageHeader.jpg"}) {
       childImageSharp {
-        sizes {
+        sizes (maxWidth: 2400) {
           ...GatsbyImageSharpSizes
         }
       }
