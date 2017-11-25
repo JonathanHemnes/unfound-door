@@ -30,7 +30,7 @@ const PhotoLink = (props) => (
 )
 
 PhotoLink.propTypes = {
-    to: PropTypes.string.isRequired,
+    to: PropTypes.string,
     src: PropTypes.string.isRequired,
     text: PropTypes.string,
     subText: PropTypes.string

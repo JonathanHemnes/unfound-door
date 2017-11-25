@@ -11,9 +11,9 @@ const center = css({
   textAlign: 'center'
 })
 
-const Expertise = props => (
+const Expertise = ({props, data}) => (
   <div>
-    <Splash src={expertiseLogo} />
+    <Splash sizes={data.file.childImageSharp.sizes} />
     <div> 
       <h2 {...center}>Our Expertise</h2>
       <MainServices />
@@ -24,3 +24,15 @@ const Expertise = props => (
 )
 
 export default Expertise
+
+export const query = graphql`
+query expertiseQuery {
+  file (relativePath: {eq: "img/header/expertise.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+} 
+`
