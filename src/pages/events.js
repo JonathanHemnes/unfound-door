@@ -11,12 +11,26 @@ function getHeightFromPhotoPath(path) {
 }
 
 const Events = ({ data }) => {
-    console.log(data)
+    const images = css({
+        display: 'flex',
+    })
+
+    const image = css({
+        maxWidth: '500px',
+        width: '30%',
+        padding: '5px'
+    })
     
     return (
-        <div>
-            <h1>HELLO</h1>
-            <Img sizes={data.file.childImageSharp.sizes} />
+        <div {...images}>
+            {data.allFile.edges.map((edge, i) => {
+                if (!edge.node.childImageSharp) {
+                    return null;
+                }
+                return <div {...image} key={i} >
+                        <Img sizes={edge.node.childImageSharp.sizes} />
+                    </div>
+            })}
         </div>
     )
 }
@@ -25,14 +39,18 @@ export default Events
 
 export const query = graphql`
 query ImagesQuery {
-  file(relativePath: { eq: "img/Events_&_Meetings/The_Unfound_Door_Events_&_Meetings_533X800_101.jpg"}) {
-    childImageSharp {
-      # Specify the image processing steps right in the query
-      # Makes it trivial to update as your page's design changes.
-      sizes {
-          ...GatsbyImageSharpSizes
+    allFile(
+      filter:{relativeDirectory:{eq: "img/Events_&_Meetings"}}
+    ) {
+      edges {
+        node {
+            childImageSharp {
+                sizes {
+                    ...GatsbyImageSharpSizes_withWebp
+                }
+            }
+        }
       }
     }
   }
-}
 `
