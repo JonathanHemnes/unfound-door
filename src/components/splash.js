@@ -23,7 +23,7 @@ const logoStyle = css({
 
 const Splash = props => (
     <div {...imgWrapper}>
-        <GreyImage src={props.src} alt={props.alt} />
+        <GreyImage sizes={props.sizes} alt={props.alt} />
         <div {...logoStyle}>
             <img src={logo} />
         </div>
@@ -31,7 +31,7 @@ const Splash = props => (
 )
 
 Splash.propTypes = {
-    src: PropTypes.string.isRequired,
+    src: PropTypes.string,
     alt: PropTypes.string
 }
 

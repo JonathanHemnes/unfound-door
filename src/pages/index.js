@@ -13,16 +13,19 @@ const photoArray = css({
   flexDirection: `row`
 })
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data }) => {
+  console.log(data)
+  return (
+  
   <div>
-    <Splash src={mainSplashLogo} />
+    <Splash sizes={data.file.childImageSharp.sizes} />
     <WhatWeDo email={data.site.siteMetadata.mainEmail} />
     <MainServices />
     <div {...photoArray}>
       <PhotoLink to={'/'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
     </div>
   </div>
-)
+)}
 
 export default IndexPage
 
@@ -32,6 +35,13 @@ export const query = graphql`
       siteMetadata {
         title,
         mainEmail
+      }
+    },
+    file (relativePath: {eq: "img/header/MainPageHeader.jpg"}) {
+      childImageSharp {
+        sizes {
+          ...GatsbyImageSharpSizes
+        }
       }
     }
   } 

@@ -1,37 +1,22 @@
 import React from 'react';
 import { css } from 'glamor';
 import Img from 'gatsby-image'
-
-function getWidthFromPhotoPath(path) {
-    return 500;
-}
-
-function getHeightFromPhotoPath(path) {
-    return 583;
-}
+import Gallery from 'react-photo-gallery';
 
 const Events = ({ data }) => {
-    const images = css({
-        display: 'flex',
-    })
-
-    const image = css({
-        maxWidth: '500px',
-        width: '30%',
-        padding: '5px'
-    })
-    
+    const PHOTO_SET = data.allFile.edges
+        .filter(edge => edge.node.childImageSharp && edge.node.childImageSharp.resolutions)
+        .map(edge => {
+            const photo = edge.node.childImageSharp.resolutions
+            return {
+                src: photo.src,
+                srcSet: photo.srcSet.split(','),
+                height: photo.height,
+                width: photo.width
+            }
+        })
     return (
-        <div {...images}>
-            {data.allFile.edges.map((edge, i) => {
-                if (!edge.node.childImageSharp) {
-                    return null;
-                }
-                return <div {...image} key={i} >
-                        <Img sizes={edge.node.childImageSharp.sizes} />
-                    </div>
-            })}
-        </div>
+        <Gallery photos={PHOTO_SET} />
     )
 }
 
@@ -45,8 +30,8 @@ query ImagesQuery {
       edges {
         node {
             childImageSharp {
-                sizes {
-                    ...GatsbyImageSharpSizes_withWebp
+                resolutions(width:1200) {
+                    ...GatsbyImageSharpResolutions
                 }
             }
         }
