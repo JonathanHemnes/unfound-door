@@ -25,7 +25,10 @@ export default Events
 export const query = graphql`
 query ImagesQuery {
     allFile(
-      filter:{relativeDirectory:{eq: "img/Events_&_Meetings"}}
+      filter:{
+          relativeDirectory: { eq: "img/Events_&_Meetings" },
+          extension: { eq: "jpg" }
+        }
     ) {
       edges {
         node {
