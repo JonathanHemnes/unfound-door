@@ -18,7 +18,7 @@ const center = css({
 
 const About = ({ data }) => (
   <div>
-    <Splash src={mainSplashLogo} />
+    <Splash sizes={data.splash.childImageSharp.sizes} />
     <div>
       <h2 {...title}>About Us</h2>
       <p {...center}>Started by Ely Hemnes, realized their was a sinlge source focused on detail and service for companies and individuals to access amazing creatives....</p>
@@ -32,12 +32,13 @@ const About = ({ data }) => (
 export default About
 
 export const query = graphql`
-  query aboutQuery {
-    site {
-      siteMetadata {
-        title,
-        mainEmail
+query aboutQuery {
+  splash: file (relativePath: {eq: "img/OurStoryHeader-TheUnfoundDoor.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
       }
     }
-  } 
+  }
+} 
 `
