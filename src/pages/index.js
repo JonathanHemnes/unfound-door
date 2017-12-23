@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
     console.log(data)
     return (
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} />
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={data.site.siteMetadata.mainPageSubText} />
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>
@@ -33,7 +33,8 @@ export const query = graphql`
     site {
       siteMetadata {
         title,
-        mainEmail
+        mainEmail,
+        mainPageSubText
       }
     },
     file (relativePath: {eq: "img/header/MainPageHeader.jpg"}) {

@@ -23,13 +23,17 @@ const logoStyle = css({
     width: '65vw'
 })
 
+const subTextStyle = css({
+    color: 'white'
+})
+
 const Splash = props => {
-    console.log(props)
     return (
     <div {...imgWrapper}>
         <GreyImage src={props.src} sizes={props.sizes} resolutions={props.resolutions} alt={props.alt} />
         <div {...logoStyle}>
             <Img sizes={props.logo.sizes} />
+            <h3 {...subTextStyle}>{props.subText}</h3>
         </div>
     </div>
 )

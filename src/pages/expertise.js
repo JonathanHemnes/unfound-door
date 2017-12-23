@@ -13,7 +13,7 @@ const center = css({
 
 const Expertise = ({props, data}) => (
   <div>
-    <Splash sizes={data.file.childImageSharp.sizes} />
+    <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp}/>
     <div> 
       <h2 {...center}>Our Expertise</h2>
       <MainServices />
@@ -34,5 +34,12 @@ query expertiseQuery {
       }
     }
   }
-} 
+  logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+}
 `

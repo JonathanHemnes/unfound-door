@@ -4,12 +4,13 @@ import { css } from 'glamor'
 const footer = css({
     display: `flex`,
     justifyContent: `center`,
+    alignItems: 'center',
     background: `black`,
-    color: `white`
+    color: `white`,
 })
 
 const name = css({
-    padding: `5px`
+     paddingTop: `20px`
 })
 
 class Footer extends React.Component {
@@ -21,7 +22,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div {...footer}>
-                <p {...name}>Carefully Crafted By The Unfound Door {this.state.year}</p>
+                <p {...name}>Carefully Crafted By The<strong>Unfound</strong>Door {this.state.year}</p>
             </div>
         )
     }

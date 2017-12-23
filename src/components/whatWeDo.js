@@ -23,6 +23,10 @@ const subText = css({
     textAlign: `center`
 })
 
+const emphasis = css({
+    textTransform: 'uppercase'
+})
+
 const callToAction = css({
     display: `flex`,
     flexDirection: `column`,
@@ -46,10 +50,9 @@ const WhatWeDo = ( props ) => (
         </div>
         <div {...subText}>
             <p>
-                The Unfound Door is a creative consultancy firm specializing in photography, videography, web and graphic design, and creative vision strategy.
-                The firm focuses on bringing customized and comprehensive imagery and branding to small businesses, A/E/C companies, and individuals. We are dedicated to creating
-                the ultimate stress-free experience by offering a diversity of creative services with attention, passion, and technique.
+                The Unfound Door is a creative consultancy firm designed to help you discover the best artistic services that advance your marketing. From photography and videography to graphic and web design, our focus is to bring customized, comprehensive visuals and branding to small businesses, specialized industries, and individuals. We are dedicated to creating the ultimate seamless experience by offering a diversity of creative services with precision, technique, and passion.
             </p>
+            <h4 {...emphasis}> DISCOVER WHAT HAPPENS WHEN CREATIVITY MEETS EFFICIENCY</h4>
         </div>
         <div {...callToAction}>
             <a href={`mailto:${props.email}`} target="_blank" {...letsTalk}>Let's Talk</a>
