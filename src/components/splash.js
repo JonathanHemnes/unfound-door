@@ -4,6 +4,7 @@ import { css } from 'glamor'
 import StyleStandards from '../styleStandards'
 import logo from '../img/TUD_logo_white.png'
 import GreyImage from './greyImage'
+import Img from 'gatsby-image'
 
 const imgWrapper = css({
     width: `100vw`,
@@ -19,17 +20,20 @@ const logoStyle = css({
     top: `50%`,
     left: `50%`,
     transform: `translate(-50%, -50%)`,
+    width: '65vw'
 })
 
-const Splash = props => (
+const Splash = props => {
+    console.log(props)
+    return (
     <div {...imgWrapper}>
         <GreyImage src={props.src} sizes={props.sizes} resolutions={props.resolutions} alt={props.alt} />
         <div {...logoStyle}>
-            <img src={logo} />
+            <Img sizes={props.logo.sizes} />
         </div>
     </div>
 )
-
+}
 Splash.propTypes = {
     src: PropTypes.string,
     alt: PropTypes.string

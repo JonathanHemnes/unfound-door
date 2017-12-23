@@ -1,11 +1,11 @@
 import React from 'react'
 import { css } from 'glamor'
 import TitledHeadshot from './titledHeadshot.js'
-import grahamHeadshot from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
-import kristinHeadshot from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
-import kylaHeadshot from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
-import joshHeadshot from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
-import katieHeadshot from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
+import grahamHeadshot from '../img/MainPhotographyHeader.jpg'
+import kristinHeadshot from '../img/MainPhotographyHeader.jpg'
+import kylaHeadshot from '../img/MainPhotographyHeader.jpg'
+import joshHeadshot from '../img/MainPhotographyHeader.jpg'
+import katieHeadshot from '../img/MainPhotographyHeader.jpg'
 
 const headshotStyles = css({
     display: `flex`,

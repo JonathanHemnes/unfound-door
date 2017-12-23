@@ -1,9 +1,9 @@
 import React from 'react'
 import { css } from 'glamor'
 import PhotoLink from './photoLink'
-import headerPhoto from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
+import headerPhoto from '../img/MainPhotographyHeader.jpg'
 import videographyPhoto from '../img/MainVideographyPhoto.jpg'
-import designStrategyPhoto from '../img/DesignStrategyHeader2-TheUnfoundDoor.jpg'
+import designStrategyPhoto from '../img/DesignStrategyThumbnailHeader.jpg'
 
 const photoArray = css({
     display: `flex`,

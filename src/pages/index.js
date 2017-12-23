@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import { css } from 'glamor'
 import Splash from '../components/splash'
 import mainSplashLogo from '../img/header/MainPageHeader.jpg'
-import headerPhoto from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
 import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photoLink'
 import MainServices from '../components/mainServices'
@@ -15,10 +14,10 @@ const photoArray = css({
 })
 
 const IndexPage = ({ data }) => {
+    console.log(data)
     return (
-
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} />
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} />
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>
@@ -43,6 +42,13 @@ export const query = graphql`
           ...GatsbyImageSharpSizes
         }
       }
+    },
+    logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
+      childImageSharp {
+        sizes (maxWidth: 2400) {
+          ...GatsbyImageSharpSizes
+        }
     }
   } 
+}
 `

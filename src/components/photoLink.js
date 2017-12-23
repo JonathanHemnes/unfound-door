@@ -13,7 +13,7 @@ const container = css({
 const textBlock = css({
     position: `absolute`,
     textAlign: `center`,
-    top: `35%`,
+    top: `50%`,
     left: `50%`,
     transform: `translate(-50%, -50%)`,
 })
