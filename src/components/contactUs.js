@@ -29,12 +29,19 @@ const socialIcons = css({
 
 const padding = css({
     paddingLeft: `5%`,
-    paddingRight: `5%`
+    paddingRight: `5%`,
+    '@media(max-width: 500px)': {
+        paddingBottom: '5%'
+    }
 })
 
 const contactForm = css({
     minWidth: '250px',
     flex: 1
+})
+
+const center = css({
+    margin: 'auto'
 })
 
 const ContactUs = props => (
@@ -48,16 +55,10 @@ const ContactUs = props => (
             <div {...address} {...padding}>
                 <Address />
             </div>
-            <div {...socialIcons} {...padding}>
+            <div {...socialIcons} {...padding} {...center}>
                 <SocialIcons />
             </div>
             <div {...contactForm} {...padding}>
-                <form action="https://formspree.io/ely@theunfounddoor.com"
-                    method="POST">
-                    <input type="text" name="name" placeholder="name" />
-                    <input type="email" name="_replyto" placeholder="email" />
-                    <input type="submit" value="Send" />
-                </form>
             </div>
         </div>
     </div>
