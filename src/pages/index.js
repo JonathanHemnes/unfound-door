@@ -10,8 +10,7 @@ import MainServices from '../components/mainServices'
 
 const photoArray = css({
     display: `flex`,
-    flexDirection: `row`,
-    justifyContent: 'space-around'
+    flexDirection: `row`
 })
 
 const IndexPage = ({ data }) => {
