@@ -11,15 +11,20 @@ const headerText = css({
 const contact = css({
     display: `flex`,
     flexDirection: 'row',
-    justifyContent: `center`
+    flexWrap: 'wrap',
+    justifyContent: `center`,
+    backgroundColor: `gray`,
+    padding: '25px 0 25px 0'
 })
 
 const address = css({
-    width: `30%`
+    minWidth: '250px',
+    flex: 1
 })
 
 const socialIcons = css({
-    width: `30%`
+    minWidth: '250px',
+    flex: 1
 })
 
 const padding = css({
@@ -28,14 +33,15 @@ const padding = css({
 })
 
 const contactForm = css({
-    width: `40%`
+    minWidth: '250px',
+    flex: 1
 })
 
 const ContactUs = props => (
     <div>
         <div {...headerText}>
-            <h4 >Start Your Journey Towards Creative Freedom</h4>
-            <h2>Contact Us</h2>
+            <h4>Start Your Journey Towards Creative Freedom</h4>
+            <h1>Contact Us</h1>
             <h4>We want to help you find the right path with the best creatives, begin the conversation today.</h4>
         </div>
         <div {...contact}>
@@ -46,7 +52,12 @@ const ContactUs = props => (
                 <SocialIcons />
             </div>
             <div {...contactForm} {...padding}>
-                <p>contactForm</p>
+                <form action="https://formspree.io/ely@theunfounddoor.com"
+                    method="POST">
+                    <input type="text" name="name" placeholder="name" />
+                    <input type="email" name="_replyto" placeholder="email" />
+                    <input type="submit" value="Send" />
+                </form>
             </div>
         </div>
     </div>
