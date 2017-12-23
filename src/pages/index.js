@@ -7,6 +7,7 @@ import headerPhoto from '../img/PhotographyHeader2-TheUnfoundDoor.jpg'
 import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photoLink'
 import MainServices from '../components/mainServices'
+import WhoWeArePhoto from '../img/Main-WhoWeAre-Header.jpg'
 
 const photoArray = css({
     display: `flex`,
@@ -21,7 +22,7 @@ const IndexPage = ({ data }) => {
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>
-                <PhotoLink to={'/about'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
+                <PhotoLink to={'/about'} src={WhoWeArePhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
             </div>
         </div>
     )}
