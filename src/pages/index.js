@@ -9,23 +9,23 @@ import PhotoLink from '../components/photoLink'
 import MainServices from '../components/mainServices'
 
 const photoArray = css({
-  display: `flex`,
-  flexDirection: `row`
+    display: `flex`,
+    flexDirection: `row`,
+    justifyContent: 'space-around'
 })
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-  return (
-  
-  <div>
-    <Splash sizes={data.file.childImageSharp.sizes} />
-    <WhatWeDo email={data.site.siteMetadata.mainEmail} />
-    <MainServices />
-    <div {...photoArray}>
-      <PhotoLink to={'/about'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
-    </div>
-  </div>
-)}
+    return (
+
+        <div>
+            <Splash sizes={data.file.childImageSharp.sizes} />
+            <WhatWeDo email={data.site.siteMetadata.mainEmail} />
+            <MainServices />
+            <div {...photoArray}>
+                <PhotoLink to={'/about'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
+            </div>
+        </div>
+    )}
 
 export default IndexPage
 

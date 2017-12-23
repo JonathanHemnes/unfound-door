@@ -12,7 +12,8 @@ const header = css({
 })
 
 const headerText = css({
-    textTransform: `uppercase`
+    textTransform: `uppercase`,
+    textAlign: 'center'
 })
 
 const subText = css({

@@ -6,8 +6,8 @@ import GreyImage from './greyImage'
 
 const container = css({
     position: `relative`,
-    minWidth: '400px',
-    maxWidth: '33.33334vw'
+    minWidth: '360px',
+    flex: 1
 })
 
 const textBlock = css({
