@@ -5,15 +5,21 @@ import PropTypes from 'prop-types'
 import GreyImage from './greyImage'
 
 const container = css({
-    position: `relative`
+    position: `relative`,
+    minWidth: '400px',
+    maxWidth: '33.33334vw'
 })
 
-const text = css({
+const textBlock = css({
     position: `absolute`,
     textAlign: `center`,
-    top: `50%`,
+    top: `35%`,
     left: `50%`,
-    transform: `translate(-50%, -50%)`
+    transform: `translate(-50%, -50%)`,
+})
+
+const white = css({
+    color: 'white'
 })
 
 
@@ -21,9 +27,9 @@ const PhotoLink = (props) => (
     <div {...container}>
         <Link to={props.to}>
             <GreyImage src={props.src} />
-            {props.text && <div {...text}>
-                <h3>{props.text}</h3>
-                <h4>{props.subText}</h4>
+            {props.text && <div {...textBlock}>
+                <h2 {...white}>{props.text}</h2>
+                <h3 {...white}>{props.subText}</h3>
             </div>}
         </Link>
     </div>

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 const header = css({
+    paddingTop: '25px',
     display: `flex`,
     flexDirection: `column`,
     alignItems: `center`,
@@ -25,13 +26,14 @@ const callToAction = css({
     display: `flex`,
     flexDirection: `column`,
     alignItems: `center`,
-    justifyContent: `center`
+    justifyContent: `center`,
+    paddingBottom: '25px'
 })
 
 const letsTalk = css({
     textDecoration: `none`,
-    padding: `15px`,
-    border: `1px solid black`,
+    padding: `15px 30px 15px 30px`,
+    border: `2px solid black`,
     color: `black`
 })
 
@@ -49,7 +51,7 @@ const WhatWeDo = ( props ) => (
             </p>
         </div>
         <div {...callToAction}>
-            <a href={`mailto:${props.email}`} target="_blank" {...letsTalk}>Lets Talk</a>
+            <a href={`mailto:${props.email}`} target="_blank" {...letsTalk}>Let's Talk</a>
         </div>
     </div>
 )

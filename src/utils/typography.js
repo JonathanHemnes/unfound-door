@@ -1,6 +1,21 @@
 import Typography from 'typography'
-import alton from 'typography-theme-alton'
 
-const typography = new Typography(alton)
+const typography = new Typography({
+    baseFontSize: '18px',
+    baseLineHeight: 1.666,
+    headerFontFamily: ['Roboto', 'sans-serif'],
+    bodyFontFamily: ['Roboto', 'sans-serif'],
+    googleFonts: [
+        {
+            name: 'Roboto',
+            styles: [
+                '400',
+                '400i',
+                '700',
+                '700i',
+            ]
+        }
+    ]
+})
 
 export default typography

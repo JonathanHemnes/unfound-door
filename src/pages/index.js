@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
     <WhatWeDo email={data.site.siteMetadata.mainEmail} />
     <MainServices />
     <div {...photoArray}>
-      <PhotoLink to={'/'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
+      <PhotoLink to={'/about'} src={headerPhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
     </div>
   </div>
 )}

@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
 const imgStyle = css({
-    width: `100%`,
-    filter: `gray`,
     'WebkitFilter': 'grayscale(0.5)',
     filter: 'grayscale(0.5)',
 })
