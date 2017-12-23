@@ -10,12 +10,11 @@ const iconContainer = css({
 })
 
 const icons = [
-    {link: 'http://google.com', iconName: 'facebook-official', size: 'fa-3x'},
-    {link: 'http://google.com', iconName: 'instagram', size: 'fa-3x'},
-    {link: 'http://google.com', iconName: 'youtube', size: 'fa-3x'},
-    {link: 'http://google.com', iconName: 'google', size: 'fa-3x'},
-    {link: 'http://google.com', iconName: 'linkedin', size: 'fa-3x'},
-    {link: 'http://google.com', iconName: 'pinterest', size: 'fa-3x'},
+    {link: 'https://www.facebook.com/theunfounddoor', iconName: 'facebook-official', size: 'fa-3x'},
+    {link: 'https://www.instagram.com/theunfounddoor/', iconName: 'instagram', size: 'fa-3x'},
+    {link: 'https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA', iconName: 'youtube', size: 'fa-3x'},
+    // {link: 'http://google.com', iconName: 'google', size: 'fa-3x'},
+    {link: 'https://www.linkedin.com/in/ely-hemnes-47261a51/', iconName: 'linkedin', size: 'fa-3x'}
 ]
 
 const SocialIcons = () => (
