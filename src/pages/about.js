@@ -24,7 +24,7 @@ const About = ({ data }) => (
             <p {...center}>Started by Ely Hemnes, realized their was a sinlge source focused on detail and service for companies and individuals to access amazing creatives....</p>
             <Founder img={data.founderHeadshot.childImageSharp} />
             <OurTeam />
-            <StrategicPartnership img={data.strategicPartnership.childImageSharp} />
+            <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
         </div>
     </div>
 )
@@ -60,6 +60,17 @@ query aboutQuery {
         ...GatsbyImageSharpSizes
       }
     }
+  } 
+  partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {eq: "jpg", eq: "png"}}){
+    edges {
+        node {
+            childImageSharp {
+               sizes (maxWidth: 2400) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+      }
   } 
 } 
 `
