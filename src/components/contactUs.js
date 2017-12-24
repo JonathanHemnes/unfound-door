@@ -2,6 +2,11 @@ import React from 'react'
 import { css } from 'glamor'
 import SocialIcons from './socialIcons'
 import Address from './address'
+import StyleStandards from '../styleStandards.js'
+
+const container = css({
+    margin: '25px 0 0 0'
+})
 
 const headerText = css({
     textTransform: `uppercase`,
@@ -13,7 +18,7 @@ const contact = css({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: `center`,
-    backgroundColor: `gray`,
+    backgroundColor: StyleStandards.colors.grey,
     padding: '25px 0 25px 0'
 })
 
@@ -45,7 +50,7 @@ const center = css({
 })
 
 const ContactUs = props => (
-    <div>
+    <div {...container}>
         <div {...headerText}>
             <h4>Start Your Journey Towards Creative Freedom</h4>
             <h1>Contact Us</h1>

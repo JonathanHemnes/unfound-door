@@ -7,13 +7,14 @@ import StyleStandards from '../styleStandards'
 const listElement = css({
     marginRight: `1rem`,
     '& a': {
+        ...StyleStandards.animations.greyHover,
         textDecoration: `none`,
         color: StyleStandards.colors.white,
         fontSize: `26px`,
         '@media(max-width: 500px)': {
             fontSize: '18px'
-        }
-    } 
+        },
+    }
 })
 
 const LinkToList = (props) =>(

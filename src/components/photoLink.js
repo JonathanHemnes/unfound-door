@@ -3,6 +3,7 @@ import { css } from 'glamor'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import GreyImage from './greyImage'
+import StyleStandards from '../styleStandards.js'
 
 const container = css({
     position: `relative`,
@@ -19,7 +20,9 @@ const textBlock = css({
 })
 
 const white = css({
-    color: 'white'
+    ...StyleStandards.animations.greyHover,
+    color: StyleStandards.colors.white,
+    textTransform: 'uppercase'
 })
 
 

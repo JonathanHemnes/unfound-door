@@ -18,9 +18,9 @@ const center = css({
 
 const About = ({ data }) => (
   <div>
-    <Splash sizes={data.splash.childImageSharp.sizes} />
+    <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} />
     <div>
-      <h2 {...title}>About Us</h2>
+      <h1 {...title}>About Us</h1>
       <p {...center}>Started by Ely Hemnes, realized their was a sinlge source focused on detail and service for companies and individuals to access amazing creatives....</p>
       <Founder />
       <OurTeam />
@@ -40,5 +40,12 @@ query aboutQuery {
       }
     }
   }
+  logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
 } 
 `

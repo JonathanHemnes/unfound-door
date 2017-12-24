@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import StyleStandards from '../styleStandards.js'
 
 const header = css({
     paddingTop: '25px',
@@ -36,10 +37,11 @@ const callToAction = css({
 })
 
 const letsTalk = css({
+    ...StyleStandards.animations.greyHoverBackground,
     textDecoration: `none`,
     padding: `15px 30px 15px 30px`,
     border: `2px solid black`,
-    color: `black`
+    color: StyleStandards.colors.black,
 })
 
 const WhatWeDo = ( props ) => (

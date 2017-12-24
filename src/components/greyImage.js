@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 const imgStyle = css({
     'WebkitFilter': 'grayscale(0.5)',
     filter: 'grayscale(0.5)',
+    margin: '0 0 0 0'
 })
 
 const GreyImage = props => {

@@ -21,7 +21,7 @@ const PhotoWithTextOverlay = props => (
     <div {...photoWithText}>
         <GreyImage src={props.src} />
         <div {...photoText}>
-            <h5 {...props.textStyle}>{props.text}</h5>
+            <p {...props.textStyle}>{props.text}</p>
             <p>{props.subText}</p>
         </div>
     </div>
