@@ -6,7 +6,8 @@ const container = css({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    height: '150px'
 })
 
 const anchor = css({

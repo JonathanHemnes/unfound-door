@@ -21,7 +21,7 @@ const About = ({ data }) => (
         <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} />
         <div>
             <h1 {...title}>About Us</h1>
-            <p {...center}>Started by Ely Hemnes, realized their was a sinlge source focused on detail and service for companies and individuals to access amazing creatives....</p>
+            <p {...center}>THE<strong>UNFOUND</strong>DOOR began as an experiment; can artists provide the level of service, responsibility, and management that clients need and deserve?</p>
             <Founder img={data.founderHeadshot.childImageSharp} />
             <OurTeam teamHeadshots={data.teamHeadshots} />
             <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />

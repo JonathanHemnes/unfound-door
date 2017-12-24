@@ -14,7 +14,8 @@ const imageStyles = css({
 })
 
 const title = css({
-    textAlign: `center`
+    textAlign: `center`,
+    textTransform: 'uppercase'
 })
 
 const noMargin = css({

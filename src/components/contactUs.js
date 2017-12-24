@@ -2,70 +2,93 @@ import React from 'react'
 import { css } from 'glamor'
 import SocialIcons from './socialIcons'
 import Address from './address'
+import FaIcon from './faIcon.js'
 import StyleStandards from '../styleStandards.js'
 
-const container = css({
-    margin: '25px 0 0 0'
-})
 
 const headerText = css({
-    textTransform: `uppercase`,
     textAlign: `center`
 })
 
-const contact = css({
-    display: `flex`,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: `center`,
-    backgroundColor: StyleStandards.colors.grey,
-    padding: '25px 0 25px 0'
-})
-
-const address = css({
-    minWidth: '250px',
-    flex: 1
-})
-
-const socialIcons = css({
-    minWidth: '250px',
-    flex: 1
-})
-
-const padding = css({
-    paddingLeft: `5%`,
-    paddingRight: `5%`,
-    '@media(max-width: 500px)': {
-        paddingBottom: '5%'
-    }
-})
-
-const contactForm = css({
-    minWidth: '250px',
-    flex: 1
+const uppercase = css({
+    textTransform: 'uppercase'
 })
 
 const center = css({
     margin: 'auto'
 })
 
+const contactSection = css({
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+})
+
+const contact = css({
+    flex: 1,
+    minWidth: '300px'
+})
+
+const contactHeader = css({
+    backgroundColor: StyleStandards.colors.black,
+    color: StyleStandards.colors.white,
+    textAlign: 'center',
+    height: '30px',
+    fontSize: '30px',
+    padding: '10px  0 40px 0'
+})
+
+const contactBody = css({
+    backgroundColor: StyleStandards.colors.grey,
+    height: '150px'
+})
+
+const mainContactIcons = css({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '150px'
+})
+
+const mainContactIconStyle = css({
+    margin: '10px'
+})
+
 const ContactUs = props => (
-    <div {...container}>
+    <div>
         <div {...headerText}>
-            <h4>Start Your Journey Towards Creative Freedom</h4>
-            <h1>Contact Us</h1>
-            <h4>We want to help you find the right path with the best creatives, begin the conversation today.</h4>
-        </div>
-        <div {...contact}>
-            <div {...address} {...padding}>
-                <Address />
-            </div>
-            <div {...socialIcons} {...padding} {...center}>
-                <SocialIcons />
-            </div>
-            <div {...contactForm} {...padding}>
-            </div>
-        </div>
+           <h1 {...uppercase}>Be Found</h1> 
+           <p>Start Your Journey Towards Creative Freedom</p>
+       </div> 
+       <div {...contactSection}>
+           <div {...contact}>
+               <div {...contactHeader}>
+                   <p>Find Us</p> 
+               </div>
+               <div {...contactBody}>
+                   <Address />
+               </div>     
+           </div>
+           <div {...contact}>
+               <div {...contactHeader}>
+                   <p>Drop a line</p> 
+               </div>
+               <div {...contactBody}>
+                   <div {...mainContactIcons}>
+                       <FaIcon link="mailto:ely@theunfounddoor.com" iconName="envelope" size="fa-5x" style={mainContactIconStyle} />
+                       <FaIcon link="tel:6177759911" iconName="phone" size="fa-5x" style={mainContactIconStyle} />
+                   </div>
+               </div>     
+           </div>
+           <div {...contact}>
+               <div {...contactHeader}>
+                   <p>Connect</p> 
+               </div>
+               <div {...contactBody}>
+                   <SocialIcons />
+               </div>     
+           </div>
+       </div>
     </div>
 )
 

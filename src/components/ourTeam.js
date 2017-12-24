@@ -12,7 +12,8 @@ const headshotStyles = css({
 })
 
 const title = css({
-    textAlign: `center`
+    textAlign: `center`,
+    marginTop: '20px'
 })
 
 function getTeamMemberName(fileName) {
