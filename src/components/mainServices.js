@@ -14,9 +14,9 @@ const photoArray = css({
 
 const MainServices = () => (
     <div {...photoArray}>
-        <PhotoLink to={'/'} src={headerPhoto} text={'Photography'} />
-        <PhotoLink to={'/'} src={videographyPhoto} text={'Videography'} />
-        <PhotoLink to={'/'} src={designStrategyPhoto} text={'Design & Strategy'} />
+        <PhotoLink to={'/photography'} src={headerPhoto} text={'Photography'} />
+        <PhotoLink to={'/videography'} src={videographyPhoto} text={'Videography'} />
+        <PhotoLink to={'/design-strategy'} src={designStrategyPhoto} text={'Design & Strategy'} />
     </div>
 )
 

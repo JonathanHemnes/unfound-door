@@ -14,7 +14,6 @@ const photoArray = css({
 })
 
 const IndexPage = ({ data }) => {
-    console.log(data)
     return (
         <div>
             <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={data.site.siteMetadata.mainPageSubText} />

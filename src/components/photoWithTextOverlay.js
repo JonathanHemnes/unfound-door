@@ -14,12 +14,14 @@ const photoText = css({
     textAlign: `center`,
     top: `50%`,
     left: `50%`,
-    transform: `translate(-50%, -50%)`
+    transform: `translate(-50%, -50%)`,
+    color: 'white',
+    textTransform: 'uppercase'
 })
 
 const PhotoWithTextOverlay = props => (
     <div {...photoWithText}>
-        <GreyImage src={props.src} />
+        <GreyImage src={props.src} sizes={props.sizes} />
         <div {...photoText}>
             <p {...props.textStyle}>{props.text}</p>
             <p>{props.subText}</p>
@@ -28,7 +30,7 @@ const PhotoWithTextOverlay = props => (
 )
 
 PhotoWithTextOverlay.propTypes = {
-    src: PropTypes.string.isRequired,
+    src: PropTypes.string,
     text: PropTypes.string.isRequired,
     textStyle: PropTypes.object,
     subText: PropTypes.string,

@@ -3,6 +3,7 @@ import { css } from 'glamor'
 import PhotoWithTextOverlay from './photoWithTextOverlay'
 import strategicPartnershipPhoto from '../img/PhotographyHeader-Option2-TheUnfoundDoor.jpg'
 import PhotoLink from './photoLink'
+import StyleStandards from '../styleStandards.js'
 
 const partnersStyle = css({
     display: `flex`,
@@ -19,7 +20,7 @@ const partners = [
 
 const StrategicPartnership = props => (
     <div>
-        <PhotoWithTextOverlay src={strategicPartnershipPhoto} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} />
+        <PhotoWithTextOverlay sizes={props.img.sizes} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} />
         <div {...partnersStyle}>
             {partners.map((partner, i) => {
                 return <PhotoLink key={i} src={partner.src} to={partner.url} />
