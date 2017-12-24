@@ -23,7 +23,7 @@ const About = ({ data }) => (
             <h1 {...title}>About Us</h1>
             <p {...center}>Started by Ely Hemnes, realized their was a sinlge source focused on detail and service for companies and individuals to access amazing creatives....</p>
             <Founder img={data.founderHeadshot.childImageSharp} />
-            <OurTeam />
+            <OurTeam teamHeadshots={data.teamHeadshots} />
             <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
         </div>
     </div>
@@ -72,5 +72,17 @@ query aboutQuery {
           }
       }
   } 
+  teamHeadshots: allFile(filter: {relativeDirectory: {eq: "img/Team_Headshots"}, extension:{regex: "/jpg|png/"}}){
+    edges {
+        node {
+            name
+            childImageSharp {
+               sizes (maxWidth: 2400) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+      }
+  }
 } 
 `

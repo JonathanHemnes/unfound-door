@@ -1,63 +1,46 @@
 import React from 'react'
 import { css } from 'glamor'
 import TitledHeadshot from './titledHeadshot.js'
-import grahamHeadshot from '../img/MainPhotographyHeader.jpg'
-import kristinHeadshot from '../img/MainPhotographyHeader.jpg'
-import kylaHeadshot from '../img/MainPhotographyHeader.jpg'
-import joshHeadshot from '../img/MainPhotographyHeader.jpg'
-import katieHeadshot from '../img/MainPhotographyHeader.jpg'
+import StyleStandards from '../styleStandards.js'
 
 const headshotStyles = css({
     display: `flex`,
-    flexDirection: `row`
+    flexDirection: `row`,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    margin: '20px 20px 20px 20px'
 })
 
 const title = css({
     textAlign: `center`
 })
 
-const graham = {
-    src: grahamHeadshot,
-    name: `Graham Johnstone`,
-    title: `Videographer`
+function getTeamMemberName(fileName) {
+    const parts = fileName.split('_');
+    const firstName = parts[0];
+    const lastName = parts[1];
+    return `${firstName} ${lastName}`;
 }
 
-const kristin = {
-    src: kristinHeadshot,
-    name: `Kristin Olson`,
-    title: `Photographer`
-}
-const kyla = {
-    src: kylaHeadshot,
-    name: `Kyla Fear`,
-    title: `Photographer`
-}
-const josh = {
-    src: joshHeadshot,
-    name: `Josh Thill`,
-    title: `Wordpress Dev`
-}
-const katie = {
-    src: katieHeadshot,
-    name: `Katie Baechler`,
-    title: `Photographer`
+function getTeamMemberTitle(fileName){
+    return fileName.split('_').slice(2).join(' ');
 }
 
-const team = [graham, kristin, kyla, josh, katie]
-
-const OurTeam = props => (
-    <div>
-        <div {...title}>
-            <h2>Our Team</h2>
+const OurTeam = props => {
+    return (
+        <div>
+            <div {...title}>
+                <h2>Our Team</h2>
+            </div>
+            <div {...headshotStyles}>
+                {
+                    props.teamHeadshots.edges.map((file, i) => {
+                        return <TitledHeadshot key={i} sizes={file.node.childImageSharp.sizes} name={getTeamMemberName(file.node.name)} title={getTeamMemberTitle(file.node.name)} />
+                    })
+                }
+            </div>
         </div>
-        <div {...headshotStyles}>
-            {
-                team.map((member, i) => {
-                    return <TitledHeadshot key={i} src={member.src} name={member.name} title={member.title} />
-                })
-            }
-        </div>
-    </div>
-)
+    )
+}
 
 export default OurTeam
