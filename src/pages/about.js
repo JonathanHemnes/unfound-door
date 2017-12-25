@@ -13,7 +13,9 @@ const title = css({
 })
 
 const center = css({
-    textAlign: `center`
+    textAlign: `center`,
+    marginLeft: '15%',
+    marginRight: '15%'
 })
 
 const About = ({ data }) => (

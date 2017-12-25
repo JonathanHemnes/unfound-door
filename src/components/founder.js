@@ -5,7 +5,9 @@ import PhotoWithTextOverlay from './photoWithTextOverlay'
 import Img from 'gatsby-image'
 
 const header = css({
-    textAlign: `center`
+    textAlign: `center`,
+    marginLeft: '15%',
+    marginRight: '15%'
 })
 const photos = css({
     display: `flex`,
@@ -19,7 +21,10 @@ const photos = css({
 })
 
 const leftPhotoStyle = css({
-    width: '560px'
+    width: '560px',
+    '@media(max-width: 1082px)': {
+        width: '100%'
+    }
 })
 
 const rightPhotoStyle = css({
