@@ -63,7 +63,7 @@ query aboutQuery {
       }
     }
   } 
-  partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {eq: "jpg", eq: "png"}}){
+  partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
             childImageSharp {

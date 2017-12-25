@@ -20,7 +20,7 @@ const photoText = css({
 
 const PhotoWithTextOverlay = props => (
     <div {...photoWithText}>
-        <GreyImage src={props.src} sizes={props.sizes} />
+        <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
         <div {...photoText}>
             <p {...props.textStyle}>{props.text}</p>
             <p {...props.subTextStyle}>{props.subText}</p>

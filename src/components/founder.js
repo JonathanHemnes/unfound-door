@@ -29,7 +29,7 @@ const leftPhotoStyle = css({
 
 const rightPhotoStyle = css({
     flex: 1,
-    minWidth: '425px'
+    minWidth: '360px'
 })
 
 const overlayTextStyle = css({

@@ -3,19 +3,13 @@ import { css } from 'glamor'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const imgStyle = css({
-    'WebkitFilter': 'grayscale(0.5)',
-    filter: 'grayscale(0.5)',
-    margin: '0 0 0 0'
-})
-
 const GreyImage = props => {
     if (props.src) {
-        return (<img src={props.src} alt={props.alt} {...imgStyle} />)
+        return (<img src={props.src} alt={props.alt} {...props.imgStyle} />)
     } else if (props.sizes) {
-        return (<Img sizes={props.sizes} className={imgStyle} />)
+        return (<Img sizes={props.sizes} className={props.imgStyle} />)
     } else if (props.resolutions) {
-        return (<Img resolutions={props.resolutions} className={imgStyle} />)
+        return (<Img resolutions={props.resolutions} className={props.imgStyle} />)
     }
 }
 

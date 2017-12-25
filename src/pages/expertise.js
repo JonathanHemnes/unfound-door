@@ -19,8 +19,8 @@ const Expertise = ({props, data}) => (
       <MainServices />
       <ImportantClients />
     </div>
-    <StrategicPartnership />
-  </div>
+    <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
+</div>
 )
 
 export default Expertise
@@ -40,6 +40,24 @@ query expertiseQuery {
         ...GatsbyImageSharpSizes
       }
     }
+  } 
+  strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
+    edges {
+        node {
+            childImageSharp {
+               sizes (maxWidth: 2400) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+      }
   } 
 }
 `
