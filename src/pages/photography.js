@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 import Splash from '../components/splash'
 import PhotoLinkArray from '../components/photoLinkArray'
+import PartnerLogos from '../components/partnerLogos.js'
 
 const subTextStyle = css({
     fontSize: '30px',
@@ -16,7 +17,6 @@ const arrayStyle = css({
 
 const photoStyle = css({
     flex:1,
-    minWidth: '250px',
     overflow: 'hidden'
 })
 
@@ -25,6 +25,10 @@ const center = css({
     marginLeft: '15%',
     marginRight: '15%',
     marginTop: '20px'
+})
+
+const marginBottom = css({
+    marginBottom: '20px'
 })
 
 const Photography = ({ data }) => {
@@ -100,11 +104,15 @@ const Photography = ({ data }) => {
                 <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
             </div>
             <PhotoLinkArray images={professionalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <h1 {...center}>The Company You'll Keep</h1>
+            <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
             <div {...center}>
                 <h1>Personal</h1>
                 <p>Creating keepsakes, one moment at a time</p>
             </div>
-            <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <div {...marginBottom}>
+                <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            </div>
         </div>
     )
 }
@@ -126,6 +134,28 @@ query photographyQuery {
         ...GatsbyImageSharpSizes
       }
     }
+  } 
+  partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
+    edges {
+        node {
+            childImageSharp {
+               sizes (maxWidth: 2400) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+      }
+  } 
+  companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
+    edges {
+        node {
+            childImageSharp {
+               sizes (maxWidth: 2400) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+      }
   } 
   headshot: file(relativePath: {eq: "img/Photography_Sections/Headshot_Portrait.jpg"}) {
     childImageSharp {
