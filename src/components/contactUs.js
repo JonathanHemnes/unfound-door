@@ -7,7 +7,9 @@ import StyleStandards from '../styleStandards.js'
 
 
 const headerText = css({
-    textAlign: `center`
+    textAlign: `center`,
+    backgroundColor: StyleStandards.colors.grey,
+    paddingTop: '15px'
 })
 
 const uppercase = css({
@@ -27,6 +29,11 @@ const contactSection = css({
 const contact = css({
     flex: 1,
     minWidth: '300px'
+})
+
+const noMargin = css({
+    margin: 0,
+    paddingBottom: `1.45rem`
 })
 
 const contactHeader = css({
@@ -58,7 +65,7 @@ const ContactUs = props => (
     <div>
         <div {...headerText}>
            <h1 {...uppercase}>Be Found</h1> 
-           <p>Start Your Journey Towards Creative Freedom</p>
+           <p {...noMargin}>Start Your Journey Towards Creative Freedom</p>
        </div> 
        <div {...contactSection}>
            <div {...contact}>
