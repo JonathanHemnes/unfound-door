@@ -11,15 +11,24 @@ const subTextStyle = css({
 const arrayStyle = css({
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around'
+    justifyContent: 'center'
 })
 
 const photoStyle = css({
-    width: '300px'
+    flex:1,
+    minWidth: '250px',
+    overflow: 'hidden'
+})
+
+const center = css({
+    textAlign: 'center',
+    marginLeft: '15%',
+    marginRight: '15%',
+    marginTop: '20px'
 })
 
 const Photography = ({ data }) => {
-    const images=[
+    const professionalImages=[
         {
             sizes: data.headshot.childImageSharp.sizes,
             to: '/headshots',
@@ -27,7 +36,7 @@ const Photography = ({ data }) => {
         },
         {
             sizes: data.eventsMeetings.childImageSharp.sizes,
-            to: '/events_meetings',
+            to: '/events',
             text: 'Events & Meetings'
         },
         {
@@ -35,12 +44,67 @@ const Photography = ({ data }) => {
             to: '/marketing_lifestyle',
             text: 'Marketing & Lifestyle'
         },
-
+        {
+            sizes: data.nonProfit.childImageSharp.sizes,
+            to: '/nonprofits',
+            text: 'Non Profit'
+        },
+        {
+            sizes: data.engineeringConstruction.childImageSharp.sizes,
+            to: '/engineering_construction',
+            text: 'Engineering / Construction'
+        },
+        {
+            sizes: data.architecture.childImageSharp.sizes,
+            to: '/architecture',
+            text: 'Architecture & Project Progress'
+        },
+        {
+            sizes: data.aerial.childImageSharp.sizes,
+            to: '/aerial',
+            text: 'Aerial'
+        },
+        {
+            sizes: data.foodProduct.childImageSharp.sizes,
+            to: '/food_product',
+            text: 'Food & Product'
+        }
+    ]
+    const personalImages = [
+        {
+            sizes: data.wedding.childImageSharp.sizes,
+            to: '/weddings',
+            text: 'Weddings & Couples Portraits'
+        },
+        {
+            sizes: data.families.childImageSharp.sizes,
+            to: '/families',
+            text: 'Families & Babies'
+        },
+        {
+            sizes: data.portraits.childImageSharp.sizes,
+            to: '/portraits',
+            text: 'Portraits & Seniors'
+        },
+        {
+            sizes: data.boudoir.childImageSharp.sizes,
+            to: '/boudoir',
+            text: 'Boudoir'
+        },
     ]
     return (
         <div>
             <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Photography" />
-            <PhotoLinkArray images={images} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <div {...center}>
+                <h1>Professional</h1>
+                <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
+            </div>
+            <PhotoLinkArray images={professionalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <div {...center}>
+                <h1>Personal</h1>
+                <p>Creating keepsakes, one moment at a time</p>
+            </div>
+            <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
         </div>
     )
 }
@@ -78,6 +142,69 @@ query photographyQuery {
     }
   } 
   marketingLifestyle: file(relativePath: {eq: "img/Photography_Sections/Marketing_Lifestyle.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  nonProfit: file(relativePath: {eq: "img/Photography_Sections/Nonprofit.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  engineeringConstruction: file(relativePath: {eq: "img/Photography_Sections/Engineering_Construction.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  architecture: file(relativePath: {eq: "img/Photography_Sections/Architecture_Project.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  aerial: file(relativePath: {eq: "img/Photography_Sections/Aerial_Photography.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  foodProduct: file(relativePath: {eq: "img/Photography_Sections/Food_and_Product.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  wedding: file(relativePath: {eq: "img/Photography_Sections/Weddings_Couple_Portraits.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  families: file(relativePath: {eq: "img/Photography_Sections/Families_babies.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  boudoir: file(relativePath: {eq: "img/Photography_Sections/Boudoir_Photography.jpg"}) {
+    childImageSharp {
+      sizes (maxWidth: 2400) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  } 
+  portraits: file(relativePath: {eq: "img/Photography_Sections/Portraits_Seniors.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes

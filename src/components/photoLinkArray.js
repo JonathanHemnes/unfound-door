@@ -8,8 +8,8 @@ const PhotoLinkArray = props => {
         <div {...props.arrayStyle}>
             { props.images.map(( image, key ) => {
                 return (
-                    <div key={key} {...props.photoStyle}>
-                        <PhotoLink src={image.src} sizes={image.sizes} text={image.text} subText={image.subText} to={image.to} />
+                    <div key={key}>
+                        <PhotoLink src={image.src} sizes={image.sizes} text={image.text} subText={image.subText} to={image.to} imgStyle={props.photoStyle}/>
                     </div>
                 )
             })

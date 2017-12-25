@@ -29,7 +29,7 @@ const white = css({
 const PhotoLink = (props) => (
     <div {...container}>
         <Link to={props.to}>
-            <GreyImage src={props.src} sizes={props.sizes} />
+            <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
             {props.text && <div {...textBlock}>
                 <h2 {...white}>{props.text}</h2>
                 <h3 {...white}>{props.subText}</h3>
