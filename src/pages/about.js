@@ -7,9 +7,14 @@ import OurTeam from '../components/ourTeam'
 import AboutHeader from '../components/aboutHeader'
 import StrategicPartnership from '../components/strategicPartnership'
 
+const subTextStyle = css({
+    fontSize: '30px',
+    textTransform: 'uppercase'
+})
+
 const About = ({ data }) => (
     <div>
-        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} />
+        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Our Story" />
         <div>
             <AboutHeader />
             <Founder img={data.founderHeadshot.childImageSharp} />

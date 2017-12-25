@@ -33,7 +33,7 @@ const Splash = props => {
         <GreyImage src={props.src} sizes={props.sizes} resolutions={props.resolutions} alt={props.alt} />
         <div {...logoStyle}>
             <Img sizes={props.logo.sizes} />
-            <h3 {...subTextStyle}>{props.subText}</h3>
+            <h3 {...subTextStyle} {...props.textStyle}>{props.subText}</h3>
         </div>
     </div>
 )

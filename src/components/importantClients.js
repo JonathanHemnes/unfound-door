@@ -14,7 +14,8 @@ const clients = [
 
 const photoArray = css({
     display: `flex`,
-    flexDirection: `row`
+    flexDirection: `row`,
+    flexWrap: 'wrap'
 })
 
 const center = css({

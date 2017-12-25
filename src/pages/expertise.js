@@ -17,6 +17,11 @@ const uppercase = css({
     textTransform: 'uppercase'
 })
 
+const subTextStyle = css({
+    fontSize: '30px',
+    textTransform: 'uppercase'
+})
+
 const who = 'We are a creative consultancy  rm working the best creatives in every industry with services ranging from photography and videography to design and content creation.';
 const what = 'We are dedicated to creating the ultimate seamless experience by offering a diversity of creative services with precision, technique, and passion.';
 const why = 'We believe that you should have a designated team focused on aiding you throughout the process of crafting and implementing your vision.';
@@ -25,12 +30,11 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 
 const Expertise = ({props, data}) => (
     <div>
-        <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp}/>
+        <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" textStyle={subTextStyle}/>
         <div> 
             <AboutHeader />
             <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             <MainServices />
-            <ImportantClients />
         </div>
         <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
     </div>
