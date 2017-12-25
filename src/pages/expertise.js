@@ -7,6 +7,7 @@ import StrategicPartnership from '../components/strategicPartnership'
 import MainServices from '../components/mainServices'
 import ImportantClients from '../components/importantClients'
 import AboutHeader from '../components/aboutHeader'
+import WhoWhatWhere from '../components/whoWhatWhere'
 
 const center = css({
   textAlign: 'center'
@@ -21,6 +22,7 @@ const Expertise = ({props, data}) => (
         <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp}/>
         <div> 
             <AboutHeader />
+            <WhoWhatWhere />
             <MainServices />
             <ImportantClients />
         </div>
