@@ -1,12 +1,13 @@
 import React from 'react'
 import { css } from 'glamor'
+import StyleStandards from '../styleStandards.js'
 
 const footer = css({
     display: `flex`,
     justifyContent: `center`,
     alignItems: 'center',
-    background: `black`,
-    color: `white`,
+    background: StyleStandards.colors.grey,
+    color: StyleStandards.colors.black,
 })
 
 const name = css({

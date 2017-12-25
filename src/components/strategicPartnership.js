@@ -10,20 +10,29 @@ const logoArray = css({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    minHeight: '150px',
+    minHeight: '175px',
 })
 
 const imageStyle = css({
     margin: '5px 5px 5px 5px',
-    minWidth: '100px'
+    minWidth: '125px'
+})
+
+const textStyle = css({
+    fontSize: '30px',
+    textTransform: 'uppercase'
+})
+
+const subTextStyle = css({
+    fontSize: '20px'
 })
 
 const StrategicPartnership = props => {
     return (
         <div>
-            <PhotoWithTextOverlay sizes={props.img.sizes} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} />
+            <PhotoWithTextOverlay sizes={props.img.sizes} textStyle={textStyle} subTextStyle={subTextStyle} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} />
             <div {...logoArray}>
                 {props.partnerLogos.edges.map((file, i) => {
                     return (
