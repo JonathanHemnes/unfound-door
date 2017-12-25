@@ -4,26 +4,14 @@ import Splash from '../components/splash'
 import mainSplashLogo from '../img/OurStoryHeader-TheUnfoundDoor.jpg'
 import Founder from '../components/founder'
 import OurTeam from '../components/ourTeam'
+import AboutHeader from '../components/aboutHeader'
 import StrategicPartnership from '../components/strategicPartnership'
-
-const title = css({
-    textTransform: `uppercase`,
-    textAlign: `center`,
-    margin: '25px 0 0 0'
-})
-
-const center = css({
-    textAlign: `center`,
-    marginLeft: '15%',
-    marginRight: '15%'
-})
 
 const About = ({ data }) => (
     <div>
         <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} />
         <div>
-            <h1 {...title}>About Us</h1>
-            <p {...center}>THE<strong>UNFOUND</strong>DOOR began as an experiment; can artists provide the level of service, responsibility, and management that clients need and deserve?</p>
+            <AboutHeader />
             <Founder img={data.founderHeadshot.childImageSharp} />
             <OurTeam teamHeadshots={data.teamHeadshots} />
             <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />

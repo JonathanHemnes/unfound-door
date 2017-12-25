@@ -6,21 +6,26 @@ import expertiseLogo from '../img/header/expertise.jpg'
 import StrategicPartnership from '../components/strategicPartnership'
 import MainServices from '../components/mainServices'
 import ImportantClients from '../components/importantClients'
+import AboutHeader from '../components/aboutHeader'
 
 const center = css({
   textAlign: 'center'
 })
 
+const uppercase = css({
+    textTransform: 'uppercase'
+})
+
 const Expertise = ({props, data}) => (
-  <div>
-    <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp}/>
-    <div> 
-      <h2 {...center}>Our Expertise</h2>
-      <MainServices />
-      <ImportantClients />
+    <div>
+        <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp}/>
+        <div> 
+            <AboutHeader />
+            <MainServices />
+            <ImportantClients />
+        </div>
+        <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
     </div>
-    <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
-</div>
 )
 
 export default Expertise
