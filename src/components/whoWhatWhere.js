@@ -14,10 +14,19 @@ const container = css({
 
 const item = css({
     width: '300px',
-    height: '300px',
+    height: '250px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+})
+
+const faStyle = css({
+    marginBottom: '10px'
+})
+
+const textStyle = css({
+    textAlign: 'center',
+    padding: '0 10px 0 10px'
 })
 
 
@@ -26,29 +35,29 @@ const faSize = 'fa-3x'
 const WhoWhatWhere = props => (
     <div {...container}>
         <div {...item}>
-            <FaIcon size={faSize} iconName="users" />
+            <FaIcon size={faSize} iconName="users" style={faStyle} />
             <h3>Who</h3>
-            <p>{props.who}</p>
+            <p {...textStyle}>{props.who}</p>
         </div>
         <div {...item}>
-            <FaIcon size={faSize} iconName="cogs" />
+            <FaIcon size={faSize} iconName="cogs" style={faStyle} />
             <h3>What</h3>
-            <p>{props.what}</p>
+            <p {...textStyle}>{props.what}</p>
         </div>
         <div {...item}>
-            <FaIcon size={faSize} iconName="line-chart" />
+            <FaIcon size={faSize} iconName="line-chart" style={faStyle} />
             <h3>Why</h3>
-            <p>{props.why}</p>
+            <p {...textStyle}>{props.why}</p>
         </div>
         <div {...item}>
-            <FaIcon size={faSize} iconName="location-arrow" />
+            <FaIcon size={faSize} iconName="location-arrow" style={faStyle} />
             <h3>Where</h3>
-            <p>{props.where}</p>
+            <p {...textStyle}>{props.where}</p>
         </div>
         <div {...item}>
-            <FaIcon size={faSize} iconName="comments-o" />
+            <FaIcon size={faSize} iconName="comments-o" style={faStyle} />
             <h3>How</h3>
-            <p>{props.how}</p>
+            <p {...textStyle}>{props.how}</p>
         </div>
     </div>
 )
