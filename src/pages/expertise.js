@@ -8,6 +8,7 @@ import MainServices from '../components/mainServices'
 import ImportantClients from '../components/importantClients'
 import AboutHeader from '../components/aboutHeader'
 import WhoWhatWhere from '../components/whoWhatWhere'
+import PartnerLogos from '../components/partnerLogos'
 
 const center = css({
   textAlign: 'center'
@@ -28,17 +29,21 @@ const why = 'We believe that you should have a designated team focused on aiding
 const where = 'Where ever you are we can go!';
 const how = 'Schedule a meeting to discuss how you can discover your creative possibilities that best reflect your vision with creatives that will surpass your expectations today.';
 
-const Expertise = ({props, data}) => (
-    <div>
-        <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" textStyle={subTextStyle}/>
-        <div> 
-            <AboutHeader />
-            <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
-            <MainServices />
+const Expertise = ({props, data}) => {
+    console.log(data)
+    return (
+        <div>
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" textStyle={subTextStyle}/>
+            <div> 
+                <AboutHeader />
+                <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
+                <MainServices />
+                <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
         </div>
         <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
-    </div>
-)
+        </div>
+    )
+}
 
 export default Expertise
 
@@ -66,6 +71,17 @@ query expertiseQuery {
     }
   } 
   partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
+    edges {
+        node {
+            childImageSharp {
+               sizes (maxWidth: 2400) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+      }
+  } 
+  companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Photography"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
             childImageSharp {

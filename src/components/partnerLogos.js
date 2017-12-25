@@ -17,6 +17,7 @@ const imageStyle = css({
 })
 
 const PartnerLogos = props => {
+    console.log(props)
     return (
         <div {...logoArray}>
             {props.partnerLogos.edges.map((file, i) => {
