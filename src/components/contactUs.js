@@ -62,7 +62,7 @@ const mainContactIconStyle = css({
 })
 
 const ContactUs = props => (
-    <div>
+    <div id="contact">
         <div {...headerText}>
            <h1 {...uppercase}>Be Found</h1> 
            <p {...noMargin}>Start Your Journey Towards Creative Freedom</p>

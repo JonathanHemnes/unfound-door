@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
 import Splash from '../components/splash'
-import mainSplashLogo from '../img/OurStoryHeader-TheUnfoundDoor.jpg'
 import Founder from '../components/founder'
 import OurTeam from '../components/ourTeam'
 import AboutHeader from '../components/aboutHeader'
