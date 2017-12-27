@@ -14,7 +14,9 @@ class BlurOnEnterAndExit extends React.Component {
     }
 
     interval() {
-        if (this.state.count !== -1) {
+        if(this.state.count === -1) {
+            clearInterval(this.intervalId);
+        } else {
             this.setState({
                 style: css({
                     filter: `blur(${this.state.count}px)`
