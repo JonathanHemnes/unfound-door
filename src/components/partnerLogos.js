@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import Img from 'gatsby-image'
+import BlurOnEnterAndExit from './blurOnEnterAndExit.js'
 
 const logoArray = css({
     display: 'flex',
@@ -40,7 +41,11 @@ class PartnerLogos extends React.Component {
 
     componentDidMount() {
         const randoTime = Math.random() * (5000 - 3000) + 3000;
-        setInterval(this.interval.bind(this), randoTime)
+        this.intervalId = setInterval(this.interval.bind(this), randoTime)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
     }
 
     render() {
@@ -48,9 +53,10 @@ class PartnerLogos extends React.Component {
         return (
             <div {...logoArray}>
                 {this.state.displayLogos.map((file, i) => {
+                    const element = <Img sizes={file.node.childImageSharp.sizes} /> 
                     return (
                         <div key={file.node.childImageSharp.sizes.src} {...imageStyle}>
-                            <Img sizes={file.node.childImageSharp.sizes} /> 
+                            <BlurOnEnterAndExit element={element} />
                         </div>
                     )   
                 })}

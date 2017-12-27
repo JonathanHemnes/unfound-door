@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from 'glamor'
 import TitledHeadshot from './titledHeadshot.js'
 import StyleStandards from '../styleStandards.js'
+import BlurOnEnterAndExit from './blurOnEnterAndExit'
 
 const headshotStyles = css({
     display: `flex`,
@@ -50,7 +51,11 @@ class OurTeam extends React.Component {
     }
     componentDidMount() {
         const randoTime = Math.random() * (5000 - 3000) + 3000;
-        setInterval(this.interval.bind(this), randoTime)
+        this.intervalId =  setInterval(this.interval.bind(this), randoTime)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
     }
 
     render() {
@@ -63,7 +68,8 @@ class OurTeam extends React.Component {
                 <div {...headshotStyles}>
                     {
                         this.state.displayHeadshots.map((file, i) => {
-                            return <TitledHeadshot key={file.node.childImageSharp.sizes.src} sizes={file.node.childImageSharp.sizes} name={getTeamMemberName(file.node.name)} title={getTeamMemberTitle(file.node.name)} />
+                            const element =  <TitledHeadshot key={file.node.childImageSharp.sizes.src} sizes={file.node.childImageSharp.sizes} name={getTeamMemberName(file.node.name)} title={getTeamMemberTitle(file.node.name)} /> 
+                            return <BlurOnEnterAndExit key={file.node.childImageSharp.sizes.src} element={element} />
                         })
                     }
                 </div>
