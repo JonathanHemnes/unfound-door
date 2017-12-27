@@ -16,19 +16,47 @@ const imageStyle = css({
     minWidth: '125px'
 })
 
-const PartnerLogos = props => {
-    console.log(props)
-    return (
-        <div {...logoArray}>
-            {props.partnerLogos.edges.map((file, i) => {
-                return (
-                    <div key={i} {...imageStyle}>
-                        <Img sizes={file.node.childImageSharp.sizes} /> 
-                    </div>
-                )   
-            })}
-        </div>
-    )
+class PartnerLogos extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            count: 0,
+            partnerLogos: props.partnerLogos,
+            displayLogos: props.partnerLogos.edges.slice(0, 5)
+        }
+    }
+
+    interval() {
+        if (this.state.count !== this.state.partnerLogos.edges.length - 5) {
+            this.setState({ count: this.state.count + 1 })
+        } else {
+            this.setState({count: 0})
+        }
+
+        this.setState({
+            displayLogos: this.state.partnerLogos.edges.slice(this.state.count, this.state.count + 5)
+        })
+    }
+
+    componentDidMount() {
+        const randoTime = Math.random() * (5000 - 3000) + 3000;
+        setInterval(this.interval.bind(this), randoTime)
+    }
+
+    render() {
+
+        return (
+            <div {...logoArray}>
+                {this.state.displayLogos.map((file, i) => {
+                    return (
+                        <div key={file.node.childImageSharp.sizes.src} {...imageStyle}>
+                            <Img sizes={file.node.childImageSharp.sizes} /> 
+                        </div>
+                    )   
+                })}
+            </div>
+        )
+    }
 }
 
 export default PartnerLogos
