@@ -32,87 +32,58 @@ const marginBottom = css({
 })
 
 const Videography = ({ data }) => {
-    const professionalImages=[
+    const videographyImages = [
         {
-            sizes: data.headshot.childImageSharp.sizes,
-            to: '/headshots',
-            text: 'Headshots'
+            sizes: data.companyCustomer.childImageSharp.sizes,
+            to: '/company-customer',
+            text: 'Company & Customer Spotlight'
         },
         {
-            sizes: data.eventsMeetings.childImageSharp.sizes,
-            to: '/events',
-            text: 'Events & Meetings'
+            sizes: data.training.childImageSharp.sizes,
+            to: '/training',
+            text: 'Training & Technical'
         },
         {
-            sizes: data.marketingLifestyle.childImageSharp.sizes,
-            to: '/marketing_lifestyle',
-            text: 'Marketing & Lifestyle'
+            sizes: data.social.childImageSharp.sizes,
+            to: '/social-videography',
+            text: 'Social Campaigns'
         },
         {
-            sizes: data.nonProfit.childImageSharp.sizes,
-            to: '/nonprofits',
-            text: 'Non Profit'
+            sizes: data.event.childImageSharp.sizes,
+            to: '/event-videography',
+            text: 'Event Highlight'
         },
         {
-            sizes: data.engineeringConstruction.childImageSharp.sizes,
-            to: '/engineering_construction',
-            text: 'Engineering / Construction'
+            sizes: data.sloMo.childImageSharp.sizes,
+            to: '/slow-motion-videography',
+            text: 'Slow-Mo Video Booth'
         },
         {
-            sizes: data.architecture.childImageSharp.sizes,
-            to: '/architecture',
-            text: 'Architecture & Project Progress'
+            sizes: data.products.childImageSharp.sizes,
+            to: '/product-videography',
+            text: 'Products'
         },
         {
             sizes: data.aerial.childImageSharp.sizes,
-            to: '/aerial',
+            to: '/aerial-videography',
             text: 'Aerial'
         },
         {
-            sizes: data.foodProduct.childImageSharp.sizes,
-            to: '/food_product',
-            text: 'Food & Product'
+            sizes: data.walkThru.childImageSharp.sizes,
+            to: '/walk-thru',
+            text: '360 Space Walk-Thru'
         }
-    ]
-    const personalImages = [
-        {
-            sizes: data.wedding.childImageSharp.sizes,
-            to: '/weddings',
-            text: 'Weddings & Couples Portraits'
-        },
-        {
-            sizes: data.families.childImageSharp.sizes,
-            to: '/families',
-            text: 'Families & Babies'
-        },
-        {
-            sizes: data.portraits.childImageSharp.sizes,
-            to: '/portraits',
-            text: 'Portraits & Seniors'
-        },
-        {
-            sizes: data.boudoir.childImageSharp.sizes,
-            to: '/boudoir',
-            text: 'Boudoir'
-        },
     ]
     return (
         <div>
             <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Videography" />
             <div {...center}>
-                <h1>Professional</h1>
-                <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
+                <h1>Videography</h1>
+                <p>Elevate your company videography with the videographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of videographer geniuses.</p>
             </div>
-            <PhotoLinkArray images={professionalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
             <h1 {...center}>The Company You'll Keep</h1>
             <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
-            <div {...center}>
-                <h1>Personal</h1>
-                <p>Creating keepsakes, one moment at a time</p>
-            </div>
-            <div {...marginBottom}>
-                <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            </div>
         </div>
     )
 }
@@ -135,17 +106,6 @@ query videographyQuery {
       }
     }
   } 
-  partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
-    edges {
-        node {
-            childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
-              }
-            }
-          }
-      }
-  } 
   companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Videography"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -157,84 +117,56 @@ query videographyQuery {
           }
       }
   } 
-  headshot: file(relativePath: {eq: "img/Photography_Sections/Headshot_Portrait.jpg"}) {
+  companyCustomer: file(relativePath: {eq: "img/Videography/Company_Customer_Spotlight_Videography.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  eventsMeetings: file(relativePath: {eq: "img/Photography_Sections/Events_Meetings.jpg"}) {
+  training: file(relativePath: {eq: "img/Videography/Training_Technical_Videography.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  marketingLifestyle: file(relativePath: {eq: "img/Photography_Sections/Marketing_Lifestyle.jpg"}) {
+  social: file(relativePath: {eq: "img/Videography/Social_Campaigns_Videography.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  nonProfit: file(relativePath: {eq: "img/Photography_Sections/Nonprofit.jpg"}) {
+  event: file(relativePath: {eq: "img/Videography/Event_Highlight_Videography.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  engineeringConstruction: file(relativePath: {eq: "img/Photography_Sections/Engineering_Construction.jpg"}) {
+  sloMo: file(relativePath: {eq: "img/Videography/Slow_Mo_Video_Booth.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  architecture: file(relativePath: {eq: "img/Photography_Sections/Architecture_Project.jpg"}) {
+  products: file(relativePath: {eq: "img/Videography/Product_Videography.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  aerial: file(relativePath: {eq: "img/Photography_Sections/Aerial_Photography.jpg"}) {
+  aerial: file(relativePath: {eq: "img/Videography/Aerial_Videography.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  foodProduct: file(relativePath: {eq: "img/Photography_Sections/Food_and_Product.jpg"}) {
-    childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  } 
-  wedding: file(relativePath: {eq: "img/Photography_Sections/Weddings_Couple_Portraits.jpg"}) {
-    childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  } 
-  families: file(relativePath: {eq: "img/Photography_Sections/Families_babies.jpg"}) {
-    childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  } 
-  boudoir: file(relativePath: {eq: "img/Photography_Sections/Boudoir_Photography.jpg"}) {
-    childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  } 
-  portraits: file(relativePath: {eq: "img/Photography_Sections/Portraits_Seniors.jpg"}) {
+  walkThru: file(relativePath: {eq: "img/Videography/360_Space_Walk_Thru.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
