@@ -30,7 +30,6 @@ const where = 'Where ever you are we can go!';
 const how = 'Schedule a meeting to discuss how you can discover your creative possibilities that best reflect your vision with creatives that will surpass your expectations today.';
 
 const Expertise = ({props, data}) => {
-    console.log(data)
     return (
         <div>
             <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" textStyle={subTextStyle}/>

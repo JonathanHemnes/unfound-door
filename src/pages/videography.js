@@ -31,7 +31,7 @@ const marginBottom = css({
     marginBottom: '20px'
 })
 
-const Photography = ({ data }) => {
+const Videography = ({ data }) => {
     const professionalImages=[
         {
             sizes: data.headshot.childImageSharp.sizes,
@@ -98,7 +98,7 @@ const Photography = ({ data }) => {
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Photography" />
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Videography" />
             <div {...center}>
                 <h1>Professional</h1>
                 <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
@@ -117,10 +117,10 @@ const Photography = ({ data }) => {
     )
 }
 
-export default Photography
+export default Videography
 
 export const query = graphql`
-query photographyQuery {
+query videographyQuery {
   splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
@@ -146,7 +146,7 @@ query photographyQuery {
           }
       }
   } 
-  companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Photography"}, extension: {regex: "/jpg|png/"}}){
+  companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Videography"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
             childImageSharp {
