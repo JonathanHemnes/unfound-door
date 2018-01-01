@@ -10,7 +10,13 @@ import WhoWeArePhoto from '../img/Main-WhoWeAre-Header.jpg'
 
 const photoArray = css({
     display: `flex`,
-    flexDirection: `row`
+    flexDirection: `row`,
+    minHeight: '300px'
+})
+
+const imageStyle = css({
+    minHeight: '300px',
+    overflow: 'hidden'
 })
 
 const IndexPage = ({ data }) => {
@@ -20,7 +26,7 @@ const IndexPage = ({ data }) => {
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>
-                <PhotoLink to={'/about'} src={WhoWeArePhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} />
+                <PhotoLink to={'/about'} src={WhoWeArePhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} imgStyle={imageStyle} />
             </div>
         </div>
     )}
