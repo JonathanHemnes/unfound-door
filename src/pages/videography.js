@@ -118,7 +118,7 @@ export default Videography
 
 export const query = graphql`
 query videographyQuery {
-  splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
+  splash: file (relativePath: {eq: "img/Videography/VideographyHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
