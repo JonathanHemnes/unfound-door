@@ -28,19 +28,32 @@ class PartnerLogos extends React.Component {
     }
 
     interval() {
-        if (this.state.count !== this.state.partnerLogos.edges.length - 5) {
-            this.setState({ count: this.state.count + 1 })
-        } else {
-            this.setState({count: 0})
-        }
+        const maxPossibleLogoArrayIndex = 5; 
+        const maxPossiblePhotoIndex = this.state.partnerLogos.edges.length - 1;
+        const randomArrayIndex = this.getRandomIndex(maxPossibleLogoArrayIndex);
+        const randomPhotoIndex = this.getRandomIndex(maxPossiblePhotoIndex)
 
-        this.setState({
-            displayLogos: this.state.partnerLogos.edges.slice(this.state.count, this.state.count + 5)
-        })
+        const newPhoto = this.state.partnerLogos.edges[randomPhotoIndex];
+        let newLogoArray = this.state.displayLogos;
+
+        if(!this.isLogoAlreadyShown(newPhoto.node.childImageSharp.sizes.src)) {
+            newLogoArray[randomArrayIndex] = newPhoto;
+            this.setState({
+                displayLogos: newLogoArray 
+            }) 
+        }
+    }
+
+    isLogoAlreadyShown(src) {
+        return this.state.displayLogos.find(logo => logo.node.childImageSharp.sizes.src === src)
+    }
+
+    getRandomIndex(maxIndex) {
+        return Math.floor(Math.random() * (maxIndex + 1))
     }
 
     componentDidMount() {
-        const randoTime = Math.random() * (5000 - 3000) + 3000;
+        const randoTime = Math.random() * (4000 - 1000) + 1000;
         this.intervalId = setInterval(this.interval.bind(this), randoTime)
     }
 
