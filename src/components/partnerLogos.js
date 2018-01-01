@@ -49,7 +49,7 @@ class PartnerLogos extends React.Component {
     }
 
     getRandomIndex(maxIndex) {
-        return Math.floor(Math.random() * (maxIndex + 1))
+        return Math.floor(Math.random() * maxIndex)
     }
 
     componentDidMount() {

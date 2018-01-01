@@ -39,18 +39,32 @@ class OurTeam extends React.Component {
     }
 
     interval() {
-        if (this.state.count !== this.state.teamHeadshots.edges.length - 5) {
-            this.setState({ count: this.state.count + 1 })
-        } else {
-            this.setState({count: 0})
-        }
+        const maxPossibleLogoArrayIndex = 5; 
+        const maxPossiblePhotoIndex = this.state.teamHeadshots.edges.length - 1;
+        const randomArrayIndex = this.getRandomIndex(maxPossibleLogoArrayIndex);
+        const randomPhotoIndex = this.getRandomIndex(maxPossiblePhotoIndex)
 
-        this.setState({
-            displayHeadshots: this.state.teamHeadshots.edges.slice(this.state.count, this.state.count + 5)
-        })
+        const newPhoto = this.state.teamHeadshots.edges[randomPhotoIndex];
+        let newLogoArray = this.state.displayHeadshots;
+
+        if(!this.isLogoAlreadyShown(newPhoto.node.childImageSharp.sizes.src)) {
+            newLogoArray[randomArrayIndex] = newPhoto;
+            this.setState({
+                displayHeadshots: newLogoArray 
+            }) 
+        }
     }
+
+    isLogoAlreadyShown(src) {
+        return this.state.displayHeadshots.find(logo => logo.node.childImageSharp.sizes.src === src)
+    }
+
+    getRandomIndex(maxIndex) {
+        return Math.floor(Math.random() * (maxIndex))
+    }
+
     componentDidMount() {
-        const randoTime = Math.random() * (5000 - 3000) + 3000;
+        const randoTime = Math.random() * (4000 - 2000) + 2000;
         this.intervalId =  setInterval(this.interval.bind(this), randoTime)
     }
 
