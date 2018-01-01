@@ -28,6 +28,11 @@ const center = css({
     marginLeft: '15%',
     marginRight: '15%',
     marginTop: '20px'
+
+})
+
+const uppercase = css({
+    textTransform: 'uppercase'
 })
 
 const marginBottom = css({
@@ -47,7 +52,7 @@ const largeContainerPhoto = {
 
 
 const Videography = ({ data }) => {
-    const videographyImages = [
+    const designImages = [
         {
             sizes: data.companyCustomer.childImageSharp.sizes,
             to: '/company-customer',
@@ -67,7 +72,10 @@ const Videography = ({ data }) => {
             sizes: data.event.childImageSharp.sizes,
             to: '/event-videography',
             text: 'Event Highlight'
-        },
+        }
+    ]
+
+    const strategyImages = [
         {
             sizes: data.sloMo.childImageSharp.sizes,
             to: '/slow-motion-videography',
@@ -93,13 +101,20 @@ const Videography = ({ data }) => {
         <div>
             <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" />
             <div {...center}>
-                <h1>Videography</h1>
-                <p>Elevate your company videography with the videographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of videographer geniuses.</p>
+                <h1 {...uppercase}>Purpose</h1>
+                <p>Your most important marketing assets should support your brand strategy. Whether you are reconstructing your image or building foundational tools to further your message, let us help you find the right path.</p>
             </div>
-            <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" to="/" containerStyle={largeContainerPhoto} />
-            <h1 {...center}>The Company You'll Keep</h1>
-            <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
+            <div {...center}>
+                <h1 {...uppercase}>Design</h1>
+                <p>In this ever changing technological landscape, you have options, sometimes too many options. Do you want a Wordpress website or a custom coded website? What social campaigns will lead to a higher conversion rate? Contact us to examine your opportunities and see what we have been up to.</p>
+            </div>
+            <PhotoLinkArray images={designImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <div {...center}>
+                <h1 {...uppercase}>Strategy</h1>
+                <p>Need help?</p>
+            </div>
+            <PhotoLinkArray images={strategyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Elevate youur marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} />
         </div>
     )
 }
