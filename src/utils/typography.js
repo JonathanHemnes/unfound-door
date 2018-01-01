@@ -2,11 +2,11 @@ import Typography from 'typography'
 
 const typography = new Typography({
     scaleRatio: 3,
-    headerFontFamily: ['Roboto', 'sans-serif'],
-    bodyFontFamily: ['Roboto', 'sans-serif'],
+    headerFontFamily: ['Raleway', 'sans-serif'],
+    bodyFontFamily: ['Raleway', 'sans-serif'],
     googleFonts: [
         {
-            name: 'Roboto',
+            name: 'Raleway',
             styles: [
                 '400',
                 '400i',

@@ -18,8 +18,8 @@ const headerText = css({
 })
 
 const subText = css({
-    marginLeft: `5%`,
-    marginRight: `5%`,
+    marginLeft: `15%`,
+    marginRight: `15%`,
     textOverflow: 'wrap',
     textAlign: `center`
 })
