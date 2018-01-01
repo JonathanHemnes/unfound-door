@@ -40,6 +40,11 @@ const greyBackground = css({
     paddingTop: '20px'
 })
 
+const largeContainerPhoto = {
+    width: `100vw`,
+    marginTop: '35px'
+}
+
 const who = 'is your audience?';
 const what = 'is the purpose of the video(s)? What story do you want to tell?';
 const why = 'utilize moving picture versus still imagery?';
@@ -97,14 +102,14 @@ const Videography = ({ data }) => {
                 <p>Elevate your company videography with the videographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of videographer geniuses.</p>
             </div>
             <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" to="/" />
-            <h1 {...center}>The Company You'll Keep</h1>
-            <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
+            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" to="/" containerStyle={largeContainerPhoto} />
             <div {...greyBackground}>
                 <h1>CONCEPTION</h1>
                 <p>Questions to consider and ask when planning videography. Schedule a meeting to discuss your options in person and get insight on how videography is put together.</p>
                 <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             </div>
+            <h1 {...center}>The Company You'll Keep</h1>
+            <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
         </div>
     )
 }

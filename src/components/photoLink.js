@@ -5,11 +5,6 @@ import PropTypes from 'prop-types'
 import GreyImage from './greyImage'
 import StyleStandards from '../styleStandards.js'
 
-const container = css({
-    position: `relative`,
-    minWidth: '360px',
-    flex: 1
-})
 
 const textBlock = css({
     position: `absolute`,
@@ -26,17 +21,24 @@ const white = css({
 })
 
 
-const PhotoLink = (props) => (
-    <div {...container}>
+const PhotoLink = (props) => {
+    const container = css(Object.assign({
+        position: `relative`,
+        minWidth: '360px',
+        width: '25vw',
+        flex: 1
+    }, props.containerStyle ))
+    return (<div {...container}>
         <Link to={props.to}>
             <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
             {props.text && <div {...textBlock}>
                 <h2 {...white}>{props.text}</h2>
                 <h3 {...white}>{props.subText}</h3>
-            </div>}
-        </Link>
-    </div>
-)
+                    </div>}
+                </Link>
+        </div>
+    )
+}
 
 PhotoLink.propTypes = {
     to: PropTypes.string,
