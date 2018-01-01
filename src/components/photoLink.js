@@ -28,14 +28,26 @@ const PhotoLink = (props) => {
         width: '25vw',
         flex: 1
     }, props.containerStyle ))
-    return (<div {...container}>
-        <Link to={props.to}>
-            <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
-            {props.text && <div {...textBlock}>
-                <h2 {...white}>{props.text}</h2>
-                <h3 {...white}>{props.subText}</h3>
+
+    return (
+        <div {...container}>
+            { props.to ?
+                <Link to={props.to}>
+                    <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
+                    {props.text && <div {...textBlock}>
+                        <h2 {...white}>{props.text}</h2>
+                        <h3 {...white}>{props.subText}</h3>
                     </div>}
                 </Link>
+                :
+                <a href={props.href} target="_blank">
+                    <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
+                    {props.text && <div {...textBlock}>
+                        <h2 {...white}>{props.text}</h2>
+                        <h3 {...white}>{props.subText}</h3>
+                    </div>}
+                </a>
+            }
         </div>
     )
 }

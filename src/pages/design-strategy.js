@@ -45,11 +45,6 @@ const largeContainerPhoto = {
     marginTop: '35px'
 }
 
-const who = 'is your audience?';
-const what = 'is the purpose of the video(s)? What story do you want to tell?';
-const why = 'utilize moving picture versus still imagery?';
-const where = 'will your audience interact with and view the video(s)?';
-const how = 'will your video(s) be narrated?';
 
 const Videography = ({ data }) => {
     const videographyImages = [
@@ -96,18 +91,13 @@ const Videography = ({ data }) => {
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Videography" />
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" />
             <div {...center}>
                 <h1>Videography</h1>
                 <p>Elevate your company videography with the videographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of videographer geniuses.</p>
             </div>
             <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" href="https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA" containerStyle={largeContainerPhoto} />
-            <div {...greyBackground}>
-                <h1>CONCEPTION</h1>
-                <p>Questions to consider and ask when planning videography. Schedule a meeting to discuss your options in person and get insight on how videography is put together.</p>
-                <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
-            </div>
+            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" to="/" containerStyle={largeContainerPhoto} />
             <h1 {...center}>The Company You'll Keep</h1>
             <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
         </div>
@@ -117,7 +107,7 @@ const Videography = ({ data }) => {
 export default Videography
 
 export const query = graphql`
-query videographyQuery {
+query designStrategyQuery {
   splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
