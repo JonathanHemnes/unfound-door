@@ -51,52 +51,53 @@ const largeContainerPhoto = {
 }
 
 
-const Videography = ({ data }) => {
+const DesignStrategy = ({ data }) => {
     const designImages = [
         {
-            sizes: data.companyCustomer.childImageSharp.sizes,
-            to: '/company-customer',
-            text: 'Company & Customer Spotlight'
+            sizes: data.graphic.childImageSharp.sizes,
+            to: '/graphic-design',
+            text: 'Graphic Design & Branding'
         },
         {
-            sizes: data.training.childImageSharp.sizes,
-            to: '/training',
-            text: 'Training & Technical'
+            sizes: data.webDesign.childImageSharp.sizes,
+            to: '/web-design',
+            text: 'Web Design & Website Maintenance'
         },
         {
-            sizes: data.social.childImageSharp.sizes,
-            to: '/social-videography',
-            text: 'Social Campaigns'
+            sizes: data.socialMedia.childImageSharp.sizes,
+            to: '/social-media',
+            text: 'Social Media'
         },
         {
-            sizes: data.event.childImageSharp.sizes,
-            to: '/event-videography',
-            text: 'Event Highlight'
+            sizes: data.contentCreation.childImageSharp.sizes,
+            to: '/content-creation',
+            text: 'Content Creation & SEO'
         }
     ]
 
     const strategyImages = [
         {
-            sizes: data.sloMo.childImageSharp.sizes,
-            to: '/slow-motion-videography',
-            text: 'Slow-Mo Video Booth'
+            sizes: data.account.childImageSharp.sizes,
+            to: '/account-management',
+            text: 'Account Management'
         },
         {
-            sizes: data.products.childImageSharp.sizes,
-            to: '/product-videography',
-            text: 'Products'
+            sizes: data.smallBusinessFoundation.childImageSharp.sizes,
+            to: '/small-business-foundation',
+            text: 'Small Business Foundation'
         },
         {
-            sizes: data.aerial.childImageSharp.sizes,
-            to: '/aerial-videography',
-            text: 'Aerial'
+            sizes: data.businessDevelopment.childImageSharp.sizes,
+            to: '/business-development',
+            text: 'Business Development'
         },
         {
-            sizes: data.walkThru.childImageSharp.sizes,
-            to: '/walk-thru',
-            text: '360 Space Walk-Thru'
+            sizes: data.creative.childImageSharp.sizes,
+            to: '/creative-suite',
+            text: 'Creative Suite'
         }
     ]
+
     return (
         <div>
             <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" />
@@ -114,16 +115,16 @@ const Videography = ({ data }) => {
                 <p>Need help?</p>
             </div>
             <PhotoLinkArray images={strategyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Elevate youur marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} />
+            <PhotoLink sizes={data.elevate.childImageSharp.sizes} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} />
         </div>
     )
 }
 
-export default Videography
+export default DesignStrategy
 
 export const query = graphql`
 query designStrategyQuery {
-  splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
+  splash: file (relativePath: {eq: "img/Design_Strategy/Header.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
@@ -137,74 +138,63 @@ query designStrategyQuery {
       }
     }
   } 
-  companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Videography"}, extension: {regex: "/jpg|png/"}}){
-    edges {
-        node {
-            childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
-              }
-            }
-          }
-      }
-  } 
-  portfolio: file(relativePath: {eq: "img/Videography/Recent_Portfolio_Videography_Icon.jpg"}) {
+  elevate: file(relativePath: {eq: "img/Design_Strategy/Elevate_Marketing_Materials.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  companyCustomer: file(relativePath: {eq: "img/Videography/Company_Customer_Spotlight_Videography.jpg"}) {
+  account: file(relativePath: {eq: "img/Design_Strategy/Account_Management.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  training: file(relativePath: {eq: "img/Videography/Training_Technical_Videography.jpg"}) {
+  graphic: file(relativePath: {eq: "img/Design_Strategy/Graphic_Design_and_Branding.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  social: file(relativePath: {eq: "img/Videography/Social_Campaigns_Videography.jpg"}) {
+  creative: file(relativePath: {eq: "img/Design_Strategy/Creative_Suite.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  event: file(relativePath: {eq: "img/Videography/Event_Highlight_Videography.jpg"}) {
+  contentCreation: file(relativePath: {eq: "img/Design_Strategy/Creative_Suite.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  sloMo: file(relativePath: {eq: "img/Videography/Slow_Mo_Video_Booth.jpg"}) {
+  socialMedia: file(relativePath: {eq: "img/Design_Strategy/Social_Media.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  products: file(relativePath: {eq: "img/Videography/Product_Videography.jpg"}) {
+  webDesign: file(relativePath: {eq: "img/Design_Strategy/WebDesign_and_Website_Maintenence.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  aerial: file(relativePath: {eq: "img/Videography/Aerial_Videography.jpg"}) {
+  businessDevelopment: file(relativePath: {eq: "img/Design_Strategy/Business_Development.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
       }
     }
   } 
-  walkThru: file(relativePath: {eq: "img/Videography/360_Space_Walk_Thru.jpg"}) {
+  smallBusinessFoundation: file(relativePath: {eq: "img/Design_Strategy/Small_Business_Foundation.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes
