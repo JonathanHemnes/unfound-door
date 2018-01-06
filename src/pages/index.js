@@ -6,7 +6,7 @@ import mainSplashLogo from '../img/header/MainPageHeader.jpg'
 import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photoLink'
 import MainServices from '../components/mainServices'
-import WhoWeArePhoto from '../img/Main-WhoWeAre-Header.jpg'
+import CustomerReviews from '../components/customerReviews'
 
 const photoArray = css({
     display: `flex`,
@@ -19,6 +19,20 @@ const imageStyle = css({
     overflow: 'hidden'
 })
 
+const reviews = [{
+    text: 'GE Johnson engaged The Unfound Door to help us cel- ebrate our 50th Anniversary and capture the momentous occasion. Our photographer was extremely easy to work with, professional, understood our mission, and captured our celebration perfectly. We will no doubt use their services again. They did not disappoint, in fact, they delivered much more than we could have ever anticipated.',
+    source: 'Michelle K., GE Johnson'
+},{
+    text: 'I engaged The Unfound Door to shoot both my professional head-shots and stock imagery for the re-design of my web- site. They went out of their way to make sure we captured all the different types of shots we had originally discussed and displayed their creativity in suggesting various angles and backgrounds for photos. They were great to work with and I appreciated their level of professionalism and positivity.',
+    source: 'Julie W., Business Rewritten'
+}, {
+    text: 'Ely and her team are great to work with! We have used them a few times to shoot various construction projects and have received quality images with quick turn-around. Ely and her team take care to make sure we get the shots that not only help us but also our clients!',
+    source: 'Jessica N., Pinkard Construction'
+}, {
+    text: 'They are so amazing to work with! Totally made me feel like a movie star for a morning, and the head shots turned out amazing.',
+    source: 'Conor R.'
+}]
+
 const IndexPage = ({ data }) => {
     return (
         <div>
@@ -26,8 +40,9 @@ const IndexPage = ({ data }) => {
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>
-                <PhotoLink to={'/about'} src={WhoWeArePhoto} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} imgStyle={imageStyle} />
+                <PhotoLink to={'/about'} sizes={data.whoWeArePhoto.childImageSharp.sizes} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} imgStyle={imageStyle} />
             </div>
+            <CustomerReviews reviews={reviews} />
         </div>
     )}
 
@@ -43,6 +58,13 @@ export const query = graphql`
       }
     },
     file (relativePath: {eq: "img/header/MainPageHeader.jpg"}) {
+      childImageSharp {
+        sizes (maxWidth: 2400) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    },
+    whoWeArePhoto: file (relativePath: {eq: "img/Main-WhoWeAre-Header.jpg"}) {
       childImageSharp {
         sizes (maxWidth: 2400) {
           ...GatsbyImageSharpSizes
