@@ -191,7 +191,7 @@ query designStrategyQuery {
       }
     }
   } 
-  contentCreation: file(relativePath: {eq: "img/Design_Strategy/Creative_Suite.jpg"}) {
+  contentCreation: file(relativePath: {eq: "img/Design_Strategy/Content_Creation_and_SEO.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes

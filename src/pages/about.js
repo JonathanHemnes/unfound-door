@@ -47,7 +47,7 @@ export default About
 
 export const query = graphql`
 query aboutQuery {
-  splash: file (relativePath: {eq: "img/OurStoryHeader-TheUnfoundDoor.jpg"}) {
+  splash: file (relativePath: {eq: "img/header/OurStoryHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
         ...GatsbyImageSharpSizes

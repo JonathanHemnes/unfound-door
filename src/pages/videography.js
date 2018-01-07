@@ -15,6 +15,7 @@ const smallerFontOnSmallScreen = css({
 })
 
 const portfolioBanner = css({
+    fontSize: '2.5rem',
     '@media(max-width: 470px)': {
         fontSize: '1.4rem'
     }
@@ -59,6 +60,10 @@ const largeContainerPhoto = {
     width: `100vw`,
     marginTop: '35px'
 }
+
+const marginSides = css({
+    margin: '0 4%'
+})
 
 const who = 'is your audience?';
 const what = 'is the purpose of the video(s)? What story do you want to tell?';
@@ -123,7 +128,7 @@ const Videography = ({ data }) => {
             </div>
             <div {...greyBackground} {...conception}>
                 <h1 {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>Conception</h1>
-                <p>Questions to consider and ask when planning videography. Schedule a meeting to discuss your options in person and get insight on how videography is put together.</p>
+                <p {...marginSides}>Questions to consider and ask when planning videography. Schedule a meeting to discuss your options in person and get insight on how videography is put together.</p>
                 <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             </div>
             <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom}>
