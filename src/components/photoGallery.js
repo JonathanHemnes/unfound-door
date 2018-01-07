@@ -13,6 +13,12 @@ const stripe = css({
     backgroundColor: 'black'
 })
 
+const headerFontStyle = css({
+    '@media(max-width: 400px)': {
+        fontSize: '1.4rem'
+    }
+})
+
 const PhotoGallery = props => {
     const PHOTO_SET = props.photos
         .filter(edge => edge.node.childImageSharp && edge.node.childImageSharp.resolutions)
@@ -29,7 +35,7 @@ const PhotoGallery = props => {
         <div>
             <div {...stripe}></div>
             <div {...header}>
-                <h1>{props.title}</h1>
+                <h1 {...headerFontStyle}>{props.title}</h1>
             </div> 
             <Gallery photos={PHOTO_SET} />
         </div>
