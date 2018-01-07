@@ -5,6 +5,8 @@ import Splash from '../components/splash'
 import MainServices from '../components/mainServices'
 import PhotoLink from '../components/photoLink'
 import Address from '../components/address'
+import SocialIcons from '../components/socialIcons'
+import FaIcon from '../components/faIcon'
 
 const noBottomMargin = css({
     marginBottom: 0
@@ -37,23 +39,36 @@ const textStyle = css({
 
 const flexContainer = css({
     display: 'flex',
-    fledWrap: 'wrap'
+    flexWrap: 'wrap'
 })
 
 const contactForm = css({
     flex: 2,
+    minWidth: '400px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center'
 })
 
 const connectArea = css({
-    flex: 1
+    flex: 1,
+    minWidth: '350px',
+    '> h2': {
+        backgroundColor: StyleStandards.colors.black,
+        color: StyleStandards.colors.white,
+        padding: '10px',
+        textTransform: 'uppercase'
+    }
+})
+
+const uppercase = css({
+    textTransform: 'uppercase'
 })
 
 const inputStyle = css({
     width: '100%',
-    maxWidth: '600px',
+    maxWidth: '800px',
     minWidth: '200px',
     marginBottom: '35px',
     '> input' : {
@@ -86,6 +101,21 @@ const buttonStyle = css({
     fontSize: '1rem'
 })
 
+const mainContactIcons = css({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '150px'
+})
+
+const mainContactIconStyle = css({
+    margin: '10px'
+})
+
+const paddingTop = css({
+    marginTop: '25px'
+})
+
 class Contact extends React.Component { 
     constructor({props, data}) {
         super(props);
@@ -107,27 +137,35 @@ class Contact extends React.Component {
             <div>
                 <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} />
                 <div {...StyleStandards.marginTop} {...header}>
-                    <h1 {...noBottomMargin}>Be Found</h1>
+                    <h1 {...noBottomMargin} {...uppercase}>Contact Us</h1>
                     <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>
                 </div>
                 <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom} {...flexContainer}>
                     <form name="contact" data-netlify="true" {...contactForm}>
-                        <h2>Give Us A Shout</h2>
+                        <h2 {...uppercase}>Give Us A Shout</h2>
                         <div {...inputStyle}>
-                            <input type="text" name="name" placeholder="Name" required/>
+                            <input type="text" name="name" placeholder="NAME" required/>
                         </div>
                         <div {...inputStyle}>
-                            <input type="email" name="email" placeholder="Email" required />
+                            <input type="email" name="email" placeholder="EMAIL" required />
                         </div>
                         <div {...inputStyle}>
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <textarea name="message" placeholder="MESSAGE"></textarea>
                         </div>
                         <div {...callToAction}>
                             <button type="submit" {...buttonStyle}>Submit</button>
                         </div>
                     </form>
                     <div {...connectArea}>
+                        <h2 {...noBottomMargin}>Connect</h2>
+                        <SocialIcons />
+                        <h2 {...noBottomMargin}>Find Us</h2>
                         <Address /> 
+                        <h2 {...noBottomMargin} {...paddingTop}>Drop A Line</h2>
+                        <div {...mainContactIcons}>
+                            <FaIcon link="tel:6177759911" iconName="phone" size="fa-5x" style={mainContactIconStyle} />
+                            <FaIcon link="mailto:ely@theunfounddoor.com" iconName="envelope" size="fa-5x" style={mainContactIconStyle} />
+                        </div>
                     </div>
                 </div>
                 <MainServices />
