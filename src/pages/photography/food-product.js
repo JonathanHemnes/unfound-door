@@ -4,7 +4,8 @@ import PhotoGallery from '../../components/photoGallery'
 const FoodPhotography = ({ data }) => {
 
     return (
-        <PhotoGallery title="Food & Product Photography" photos={data.allFile.edges} />
+        // <PhotoGallery title="Food & Product Photography" photos={data.allFile.edges} />
+        <h1>Hello</h1>
     )
 }
 
