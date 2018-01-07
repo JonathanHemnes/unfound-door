@@ -41,38 +41,79 @@ const flexContainer = css({
 })
 
 const contactForm = css({
-    flex: 2
+    flex: 2,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
 })
 
 const connectArea = css({
     flex: 1
 })
 
+const inputStyle = css({
+    width: '100%',
+    maxWidth: '600px',
+    minWidth: '200px',
+    marginBottom: '35px',
+    '> input' : {
+        width: '100%',
+        background: StyleStandards.colors.grey,
+        border: 'none'
+    },
+    '> textArea' : {
+        width: '100%',
+        background: StyleStandards.colors.grey,
+        border: 'none'
+    }
+})
+
+const callToAction = css({
+    display: `flex`,
+    flexDirection: `column`,
+    alignItems: `center`,
+    justifyContent: `center`,
+    paddingBottom: '25px'
+})
+
+const buttonStyle = css({
+    ...StyleStandards.animations.greyHoverBackground,
+    textDecoration: `none`,
+    padding: `15px 30px 15px 30px`,
+    border: `2px solid black`,
+    color: StyleStandards.colors.black,
+    textTransform: 'uppercase',
+    fontSize: '1rem'
+})
+
 const Contact = ({ data }) => {
+    function getTitleFromSearch() {
+        const cleansedSearch = decodeURIComponent( window.location.search.slice(1) )
+        return `Contact Us About ${cleansedSearch}` 
+    }
+    const subText = window.location.search ? getTitleFromSearch() : 'Contact Us'
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Contact Us" />
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={subText} />
             <div {...StyleStandards.marginTop} {...header}>
                 <h1 {...noBottomMargin}>Be Found</h1>
                 <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>
             </div>
             <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom} {...flexContainer}>
-                <div {...contactForm}>
-                    <form name="contact" data-netlify="true">
-                        <div>
-                            <input type="text" name="name" placeholder="Name" required />
-                        </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Email" required />
-                        </div>
-                        <div>
-                            <textarea name="message" placeholder="Message"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
+                <form name="contact" data-netlify="true" {...contactForm}>
+                    <div {...inputStyle}>
+                        <input type="text" name="name" placeholder="Name" required/>
+                    </div>
+                    <div {...inputStyle}>
+                        <input type="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div {...inputStyle}>
+                        <textarea name="message" placeholder="Message"></textarea>
+                    </div>
+                    <div {...callToAction}>
+                        <button type="submit" {...buttonStyle}>Send</button>
+                    </div>
+                </form>
                 <div {...connectArea}>
                     <Address /> 
                 </div>
