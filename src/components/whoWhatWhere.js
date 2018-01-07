@@ -13,7 +13,8 @@ const container = css({
 })
 
 const header = css({
-    paddingTop: 0
+    paddingTop: 0,
+    marginBottom: '5px'
 })
 
 const item = css({
@@ -51,22 +52,22 @@ const WhoWhatWhere = props => (
         </div>
         <div {...item}>
             <FaIcon size={faSize} iconName="cogs" style={faStyle} />
-            <h3 {...uppercase}>What</h3>
+            <h3 {...uppercase} {...header}>What</h3>
             <p {...textStyle} {...StyleStandards.paragraphSmall}>{props.what}</p>
         </div>
         <div {...item}>
             <FaIcon size={faSize} iconName="line-chart" style={faStyle} />
-            <h3 {...uppercase}>Why</h3>
+            <h3 {...uppercase} {...header}>Why</h3>
             <p {...textStyle} {...StyleStandards.paragraphSmall}>{props.why}</p>
         </div>
         <div {...item}>
             <FaIcon size={faSize} iconName="location-arrow" style={faStyle} />
-            <h3 {...uppercase}>Where</h3>
+            <h3 {...uppercase} {...header}>Where</h3>
             <p {...textStyle} {...StyleStandards.paragraphSmall}>{props.where}</p>
         </div>
         <div {...item}>
             <FaIcon size={faSize} iconName="comments-o" style={faStyle} />
-            <h3 {...uppercase}>How</h3>
+            <h3 {...uppercase} {...header}>How</h3>
             <p {...textStyle} {...StyleStandards.paragraphSmall}>{props.how}</p>
         </div>
     </div>

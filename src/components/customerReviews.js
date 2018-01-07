@@ -36,6 +36,12 @@ const CustomerReviews = props => {
         marginBottom: '10px'
     })
 
+    const smallerFontOnSmallScreen = css({
+        '@media(max-width: 400px)': {
+            fontSize: '2rem'
+        }
+    })
+
     const reviews = [{
         text: 'GE Johnson engaged The Unfound Door to help us cel- ebrate our 50th Anniversary and capture the momentous occasion. Our photographer was extremely easy to work with, professional, understood our mission, and captured our celebration perfectly. We will no doubt use their services again. They did not disappoint, in fact, they delivered much more than we could have ever anticipated.',
         source: 'Michelle K., GE Johnson'
@@ -54,7 +60,7 @@ const CustomerReviews = props => {
 
     return (
         <div {...container}>
-            <h1 {...header}>People Say The Nicest Things!</h1>
+            <h1 {...header} {...smallerFontOnSmallScreen}>People Say The Nicest Things!</h1>
             <div {...reviewContainer}>
                 {reviews.map(( review, idx ) => {
                     return (

@@ -35,7 +35,7 @@ const emphasis = css({
 const WhatWeDo = ( props ) => (
     <div {...container}>
         <div {...header}>
-            <h4 {...headerText}>Collaborate with the best, elevate your visuals</h4>
+            <h4 {...headerText}>Collaborate with the best, elevate your creative marketing assets</h4>
             <h1 {...headerText}>What We Do</h1>
         </div>
         <div {...subText}>

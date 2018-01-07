@@ -8,7 +8,8 @@ const container = css({
     justifyContent: 'center',
     alignItems: 'center',
     height: '150px',
-    paddingTop: '20px'
+    paddingTop: '20px',
+    paddingBottom: '15px'
 })
 
 const anchor = css({

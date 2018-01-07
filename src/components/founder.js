@@ -40,7 +40,7 @@ const rightPhotoStyle = css({
 const overlayTextStyle = css({
     color: `white`,
     fontSize: '18px',
-    width: '120%',
+    width: '134%',
     fontSize: '16px',
     lineHeight: 1.5
 })

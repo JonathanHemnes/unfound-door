@@ -26,7 +26,10 @@ const subTextStyle = css({
 const textStyle = css({
     fontSize: '2.5rem',
     marginBottom: '0px',
-    lineHeight: 1
+    lineHeight: 1,
+    '@media(max-width: 400px)': {
+        fontSize: '1rem'
+    }
 })
 
 const IndexPage = ({ data }) => {

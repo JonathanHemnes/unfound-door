@@ -127,7 +127,7 @@ const Videography = ({ data }) => {
                 <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             </div>
             <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom}>
-                <h1 {...center} {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin}>The Company You'll Keep</h1>
+                <h1 {...center} {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>The Company You'll Keep</h1>
                 <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
         </div>
         </div>

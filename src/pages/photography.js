@@ -5,6 +5,7 @@ import PhotoLinkArray from '../components/photoLinkArray'
 import PartnerLogos from '../components/partnerLogos.js'
 import CustomerReviews from '../components/customerReviews'
 import LetsTalk from '../components/letsTalk'
+import StyleStandards from '../styleStandards'
 
 const container = css({
     margin: '75px 0 75px 0',
@@ -55,6 +56,12 @@ const bottomPadding = css({
 
 const textStyle = css({
     fontSize: '1.4rem'
+})
+
+const smallerFontOnSmallScreen = css({
+    '@media(max-width: 400px)': {
+        fontSize: '1.4rem'
+    }
 })
 
 const Photography = ({ data }) => {
@@ -125,25 +132,25 @@ const Photography = ({ data }) => {
     return (
         <div>
             <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Photography" />
-            <CustomerReviews />
-            <div {...center} {...bottomPadding}>
-                <h1 {...header}>Professional</h1>
+            <div {...center} {...bottomPadding} {...StyleStandards.marginTop}>
+                <h1 {...header} {...smallerFontOnSmallScreen}>Professional Photography</h1>
                 <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
                 <LetsTalk email={data.site.siteMetadata.mainEmail} />
             </div>
             <PhotoLinkArray images={professionalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
             <div {...container}>
-                <h1 {...center} {...noBottomMargin} {...uppercase}>The Company You'll Keep</h1>
+                <h1 {...center} {...noBottomMargin} {...uppercase} {...smallerFontOnSmallScreen}>The Company You'll Keep</h1>
                 <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
             </div>
             <div {...center}>
-                <h1 {...uppercase} {...noBottomMargin}>Personal</h1>
+                <h1 {...uppercase} {...noBottomMargin} {...smallerFontOnSmallScreen}>Personal Photography</h1>
                 <p>Creating keepsakes, one moment at a time</p>
                 <LetsTalk email={data.site.siteMetadata.mainEmail} />
             </div>
             <div {...marginBottom}>
                 <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
             </div>
+            <CustomerReviews />
         </div>
     )
 }

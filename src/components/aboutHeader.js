@@ -16,7 +16,7 @@ const center = css({
 const AboutHeader = () => (
     <div>
         <h1 {...title}>About Us</h1>
-        <p {...center}>THE<strong>UNFOUND</strong>DOOR began as an experiment; can artists provide the level of service, responsibility, and management that clients need and deserve?</p>
+        <p {...center}>Creativity and efficiency is the name of our game. We believe in helping you find the right path towards creative freedom.</p>
     </div>
 )
 

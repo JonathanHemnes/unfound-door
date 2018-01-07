@@ -44,7 +44,7 @@ const flexContainer = css({
 
 const contactForm = css({
     flex: 2,
-    minWidth: '400px',
+    minWidth: '300px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

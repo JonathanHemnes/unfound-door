@@ -58,6 +58,14 @@ const textStyle = css({
     fontSize: '1.4rem'
 })
 
+const headerStyle = css({
+    fontSize: '2.5rem',
+    lineHeight: 1,
+    '@media(max-width: 400px)': {
+        fontSize: '1rem'
+    }
+})
+
 const DesignStrategy = ({ data }) => {
     const designImages = [
         {
@@ -100,8 +108,8 @@ const DesignStrategy = ({ data }) => {
         },
         {
             sizes: data.creative.childImageSharp.sizes,
-            to: '/creative-suite',
-            text: 'Creative Suite'
+            to: '/creative-blueprint',
+            text: 'Creative Blueprint'
         }
     ]
 
@@ -124,7 +132,7 @@ const DesignStrategy = ({ data }) => {
             </div>
             <div {...StyleStandards.marginBottom}>
                 <PhotoLinkArray images={strategyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
-                <PhotoLink sizes={data.elevate.childImageSharp.sizes} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} />
+                <PhotoLink sizes={data.elevate.childImageSharp.sizes} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} textStyle={headerStyle} />
         </div>
         </div>
     )
