@@ -86,46 +86,58 @@ const buttonStyle = css({
     fontSize: '1rem'
 })
 
-const Contact = ({ data }) => {
-    function getTitleFromSearch() {
-        const cleansedSearch = decodeURIComponent( window.location.search.slice(1) )
-        return `Contact Us About ${cleansedSearch}` 
+class Contact extends React.Component { 
+    constructor({props, data}) {
+        super(props);
+        this.data = data;
+        this.state = {
+            subText: 'Contact Us'
+        }
     }
-    const subText = window.location.search ? getTitleFromSearch() : 'Contact Us'
-    return (
-        <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={subText} />
-            <div {...StyleStandards.marginTop} {...header}>
-                <h1 {...noBottomMargin}>Be Found</h1>
-                <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>
-            </div>
-            <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom} {...flexContainer}>
-                <form name="contact" data-netlify="true" {...contactForm}>
-                    <div {...inputStyle}>
-                        <input type="text" name="name" placeholder="Name" required/>
+
+    componentDidMount() {
+        if (window.location.search) {
+            const cleansedSearch = decodeURIComponent( window.location.search.slice(1) )
+            const subText = `Contact Us About ${cleansedSearch}` 
+            this.setState({subText})
+        } 
+    }
+    render () {
+        return (
+            <div>
+                <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} />
+                <div {...StyleStandards.marginTop} {...header}>
+                    <h1 {...noBottomMargin}>Be Found</h1>
+                    <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>
+                </div>
+                <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom} {...flexContainer}>
+                    <form name="contact" data-netlify="true" {...contactForm}>
+                        <h2>Give Us A Shout</h2>
+                        <div {...inputStyle}>
+                            <input type="text" name="name" placeholder="Name" required/>
+                        </div>
+                        <div {...inputStyle}>
+                            <input type="email" name="email" placeholder="Email" required />
+                        </div>
+                        <div {...inputStyle}>
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div {...callToAction}>
+                            <button type="submit" {...buttonStyle}>Submit</button>
+                        </div>
+                    </form>
+                    <div {...connectArea}>
+                        <Address /> 
                     </div>
-                    <div {...inputStyle}>
-                        <input type="email" name="email" placeholder="Email" required />
-                    </div>
-                    <div {...inputStyle}>
-                        <textarea name="message" placeholder="Message"></textarea>
-                    </div>
-                    <div {...callToAction}>
-                        <button type="submit" {...buttonStyle}>Send</button>
-                    </div>
-                </form>
-                <div {...connectArea}>
-                    <Address /> 
+                </div>
+                <MainServices />
+                <div {...photoArray}>
+                    <PhotoLink to={'/about'} sizes={this.data.whoWeArePhoto.childImageSharp.sizes} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} textStyle={textStyle} subTextStyle={subTextStyle} imgStyle={imageStyle} />
                 </div>
             </div>
-            <MainServices />
-            <div {...photoArray}>
-                <PhotoLink to={'/about'} sizes={data.whoWeArePhoto.childImageSharp.sizes} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} textStyle={textStyle} subTextStyle={subTextStyle} imgStyle={imageStyle} />
-            </div>
-        </div>
-    )
+        )
+    }
 }
-
 export default Contact
 
 export const query = graphql`
