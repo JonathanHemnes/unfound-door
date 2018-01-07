@@ -4,7 +4,7 @@ import PhotoGallery from '../../components/photoGallery'
 const EngineeringPhotography = ({ data }) => {
 
     return (
-        <PhotoGallery title="Engineering Photography" photos={data.allFile.edges} />
+        <PhotoGallery title="Engineering & Construction Photography" photos={data.allFile.edges} />
     )
 }
 
@@ -14,7 +14,7 @@ export const query = graphql`
 query EngineeringQuery {
     allFile(
       filter:{
-          relativeDirectory: { eq: "img/Galleries/Engineering_Construction_Gallery" },
+          relativeDirectory: { eq: "img/Galleries/Engineering_Construction_Photography" },
           extension: { eq: "jpg" }
         }
     ) {

@@ -14,7 +14,7 @@ export const query = graphql`
 query ArchitectureQuery {
     allFile(
       filter:{
-          relativeDirectory: { eq: "img/Galleries/Architecture_&_Project_Progress_Gallery" },
+          relativeDirectory: { eq: "img/Galleries/Architecture_&_Project_Progress_Photography" },
           extension: { eq: "jpg" }
         }
     ) {

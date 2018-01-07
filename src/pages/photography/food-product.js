@@ -1,21 +1,20 @@
 import React from 'react';
 import PhotoGallery from '../../components/photoGallery'
 
-const FoodPhotography = ({ data }) => {
+const FoodProductPhotography = ({ data }) => {
 
     return (
-        // <PhotoGallery title="Food & Product Photography" photos={data.allFile.edges} />
-        <h1>Hello</h1>
+        <PhotoGallery title="Food & Product Photography" photos={data.allFile.edges} />
     )
 }
 
-export default FoodPhotography
+export default FoodProductPhotography
 
 export const query = graphql`
-query FoodQuery {
+query FoodProductQuery {
     allFile(
       filter:{
-          relativeDirectory: { eq: "img/Galleries/Food_&_Product_Gallery" },
+          relativeDirectory: { eq: "img/Galleries/Food_&_Product_Photography" },
           extension: { eq: "jpg" }
         }
     ) {

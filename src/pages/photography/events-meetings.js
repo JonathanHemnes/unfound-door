@@ -3,7 +3,7 @@ import PhotoGallery from '../../components/photoGallery'
 
 const EventPhotography = ({ data }) => {
     return (
-        <PhotoGallery title="Events & Meetings" photos={data.allFile.edges} />
+        <PhotoGallery title="Events & Meeting Photography" photos={data.allFile.edges} />
     )
 }
 
@@ -13,7 +13,7 @@ export const query = graphql`
 query ImagesQuery {
     allFile(
       filter:{
-          relativeDirectory: { eq: "img/Galleries/Events_&_Meetings_Gallery" },
+          relativeDirectory: { eq: "img/Galleries/Events_&_Meetings_Photography" },
           extension: { eq: "jpg" }
         }
     ) {

@@ -14,7 +14,7 @@ export const query = graphql`
 query HeadshotQuery {
     allFile(
       filter:{
-          relativeDirectory: { eq: "img/Galleries/Headshots_&_Portrait_Gallery" },
+          relativeDirectory: { eq: "img/Galleries/Headshots_&_Portrait_Photography" },
           extension: { eq: "jpg" }
         }
     ) {
