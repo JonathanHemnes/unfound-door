@@ -9,7 +9,7 @@ const header = css({
 })
 
 const stripe = css({
-    height: '35px',
+    height: '50px',
     backgroundColor: 'black'
 })
 

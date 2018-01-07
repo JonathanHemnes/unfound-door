@@ -7,12 +7,15 @@ import PartnerLogos from './partnerLogos'
 
 
 const textStyle = css({
-    fontSize: '30px',
-    textTransform: 'uppercase'
+    fontSize: '1.7rem',
+    textTransform: 'uppercase',
+    lineHeight: 1,
+    marginBottom: 0
 })
 
 const subTextStyle = css({
-    fontSize: '20px'
+    fontSize: '20px',
+    lineHeight: 1
 })
 
 const strategyPhotoStyle = css({

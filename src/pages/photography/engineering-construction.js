@@ -1,19 +1,20 @@
 import React from 'react';
-import PhotoGallery from '../components/photoGallery'
+import PhotoGallery from '../../components/photoGallery'
 
-const Events = ({ data }) => {
+const EngineeringPhotography = ({ data }) => {
+
     return (
-        <PhotoGallery title="Events & Meetings" photos={data.allFile.edges} />
+        <PhotoGallery title="Engineering Photography" photos={data.allFile.edges} />
     )
 }
 
-export default Events
+export default EngineeringPhotography
 
 export const query = graphql`
-query ImagesQuery {
+query EngineeringQuery {
     allFile(
       filter:{
-          relativeDirectory: { eq: "img/Events_&_Meetings" },
+          relativeDirectory: { eq: "img/Galleries/Engineering_Construction_Gallery" },
           extension: { eq: "jpg" }
         }
     ) {

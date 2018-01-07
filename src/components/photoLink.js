@@ -35,16 +35,16 @@ const PhotoLink = (props) => {
                 <Link to={props.to}>
                     <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
                     {props.text && <div {...textBlock}>
-                        <h2 {...white}>{props.text}</h2>
-                        <h3 {...white}>{props.subText}</h3>
+                        <h2 {...white} {...props.textStyle}>{props.text}</h2>
+                        <h3 {...white} {...props.subTextStyle}>{props.subText}</h3>
                     </div>}
                 </Link>
                 :
                 <a href={props.href} target="_blank">
                     <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
                     {props.text && <div {...textBlock}>
-                        <h2 {...white}>{props.text}</h2>
-                        <h3 {...white}>{props.subText}</h3>
+                        <h2 {...white} {...props.textStyle}>{props.text}</h2>
+                        <h3 {...white} {...props.subTextStyle}>{props.subText}</h3>
                     </div>}
                 </a>
             }

@@ -9,6 +9,7 @@ import ImportantClients from '../components/importantClients'
 import AboutHeader from '../components/aboutHeader'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import PartnerLogos from '../components/partnerLogos'
+import StyleStandards from '../styleStandards'
 
 const center = css({
   textAlign: 'center'
@@ -18,9 +19,18 @@ const uppercase = css({
     textTransform: 'uppercase'
 })
 
-const subTextStyle = css({
-    fontSize: '30px',
-    textTransform: 'uppercase'
+const padding = css({
+    margin: '75px 0 20px 0'
+})
+
+const header = css({
+    backgroundColor: StyleStandards.colors.grey,
+    padding: '20px 0 20px 0',
+    marginTop: '40px'
+})
+
+const noBottomMargin = css({
+    marginBottom: '0px'
 })
 
 const who = 'We are a creative consultancy  rm working the best creatives in every industry with services ranging from photography and videography to design and content creation.';
@@ -32,11 +42,20 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 const Expertise = ({props, data}) => {
     return (
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" textStyle={subTextStyle}/>
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" />
             <div> 
-                <AboutHeader />
-                <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
+                <div {...header}>
+                    <AboutHeader />
+                    <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
+                </div>
+                <div {...center} {...padding}>
+                    <h1 {...noBottomMargin} {...uppercase}>Our Services</h1>
+                    <p>Follow the services below to see more of what we do.</p>
+                </div>
                 <MainServices />
+                <div {...center} {...uppercase} {...padding}>
+                    <h1 {...noBottomMargin}>The Company You'll keep</h1>
+                </div>
                 <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
         </div>
         <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />

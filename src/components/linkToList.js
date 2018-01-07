@@ -5,14 +5,14 @@ import { css } from 'glamor'
 import StyleStandards from '../styleStandards'
 
 const listElement = css({
-    marginRight: `1rem`,
+    marginRight: `5%`,
     '& a': {
         ...StyleStandards.animations.greyHover,
         textDecoration: `none`,
         color: StyleStandards.colors.white,
         fontSize: `26px`,
-        '@media(max-width: 500px)': {
-            fontSize: '18px'
+        '@media(max-width: 600px)': {
+            fontSize: '16px'
         },
     }
 })

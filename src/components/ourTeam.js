@@ -4,17 +4,25 @@ import TitledHeadshot from './titledHeadshot.js'
 import StyleStandards from '../styleStandards.js'
 import BlurOnEnterAndExit from './blurOnEnterAndExit'
 
+const container = css({
+    marginBottom: '75px'
+})
+
 const headshotStyles = css({
     display: `flex`,
     flexDirection: `row`,
     flexWrap: 'wrap',
     justifyContent: 'center',
-    margin: '20px 20px 20px 20px'
 })
 
 const title = css({
-    textAlign: `center`,
-    marginTop: '20px'
+    marginTop: '20px',
+    textTransform: 'uppercase',
+    marginBottom: 0
+})
+
+const center = css({
+    textAlign: 'center'
 })
 
 function getTeamMemberName(fileName) {
@@ -75,9 +83,10 @@ class OurTeam extends React.Component {
     render() {
 
         return (
-            <div>
-                <div {...title}>
-                    <h2>Our Team</h2>
+            <div {...container}>
+                <div>
+                    <h1 {...title} {...center}>Our Team</h1>
+                    <p {...center}>Artists, Innovators, Professionals</p>
                 </div>
                 <div {...headshotStyles}>
                     {

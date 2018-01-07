@@ -4,13 +4,11 @@ import { css } from 'glamor'
 import Img from 'gatsby-image'
 
 const container = css({
-    width: '200px'
+    width: '20vw',
+    minWidth: '250px'
 })
 
 const imageStyles = css({
-    height: '200px',
-    width: '200px',
-    padding: '0 10px 0 10px'
 })
 
 const title = css({
@@ -28,7 +26,7 @@ const TitledHeadshot = props => (
             <Img sizes={props.sizes} />
         </div>
         <div {...title}>
-            <p {...noMargin}>{props.name}<br />{props.title}</p>
+            <h5 {...noMargin}>{props.name}<br />{props.title}</h5>
         </div>
     </div>
 )

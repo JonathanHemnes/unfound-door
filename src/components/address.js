@@ -7,7 +7,8 @@ const container = css({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '150px'
+    height: '150px',
+    paddingTop: '20px'
 })
 
 const anchor = css({
@@ -24,10 +25,16 @@ const noBottomPad = css({
 
 const Address = () => (
     <div {...container}>
-        <p {...logoStyle} {...noBottomPad}>THE<strong>UNFOUND</strong>DOOR</p>
-        <p {...noBottomPad}>Denver, Colorado</p>
-        <a href={'mailto:ely@theunfounddoor.com'} {...anchor} {...noBottomPad}>ely@theunfounddoor.com</a>
-        <a href={'tel:6177759911'} {...anchor} {...noBottomPad}>617-775-9911</a>
+        <div>
+            <p {...logoStyle} {...noBottomPad}>THE<strong>UNFOUND</strong>DOOR</p>
+            <p {...noBottomPad}>Denver, Colorado</p>
+            <div>
+                <a href={'mailto:ely@theunfounddoor.com'} {...anchor} {...noBottomPad}>ely@theunfounddoor.com</a>
+            </div>
+            <div>
+                <a href={'tel:6177759911'} {...anchor} {...noBottomPad}>617-775-9911</a>
+    </div>
+        </div>
     </div>
 )
 

@@ -11,7 +11,8 @@ const footer = css({
 })
 
 const name = css({
-     paddingTop: `20px`
+    paddingTop: `20px`,
+    marginBottom: '5px'
 })
 
 class Footer extends React.Component {

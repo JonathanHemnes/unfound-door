@@ -12,6 +12,10 @@ const headerText = css({
     paddingTop: '15px'
 })
 
+const noBottomMargin = css({
+    marginBottom: '0.2rem'
+})
+
 const uppercase = css({
     textTransform: 'uppercase'
 })
@@ -40,8 +44,8 @@ const contactHeader = css({
     backgroundColor: StyleStandards.colors.black,
     color: StyleStandards.colors.white,
     textAlign: 'center',
-    height: '30px',
-    fontSize: '30px',
+    height: '40px',
+    textTransform: 'uppercase',
     padding: '10px  0 40px 0'
 })
 
@@ -64,13 +68,13 @@ const mainContactIconStyle = css({
 const ContactUs = props => (
     <div id="contact">
         <div {...headerText}>
-           <h1 {...uppercase}>Be Found</h1> 
+           <h1 {...uppercase} {...noBottomMargin}>Be Found</h1> 
            <p {...noMargin}>Start Your Journey Towards Creative Freedom</p>
        </div> 
        <div {...contactSection}>
            <div {...contact}>
                <div {...contactHeader}>
-                   <p>Find Us</p> 
+                   <h3>Find Us</h3> 
                </div>
                <div {...contactBody}>
                    <Address />
@@ -78,7 +82,7 @@ const ContactUs = props => (
            </div>
            <div {...contact}>
                <div {...contactHeader}>
-                   <p>Drop a line</p> 
+                   <h3>Drop a line</h3> 
                </div>
                <div {...contactBody}>
                    <div {...mainContactIcons}>
@@ -89,7 +93,7 @@ const ContactUs = props => (
            </div>
            <div {...contact}>
                <div {...contactHeader}>
-                   <p>Connect</p> 
+                   <h3>Connect</h3> 
                </div>
                <div {...contactBody}>
                    <SocialIcons />

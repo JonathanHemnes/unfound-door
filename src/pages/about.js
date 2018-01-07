@@ -5,17 +5,37 @@ import Founder from '../components/founder'
 import OurTeam from '../components/ourTeam'
 import AboutHeader from '../components/aboutHeader'
 import StrategicPartnership from '../components/strategicPartnership'
+import WhoWhatWhere from '../components/whoWhatWhere'
+import StyleStandards from '../styleStandards'
 
-const subTextStyle = css({
-    fontSize: '30px',
-    textTransform: 'uppercase'
+const container = css({
+    marginBottom: '75px'
 })
 
+const header = css({
+    backgroundColor: StyleStandards.colors.grey,
+    padding: '20px 0 20px 0',
+    marginTop: '40px'
+})
+
+const noBottomMargin = css({
+    marginBottom: '0px'
+})
+
+const who = 'We are a creative consultancy firm working the best creatives in every industry with services ranging from photography and videography to design and content creation.';
+const what = 'We are dedicated to creating the ultimate seamless experience by offering a diversity of creative services with precision, technique, and passion.';
+const why = 'We believe that you should have a designated team focused on aiding you throughout the process of crafting and implementing your vision.';
+const where = 'Where ever you are we can go!';
+const how = 'Schedule a meeting to discuss how you can discover your creative possibilities that best reflect your vision with creatives that will surpass your expectations today.';
+
 const About = ({ data }) => (
-    <div>
-        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Our Story" />
+    <div {...container}>
+        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" />
         <div>
-            <AboutHeader />
+            <div {...header}>
+                <AboutHeader />
+                <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
+            </div>
             <Founder img={data.founderHeadshot.childImageSharp} />
             <OurTeam teamHeadshots={data.teamHeadshots} />
             <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />

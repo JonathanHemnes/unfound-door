@@ -6,6 +6,7 @@ import PhotoLink from '../components/photoLink'
 import PartnerLogos from '../components/partnerLogos.js'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
+import LetsTalk from '../components/letsTalk'
 
 const subTextStyle = css({
     fontSize: '30px',
@@ -25,9 +26,8 @@ const photoStyle = css({
 
 const center = css({
     textAlign: 'center',
-    marginLeft: '15%',
-    marginRight: '15%',
-    marginTop: '20px'
+    marginLeft: '4%',
+    marginRight: '4%',
 
 })
 
@@ -37,6 +37,10 @@ const uppercase = css({
 
 const marginBottom = css({
     marginBottom: '20px'
+})
+
+const noMarginBottom = css({
+    marginBottom: 0 
 })
 
 const greyBackground = css({
@@ -50,6 +54,9 @@ const largeContainerPhoto = {
     marginTop: '35px'
 }
 
+const textStyle = css({
+    fontSize: '1.4rem'
+})
 
 const DesignStrategy = ({ data }) => {
     const designImages = [
@@ -101,21 +108,24 @@ const DesignStrategy = ({ data }) => {
     return (
         <div>
             <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" />
-            <div {...center}>
-                <h1 {...uppercase}>Purpose</h1>
+            <div {...center} {...StyleStandards.marginTop}>
+                <h1 {...uppercase} {...noMarginBottom}>Purpose</h1>
                 <p>Your most important marketing assets should support your brand strategy. Whether you are reconstructing your image or building foundational tools to further your message, let us help you find the right path.</p>
+                <LetsTalk email={data.site.siteMetadata.mainEmail} />
             </div>
-            <div {...center}>
-                <h1 {...uppercase}>Design</h1>
+            <div {...center} {...StyleStandards.marginTop}>
+                <h1 {...uppercase} {...noMarginBottom}>Design</h1>
                 <p>In this ever changing technological landscape, you have options, sometimes too many options. Do you want a Wordpress website or a custom coded website? What social campaigns will lead to a higher conversion rate? Contact us to examine your opportunities and see what we have been up to.</p>
             </div>
-            <PhotoLinkArray images={designImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <div {...center}>
-                <h1 {...uppercase}>Strategy</h1>
-                <p>Need help?</p>
+            <PhotoLinkArray images={designImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStle={textStyle} />
+            <div {...center} {...StyleStandards.marginTop}>
+                <h1 {...uppercase} {...noMarginBottom}>Strategy</h1>
+                <p>Whether persuing new avenues or designing a future marketing plan, having an outsiders perspective may aid your process. If you require guidance with setting priorities, focusing energy and resources, strengthening operations, or thinking big picture contact us today.</p>
             </div>
-            <PhotoLinkArray images={strategyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <PhotoLink sizes={data.elevate.childImageSharp.sizes} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} />
+            <div {...StyleStandards.marginBottom}>
+                <PhotoLinkArray images={strategyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
+                <PhotoLink sizes={data.elevate.childImageSharp.sizes} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} />
+        </div>
         </div>
     )
 }
@@ -124,6 +134,13 @@ export default DesignStrategy
 
 export const query = graphql`
 query designStrategyQuery {
+  site {
+    siteMetadata {
+      title,
+      mainEmail,
+      mainPageSubText
+    }
+  },
   splash: file (relativePath: {eq: "img/Design_Strategy/Header.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {

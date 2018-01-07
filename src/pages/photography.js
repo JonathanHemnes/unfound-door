@@ -3,16 +3,26 @@ import { css } from 'glamor'
 import Splash from '../components/splash'
 import PhotoLinkArray from '../components/photoLinkArray'
 import PartnerLogos from '../components/partnerLogos.js'
+import CustomerReviews from '../components/customerReviews'
+import LetsTalk from '../components/letsTalk'
+
+const container = css({
+    margin: '75px 0 75px 0',
+})
 
 const subTextStyle = css({
     fontSize: '30px',
     textTransform: 'uppercase'
 })
 
+const uppercase = css({
+    textTransform: 'uppercase'
+})
+
 const arrayStyle = css({
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center'
+    justifyContent: 'center',
 })
 
 const photoStyle = css({
@@ -24,94 +34,115 @@ const center = css({
     textAlign: 'center',
     marginLeft: '15%',
     marginRight: '15%',
-    marginTop: '20px'
 })
 
 const marginBottom = css({
-    marginBottom: '20px'
+    marginBottom: '75px'
+})
+
+const noBottomMargin = css({
+    marginBottom: '0px'
+})
+
+const header = css({
+    textTransform: 'uppercase',
+    marginBottom: 0
+})
+
+const bottomPadding = css({
+    marginBottom: '35px'
+})
+
+const textStyle = css({
+    fontSize: '1.4rem'
 })
 
 const Photography = ({ data }) => {
     const professionalImages=[
         {
             sizes: data.headshot.childImageSharp.sizes,
-            to: '/headshots',
-            text: 'Headshots'
+            to: '/photography/headshots',
+            text: 'Headshots & Portraits'
         },
         {
             sizes: data.eventsMeetings.childImageSharp.sizes,
-            to: '/events',
+            to: '/photography/events-meetings',
             text: 'Events & Meetings'
         },
         {
             sizes: data.marketingLifestyle.childImageSharp.sizes,
-            to: '/marketing_lifestyle',
-            text: 'Marketing & Lifestyle'
+            to: '/photography/marketing-lifestyle',
+            text: 'Marketing Lifestyle'
         },
         {
             sizes: data.nonProfit.childImageSharp.sizes,
-            to: '/nonprofits',
-            text: 'Non Profit'
+            to: '/photography/nonprofits',
+            text: 'Non-Profit Giving Back'
         },
         {
             sizes: data.engineeringConstruction.childImageSharp.sizes,
-            to: '/engineering_construction',
+            to: '/photography/engineering-construction',
             text: 'Engineering / Construction'
         },
         {
             sizes: data.architecture.childImageSharp.sizes,
-            to: '/architecture',
+            to: '/photography/architecture',
             text: 'Architecture & Project Progress'
         },
         {
             sizes: data.aerial.childImageSharp.sizes,
-            to: '/aerial',
+            to: '/photography/aerial',
             text: 'Aerial'
         },
         {
             sizes: data.foodProduct.childImageSharp.sizes,
-            to: '/food_product',
+            to: '/photography/food-product',
             text: 'Food & Product'
         }
     ]
     const personalImages = [
         {
             sizes: data.wedding.childImageSharp.sizes,
-            to: '/weddings',
+            to: '/photography/weddings',
             text: 'Weddings & Couples Portraits'
         },
         {
             sizes: data.families.childImageSharp.sizes,
-            to: '/families',
+            to: '/photography/families',
             text: 'Families & Babies'
         },
         {
             sizes: data.portraits.childImageSharp.sizes,
-            to: '/portraits',
+            to: '/photography/portraits',
             text: 'Portraits & Seniors'
         },
         {
             sizes: data.boudoir.childImageSharp.sizes,
-            to: '/boudoir',
+            to: '/photography/boudoir',
             text: 'Boudoir'
         },
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Photography" />
-            <div {...center}>
-                <h1>Professional</h1>
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Photography" />
+            <CustomerReviews />
+            <div {...center} {...bottomPadding}>
+                <h1 {...header}>Professional</h1>
                 <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
+                <LetsTalk email={data.site.siteMetadata.mainEmail} />
             </div>
-            <PhotoLinkArray images={professionalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <h1 {...center}>The Company You'll Keep</h1>
-            <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
+            <PhotoLinkArray images={professionalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
+            <div {...container}>
+                <h1 {...center} {...noBottomMargin} {...uppercase}>The Company You'll Keep</h1>
+                <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
+            </div>
             <div {...center}>
-                <h1>Personal</h1>
+                <h1 {...uppercase} {...noBottomMargin}>Personal</h1>
                 <p>Creating keepsakes, one moment at a time</p>
+                <LetsTalk email={data.site.siteMetadata.mainEmail} />
             </div>
             <div {...marginBottom}>
-                <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
+                <PhotoLinkArray images={personalImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
             </div>
         </div>
     )
@@ -121,6 +152,13 @@ export default Photography
 
 export const query = graphql`
 query photographyQuery {
+  site {
+    siteMetadata {
+      title,
+      mainEmail,
+      mainPageSubText
+    }
+  },
   splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {

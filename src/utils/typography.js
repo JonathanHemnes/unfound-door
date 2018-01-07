@@ -1,7 +1,9 @@
 import Typography from 'typography'
 
 const typography = new Typography({
-    scaleRatio: 3,
+    scaleRatio: 2.5,
+    baseFontSize: '24px',
+    headerWeight: '200',
     headerFontFamily: ['Raleway', 'sans-serif'],
     bodyFontFamily: ['Raleway', 'sans-serif'],
     googleFonts: [

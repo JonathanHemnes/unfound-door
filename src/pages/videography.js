@@ -6,16 +6,32 @@ import PhotoLink from '../components/photoLink'
 import PartnerLogos from '../components/partnerLogos.js'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
+import LetsTalk from '../components/letsTalk'
 
-const subTextStyle = css({
-    fontSize: '30px',
-    textTransform: 'uppercase'
+const smallerFontOnSmallScreen = css({
+    '@media(max-width: 470px)': {
+        fontSize: '2rem'
+    }
+})
+
+const portfolioBanner = css({
+    '@media(max-width: 470px)': {
+        fontSize: '1.4rem'
+    }
+})
+
+const conception = css({
+    marginTop: '40px'
 })
 
 const arrayStyle = css({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center'
+})
+
+const textStyle = css({
+    fontSize: '1.4rem'
 })
 
 const photoStyle = css({
@@ -25,9 +41,8 @@ const photoStyle = css({
 
 const center = css({
     textAlign: 'center',
-    marginLeft: '15%',
-    marginRight: '15%',
-    marginTop: '20px'
+    marginLeft: '4%',
+    marginRight: '4%',
 })
 
 const marginBottom = css({
@@ -96,20 +111,25 @@ const Videography = ({ data }) => {
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Videography" />
-            <div {...center}>
-                <h1>Videography</h1>
-                <p>Elevate your company videography with the videographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of videographer geniuses.</p>
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Videography" />
+            <div {...center} {...StyleStandards.marginTop} {...StyleStandards.marginBottom}>
+                <h1 {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>Videography</h1>
+                <p>The future of reaching new customers and showing your value is through visual storytelling. Whether you are looking to document an important event, provide a 360 Degree Virtual Tour experience, or boast your company culture, videography is a powerful tool.</p>
+                <LetsTalk email={data.site.siteMetadata.mainEmail} />
             </div>
-            <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} />
-            <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" href="https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA" containerStyle={largeContainerPhoto} />
-            <div {...greyBackground}>
-                <h1>CONCEPTION</h1>
+            <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
+            <div {...StyleStandards.marginTop}>
+                <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" href="https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA" containerStyle={largeContainerPhoto} textStyle={portfolioBanner} />
+            </div>
+            <div {...greyBackground} {...conception}>
+                <h1 {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>Conception</h1>
                 <p>Questions to consider and ask when planning videography. Schedule a meeting to discuss your options in person and get insight on how videography is put together.</p>
                 <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             </div>
-            <h1 {...center}>The Company You'll Keep</h1>
-            <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
+            <div {...StyleStandards.marginTop} {...StyleStandards.marginBottom}>
+                <h1 {...center} {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin}>The Company You'll Keep</h1>
+                <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
+        </div>
         </div>
     )
 }
@@ -118,6 +138,13 @@ export default Videography
 
 export const query = graphql`
 query videographyQuery {
+  site {
+    siteMetadata {
+      title,
+      mainEmail,
+      mainPageSubText
+    }
+  },
   splash: file (relativePath: {eq: "img/Videography/VideographyHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
