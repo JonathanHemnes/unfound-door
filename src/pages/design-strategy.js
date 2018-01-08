@@ -70,22 +70,22 @@ const DesignStrategy = ({ data }) => {
     const designImages = [
         {
             sizes: data.graphic.childImageSharp.sizes,
-            to: '/graphic-design',
+            to: '/contact?Graphic%20design',
             text: 'Graphic Design & Branding'
         },
         {
             sizes: data.webDesign.childImageSharp.sizes,
-            to: '/web-design',
+            to: '/contact?Web%2Design',
             text: 'Web Design & Website Maintenance'
         },
         {
             sizes: data.socialMedia.childImageSharp.sizes,
-            to: '/social-media',
+            to: '/contact?Social%20Media',
             text: 'Social Media'
         },
         {
             sizes: data.contentCreation.childImageSharp.sizes,
-            to: '/content-creation',
+            to: '/contact?Content%20Creation',
             text: 'Content Creation & SEO'
         }
     ]
@@ -93,22 +93,22 @@ const DesignStrategy = ({ data }) => {
     const strategyImages = [
         {
             sizes: data.account.childImageSharp.sizes,
-            to: '/account-management',
+            to: '/contact?Account%20Management',
             text: 'Account Management'
         },
         {
             sizes: data.smallBusinessFoundation.childImageSharp.sizes,
-            to: '/small-business-foundation',
+            to: '/contact?Small%20Business%20Foundation',
             text: 'Small Business Foundation'
         },
         {
             sizes: data.businessDevelopment.childImageSharp.sizes,
-            to: '/business-development',
+            to: '/contact?Business%20Development',
             text: 'Business Development'
         },
         {
             sizes: data.creative.childImageSharp.sizes,
-            to: '/creative-blueprint',
+            to: '/contact?Creative%20Blueprint',
             text: 'Creative Blueprint'
         }
     ]
