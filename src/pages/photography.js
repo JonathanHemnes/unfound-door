@@ -83,7 +83,7 @@ const Photography = ({ data }) => {
         },
         {
             sizes: data.nonProfit.childImageSharp.sizes,
-            to: '/contact?NonProfit%20Photography',
+            to: '/contact',
             text: 'Non-Profit Giving Back'
         },
         {
@@ -98,7 +98,7 @@ const Photography = ({ data }) => {
         },
         {
             sizes: data.aerial.childImageSharp.sizes,
-            to: '/contact?Aerial%20Photography',
+            to: '/contact',
             text: 'Aerial'
         },
         {
@@ -110,22 +110,22 @@ const Photography = ({ data }) => {
     const personalImages = [
         {
             sizes: data.wedding.childImageSharp.sizes,
-            to: '/contact?Wedding%20Photography',
+            to: '/contact',
             text: 'Weddings & Couples Portraits'
         },
         {
             sizes: data.families.childImageSharp.sizes,
-            to: '/contact?Family%20Photography',
+            to: '/contact',
             text: 'Families & Babies'
         },
         {
             sizes: data.portraits.childImageSharp.sizes,
-            to: '/contact?Portrait%20Photography',
+            to: '/contact',
             text: 'Portraits & Seniors'
         },
         {
             sizes: data.boudoir.childImageSharp.sizes,
-            to: '/contact?Boudoir%20Photography',
+            to: '/contact',
             text: 'Boudoir'
         },
     ]

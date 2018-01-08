@@ -75,42 +75,42 @@ const Videography = ({ data }) => {
     const videographyImages = [
         {
             sizes: data.companyCustomer.childImageSharp.sizes,
-            to: '/contact?Company%20Videography',
+            to: '/contact',
             text: 'Company & Customer Spotlight'
         },
         {
             sizes: data.training.childImageSharp.sizes,
-            to: '/contact?Training%20Videography',
+            to: '/contact',
             text: 'Training & Technical'
         },
         {
             sizes: data.social.childImageSharp.sizes,
-            to: '/contact?Social%20Videography',
+            to: '/contact',
             text: 'Social Campaigns'
         },
         {
             sizes: data.event.childImageSharp.sizes,
-            to: '/contact?Event%20Videography',
+            to: '/contact',
             text: 'Event Highlight'
         },
         {
             sizes: data.sloMo.childImageSharp.sizes,
-            to: '/contact?Slow%20Motion%20Videography',
+            to: '/contact',
             text: 'Slow-Mo Video Booth'
         },
         {
             sizes: data.products.childImageSharp.sizes,
-            to: '/contact?Product%20Videography',
+            to: '/contact',
             text: 'Products'
         },
         {
             sizes: data.aerial.childImageSharp.sizes,
-            to: '/contact?Aerial%20Videography',
+            to: '/contact',
             text: 'Aerial'
         },
         {
             sizes: data.walkThru.childImageSharp.sizes,
-            to: '/contact?Walk%20Thru%20Videography',
+            to: '/contact',
             text: '360 Space Walk-Thru'
         }
     ]
