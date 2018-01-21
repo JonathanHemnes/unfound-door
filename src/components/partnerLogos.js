@@ -29,7 +29,7 @@ class PartnerLogos extends React.Component {
 
     interval() {
         const maxPossibleLogoArrayIndex = 5; 
-        const maxPossiblePhotoIndex = this.state.partnerLogos.edges.length - 1;
+        const maxPossiblePhotoIndex = this.state.partnerLogos.edges.length;
         const randomArrayIndex = this.getRandomIndex(maxPossibleLogoArrayIndex);
         const randomPhotoIndex = this.getRandomIndex(maxPossiblePhotoIndex)
 
