@@ -8,7 +8,6 @@ import Img from 'gatsby-image'
 import FaIcon from '../components/faIcon'
 
 const imgWrapper = css({
-    width: `100vw`,
     maxHeight: `100vh`,
     overflow: `hidden`,
     position: 'relative',
