@@ -21,6 +21,12 @@ const StyleStandards = {
                 color: colors.grey
             }
         },
+        yellowHover: {
+            ':hover': {
+                transition: `color 0.5s ease`,
+                color: colors.yellow
+            }
+        },
         greyHoverBackground: {
             ':hover': {
                 transition: `background-color 0.5s ease`,
