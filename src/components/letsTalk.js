@@ -11,13 +11,13 @@ const callToAction = css({
 })
 
 const letsTalk = css({
-    ...StyleStandards.animations.greyHoverBackground,
+    ...StyleStandards.animations.yellowHoverBackground,
     textDecoration: `none`,
     padding: `15px 30px 15px 30px`,
     border: `2px solid black`,
     color: StyleStandards.colors.black,
     textTransform: 'uppercase',
-    fontSize: '1rem'
+    fontSize: '1rem',
 })
 
 const LetsTalk = props => (

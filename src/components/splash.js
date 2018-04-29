@@ -6,6 +6,7 @@ import logo from '../img/TUD_logo_white.png'
 import GreyImage from './greyImage'
 import Img from 'gatsby-image'
 import FaIcon from '../components/faIcon'
+import LetsTalk from '../components/letsTalk'
 
 const imgWrapper = css({
     maxHeight: `100vh`,
@@ -38,8 +39,22 @@ const bottomCenter = css({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    '@media(max-width: 587px)': {
+    '@media(max-width: 950px)': {
        display: 'none' 
+    }
+})
+
+const callToAction = css({
+    position: 'absolute',
+    bottom: '75px',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    '@media(max-width: 950px)': {
+        bottom: '0'
+    },
+    '@media(max-width: 425px)': {
+        display: 'none'
     }
 })
 
@@ -54,6 +69,9 @@ const Splash = props => {
             <div {...logoStyle}>
                 <img src={props.logo.sizes.src} />
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>
+            </div>
+            <div {...callToAction}>
+                <LetsTalk />
             </div>
             <div {...bottomCenter}>
                 <FaIcon iconName='angle-down' size='fa-4x' style={iconStyle} />
