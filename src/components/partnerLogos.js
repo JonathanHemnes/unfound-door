@@ -53,7 +53,7 @@ class PartnerLogos extends React.Component {
     }
 
     componentDidMount() {
-        const randoTime = Math.random() * (4000 - 1000) + 1000;
+        const randoTime = Math.random() * (3000 - 1000) + 1000;
         this.intervalId = setInterval(this.interval.bind(this), randoTime)
     }
 
