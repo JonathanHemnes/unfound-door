@@ -74,7 +74,7 @@ const Splash = props => {
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>
             </div>
             <div {...callToAction}>
-                <LetsTalk email={props.email} />
+                <LetsTalk email={props.email} white={true} />
             </div>
             <div {...bottomCenter}>
                 <FaIcon iconName='angle-down' size='fa-4x' style={iconStyle} />
