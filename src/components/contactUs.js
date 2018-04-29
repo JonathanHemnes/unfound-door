@@ -8,7 +8,7 @@ import StyleStandards from '../styleStandards.js'
 
 const headerText = css({
     textAlign: `center`,
-    backgroundColor: StyleStandards.colors.grey,
+    backgroundColor: StyleStandards.colors.yellow,
     paddingTop: '15px'
 })
 
@@ -41,8 +41,8 @@ const noMargin = css({
 })
 
 const contactHeader = css({
-    backgroundColor: StyleStandards.colors.black,
-    color: StyleStandards.colors.white,
+    backgroundColor: StyleStandards.colors.white,
+    color: StyleStandards.colors.black,
     textAlign: 'center',
     height: '40px',
     textTransform: 'uppercase',
@@ -50,7 +50,7 @@ const contactHeader = css({
 })
 
 const contactBody = css({
-    backgroundColor: StyleStandards.colors.grey,
+    backgroundColor: StyleStandards.colors.yellow,
     height: '150px'
 })
 
