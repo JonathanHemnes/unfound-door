@@ -46,7 +46,8 @@ const contactHeader = css({
     textAlign: 'center',
     height: '40px',
     textTransform: 'uppercase',
-    padding: '10px  0 40px 0'
+    padding: '10px  0 40px 0',
+    marginBottom: '4px'
 })
 
 const contactBody = css({
