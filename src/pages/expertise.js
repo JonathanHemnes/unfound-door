@@ -42,7 +42,7 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 const Expertise = ({props, data}) => {
     return (
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" />
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail}/>
             <div> 
                 <div {...header}>
                     <AboutHeader />
@@ -67,6 +67,13 @@ export default Expertise
 
 export const query = graphql`
 query expertiseQuery {
+    site {
+      siteMetadata {
+        title,
+        mainEmail,
+        mainPageSubText
+      }
+    },
   file (relativePath: {eq: "img/header/expertise.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {
