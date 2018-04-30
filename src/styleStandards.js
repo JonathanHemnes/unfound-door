@@ -1,7 +1,7 @@
 import { css } from 'glamor'
 
 const colors = {
-    white: `white`,
+    white: `#fffff0`,
     red: `red`,
     black: `black`,
     grey: `rgb(158, 162, 168)`,

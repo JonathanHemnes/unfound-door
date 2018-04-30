@@ -5,6 +5,10 @@ const animations = {
         '0%': { transform: 'scale(0.8)', opacity: 1 },
         '60%': { transform: 'scale(1)', opacity: 1 },
         '100%': { transform: 'scale(0.8)' }
+    }),
+    grow: css.keyframes('grow', {
+        '0%': { transform: 'scale(1)' },
+        '100%': { transform: 'scale(1.1)' }
     })
 }
 

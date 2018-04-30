@@ -74,12 +74,19 @@ const inputStyle = css({
     '> input' : {
         width: '100%',
         background: StyleStandards.colors.grey,
-        border: 'none'
+        borderBottom: `3px solid ${StyleStandards.colors.grey}`,
+        ':hover': {
+            borderBottom: `3px solid ${StyleStandards.colors.yellow}`
+        }
     },
     '> textArea' : {
         width: '100%',
         background: StyleStandards.colors.grey,
-        border: 'none'
+        border: 'none',
+        borderBottom: `3px solid ${StyleStandards.colors.grey}`,
+        ':hover': {
+            borderBottom: `3px solid ${StyleStandards.colors.yellow}`
+        }
     }
 })
 

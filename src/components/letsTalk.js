@@ -16,8 +16,8 @@ const LetsTalk = ( props ) => {
         ...StyleStandards.animations.yellowHoverBackground,
         textDecoration: `none`,
         padding: `15px 30px 15px 30px`,
-        border: `2px solid ${props.white ? StyleStandards.colors.white : StyleStandards.colors.black}`,
-        color: props.white ? StyleStandards.colors.white : StyleStandards.colors.black,
+        border: `2px solid ${props.borderColor ? props.borderColor : StyleStandards.colors.black}`,
+        color: props.textColor ? props.textColor : StyleStandards.colors.black,
         textTransform: 'uppercase',
         fontSize: '1rem',
     })

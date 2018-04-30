@@ -40,18 +40,18 @@ const bottomCenter = css({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    '@media(max-width: 950px)': {
+    '@media(max-width: 1000px)': {
        display: 'none' 
     }
 })
 
 const callToAction = css({
     position: 'absolute',
-    bottom: '75px',
+    bottom: '100px',
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    '@media(max-width: 950px)': {
+    '@media(max-width: 1000px)': {
         bottom: '0'
     },
     '@media(max-width: 425px)': {
@@ -74,7 +74,7 @@ const Splash = props => {
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>
             </div>
             <div {...callToAction}>
-                <LetsTalk email={props.email} white={true} />
+                <LetsTalk email={props.email} borderColor={StyleStandards.colors.white} textColor={StyleStandards.colors.white} />
             </div>
             <div {...bottomCenter}>
                 <FaIcon iconName='angle-down' size='fa-4x' style={iconStyle} />
