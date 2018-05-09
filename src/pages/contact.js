@@ -74,12 +74,19 @@ const inputStyle = css({
     '> input' : {
         width: '100%',
         background: StyleStandards.colors.grey,
-        border: 'none'
+        borderBottom: `3px solid ${StyleStandards.colors.grey}`,
+        ':hover': {
+            borderBottom: `3px solid ${StyleStandards.colors.yellow}`
+        }
     },
     '> textArea' : {
         width: '100%',
         background: StyleStandards.colors.grey,
-        border: 'none'
+        border: 'none',
+        borderBottom: `3px solid ${StyleStandards.colors.grey}`,
+        ':hover': {
+            borderBottom: `3px solid ${StyleStandards.colors.yellow}`
+        }
     }
 })
 
@@ -135,7 +142,7 @@ class Contact extends React.Component {
     render () {
         return (
             <div>
-                <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} />
+                <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} email={this.data.site.siteMetadata.mainEmail}/>
                 <div {...StyleStandards.marginTop} {...header}>
                     <h1 {...noBottomMargin} {...uppercase}>Contact Us</h1>
                     <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>

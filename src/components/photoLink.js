@@ -15,7 +15,7 @@ const textBlock = css({
 })
 
 const white = css({
-    ...StyleStandards.animations.greyHover,
+    ...StyleStandards.animations.yellowHover,
     color: StyleStandards.colors.white,
     textTransform: 'uppercase'
 })

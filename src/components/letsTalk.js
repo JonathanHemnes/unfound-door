@@ -10,20 +10,23 @@ const callToAction = css({
     paddingBottom: '25px'
 })
 
-const letsTalk = css({
-    ...StyleStandards.animations.greyHoverBackground,
-    textDecoration: `none`,
-    padding: `15px 30px 15px 30px`,
-    border: `2px solid black`,
-    color: StyleStandards.colors.black,
-    textTransform: 'uppercase',
-    fontSize: '1rem'
-})
 
-const LetsTalk = props => (
+const LetsTalk = ( props ) => { 
+    const letsTalk = css({
+        ...StyleStandards.animations.yellowHoverBackground,
+        textDecoration: `none`,
+        padding: `15px 30px 15px 30px`,
+        border: `2px solid ${props.borderColor ? props.borderColor : StyleStandards.colors.black}`,
+        color: props.textColor ? props.textColor : StyleStandards.colors.black,
+        textTransform: 'uppercase',
+        fontSize: '1rem',
+    })
+    
+    return (
         <div {...callToAction}>
             <a href={`mailto:${props.email}`} target="_blank" {...letsTalk}>Let's Talk</a>
         </div>
-)
+    )
+}
 
 export default LetsTalk

@@ -6,6 +6,8 @@ import logo from '../img/TUD_logo_white.png'
 import GreyImage from './greyImage'
 import Img from 'gatsby-image'
 import FaIcon from '../components/faIcon'
+import LetsTalk from '../components/letsTalk'
+import animations from '../animations'
 
 const imgWrapper = css({
     maxHeight: `100vh`,
@@ -38,13 +40,29 @@ const bottomCenter = css({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    '@media(max-width: 587px)': {
+    '@media(max-width: 1000px)': {
        display: 'none' 
     }
 })
 
+const callToAction = css({
+    position: 'absolute',
+    bottom: '100px',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    '@media(max-width: 1000px)': {
+        bottom: '0'
+    },
+    '@media(max-width: 425px)': {
+        display: 'none'
+    }
+})
+
 const iconStyle = css({
-    color: 'white'
+    animation: `${animations.bounce} 2s`,
+    color: 'white',
+    animationIterationCount: 'infinite'
 })
 
 const Splash = props => {
@@ -54,6 +72,9 @@ const Splash = props => {
             <div {...logoStyle}>
                 <img src={props.logo.sizes.src} />
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>
+            </div>
+            <div {...callToAction}>
+                <LetsTalk email={props.email} borderColor={StyleStandards.colors.white} textColor={StyleStandards.colors.white} />
             </div>
             <div {...bottomCenter}>
                 <FaIcon iconName='angle-down' size='fa-4x' style={iconStyle} />

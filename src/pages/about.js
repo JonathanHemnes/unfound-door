@@ -30,7 +30,7 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 
 const About = ({ data }) => (
     <div {...container}>
-        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" />
+        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail}/>
         <div>
             <div {...header}>
                 <AboutHeader />
@@ -47,6 +47,13 @@ export default About
 
 export const query = graphql`
 query aboutQuery {
+  site {
+    siteMetadata {
+      title,
+      mainEmail,
+      mainPageSubText
+    }
+  },
   splash: file (relativePath: {eq: "img/header/OurStoryHeader.jpg"}) {
     childImageSharp {
       sizes (maxWidth: 2400) {

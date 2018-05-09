@@ -7,7 +7,7 @@ import StyleStandards from '../styleStandards'
 const listElement = css({
     marginRight: `5%`,
     '& a': {
-        ...StyleStandards.animations.greyHover,
+        ...StyleStandards.animations.yellowHover,
         textDecoration: `none`,
         color: StyleStandards.colors.white,
         fontSize: `26px`,

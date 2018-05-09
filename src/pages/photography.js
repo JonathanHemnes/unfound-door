@@ -131,7 +131,7 @@ const Photography = ({ data }) => {
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Photography" />
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Photography" email={data.site.siteMetadata.mainEmail}/>
             <div {...center} {...bottomPadding} {...StyleStandards.marginTop}>
                 <h1 {...header} {...smallerFontOnSmallScreen}>Professional Photography</h1>
                 <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>

@@ -6,7 +6,7 @@ const footer = css({
     display: `flex`,
     justifyContent: `center`,
     alignItems: 'center',
-    background: StyleStandards.colors.grey,
+    background: StyleStandards.colors.yellow,
     color: StyleStandards.colors.black,
 })
 
