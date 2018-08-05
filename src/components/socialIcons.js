@@ -19,7 +19,7 @@ const icons = [
     {link: 'https://www.facebook.com/theunfounddoor', iconName: 'facebook-official', size: 'fa-3x', name:'Facebook'},
     {link: 'https://www.instagram.com/theunfounddoor/', iconName: 'instagram', size: 'fa-3x', name: 'Instagram'},
     {link: 'https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA', iconName: 'youtube', size: 'fa-3x', name: 'Youtube'},
-    {link: 'https://www.linkedin.com/in/ely-hemnes-47261a51/', iconName: 'linkedin', size: 'fa-3x', 'LinkedIn'}
+    {link: 'https://www.linkedin.com/in/ely-hemnes-47261a51/', iconName: 'linkedin', size: 'fa-3x', name: 'LinkedIn'}
 ]
 
 const SocialIcons = () => (
