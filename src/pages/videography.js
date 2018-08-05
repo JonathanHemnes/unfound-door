@@ -116,7 +116,7 @@ const Videography = ({ data }) => {
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Videography" email={data.site.siteMetadata.mainEmail}/>
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Videography" email={data.site.siteMetadata.mainEmail} alt="People standing reviewing samples on tables"/>
             <div {...center} {...StyleStandards.marginTop} {...StyleStandards.marginBottom}>
                 <h1 {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>Videography</h1>
                 <p>The future of reaching new customers and showing your value is through visual storytelling. Whether you are looking to document an important event, provide a 360 Degree Virtual Tour experience, or boast your company culture, videography is a powerful tool.</p>

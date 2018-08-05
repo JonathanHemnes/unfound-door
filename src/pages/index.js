@@ -35,7 +35,7 @@ const textStyle = css({
 const IndexPage = ({ data }) => {
     return (
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={data.site.siteMetadata.mainPageSubText} email={data.site.siteMetadata.mainEmail}/>
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={data.site.siteMetadata.mainPageSubText} email={data.site.siteMetadata.mainEmail} alt="Three escalators"/>
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>

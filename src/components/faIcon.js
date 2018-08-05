@@ -5,7 +5,7 @@ import animations from '../animations'
 
 const hoverBounce = css({
     ':hover': {
-        animation: `${animations.grow} 1s`,
+        animation: `${animations.grow} 1s`
     }
 })
 

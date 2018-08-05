@@ -142,7 +142,7 @@ class Contact extends React.Component {
     render () {
         return (
             <div>
-                <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} email={this.data.site.siteMetadata.mainEmail}/>
+                <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} email={this.data.site.siteMetadata.mainEmail} alt="Man sitting in with computers in front of him"/>
                 <div {...StyleStandards.marginTop} {...header}>
                     <h1 {...noBottomMargin} {...uppercase}>Contact Us</h1>
                     <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>

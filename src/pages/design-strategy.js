@@ -115,7 +115,7 @@ const DesignStrategy = ({ data }) => {
 
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" email={data.site.siteMetadata.mainEmail}/>
+            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" email={data.site.siteMetadata.mainEmail} alt="Man reviewing architectural plans"/>
             <div {...center} {...StyleStandards.marginTop}>
                 <h1 {...uppercase} {...noMarginBottom}>Purpose</h1>
                 <p>Your most important marketing assets should support your brand strategy. Whether you are reconstructing your image or building foundational tools to further your message, let us help you find the right path.</p>

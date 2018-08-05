@@ -30,7 +30,7 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 
 const About = ({ data }) => (
     <div {...container}>
-        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail}/>
+        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail} alt="People walking through field with sun at their back"/>
         <div>
             <div {...header}>
                 <AboutHeader />
