@@ -19,7 +19,9 @@ const TemplateWrapper = ({ children, data }) => (
       link={[
         { rel: 'stylesheet', href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" }
       ]}
-    />
+  >
+      <meta name="theme-color" content="#9ea2a8"/>
+  </Helmet>
     <Header />
     <div>
       {children()}
