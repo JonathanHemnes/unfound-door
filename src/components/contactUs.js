@@ -87,8 +87,8 @@ const ContactUs = props => (
                </div>
                <div {...contactBody}>
                    <div {...mainContactIcons}>
-                       <FaIcon link="mailto:ely@theunfounddoor.com" iconName="envelope" size="fa-5x" style={mainContactIconStyle} />
-                       <FaIcon link="tel:6177759911" iconName="phone" size="fa-5x" style={mainContactIconStyle} />
+                       <FaIcon link="mailto:ely@theunfounddoor.com" iconName="envelope" name="email" size="fa-5x" style={mainContactIconStyle} />
+                       <FaIcon link="tel:6177759911" iconName="phone" size="fa-5x" name="telephone" style={mainContactIconStyle} />
                    </div>
                </div>     
            </div>
