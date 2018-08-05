@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
+import Helmet from 'react-helmet'
 import Splash from '../components/splash'
 import Founder from '../components/founder'
 import OurTeam from '../components/ourTeam'
@@ -30,7 +31,12 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 
 const About = ({ data }) => (
     <div {...container}>
-        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail}/>
+        <Helmet
+            meta={[
+                { name: 'description', content: who },
+            ]}
+        ></Helmet>
+        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail} alt="People walking through field with sun at their back"/>
         <div>
             <div {...header}>
                 <AboutHeader />

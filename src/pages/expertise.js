@@ -42,7 +42,7 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 const Expertise = ({props, data}) => {
     return (
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail}/>
+            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail} alt="Man in grey suit standing holding a drink"/>
             <div> 
                 <div {...header}>
                     <AboutHeader />
