@@ -21,6 +21,7 @@ const TemplateWrapper = ({ children, data }) => (
       ]}
   >
       <meta name="theme-color" content="#9ea2a8"/>
+      <html lang="en" />
   </Helmet>
     <Header />
     <div>
