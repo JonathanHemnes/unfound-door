@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 import Splash from '../components/splash'
 import expertiseLogo from '../img/header/expertise.jpg'
 import StrategicPartnership from '../components/strategicPartnership'
@@ -33,7 +34,7 @@ const noBottomMargin = css({
     marginBottom: '0px'
 })
 
-const who = 'We are a creative consultancy  rm working the best creatives in every industry with services ranging from photography and videography to design and content creation.';
+const who = 'We are a creative consultancy firm working the best creatives in every industry with services ranging from photography and videography to design and content creation.';
 const what = 'We are dedicated to creating the ultimate seamless experience by offering a diversity of creative services with precision, technique, and passion.';
 const why = 'We believe that you should have a designated team focused on aiding you throughout the process of crafting and implementing your vision.';
 const where = 'Where ever you are we can go!';
@@ -42,6 +43,11 @@ const how = 'Schedule a meeting to discuss how you can discover your creative po
 const Expertise = ({props, data}) => {
     return (
         <div>
+            <Helmet
+                meta={[
+                    { name: 'description', content: what }
+                ]}
+            />
             <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail} alt="Man in grey suit standing holding a drink"/>
             <div> 
                 <div {...header}>
