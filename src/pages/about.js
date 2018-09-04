@@ -3,7 +3,6 @@ import { css } from 'glamor'
 import Helmet from 'react-helmet'
 import Splash from '../components/splash'
 import Founder from '../components/founder'
-import OurTeam from '../components/ourTeam'
 import AboutHeader from '../components/aboutHeader'
 import StrategicPartnership from '../components/strategicPartnership'
 import WhoWhatWhere from '../components/whoWhatWhere'
@@ -43,7 +42,6 @@ const About = ({ data }) => (
                 <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             </div>
             <Founder img={data.founderHeadshot.childImageSharp} />
-            <OurTeam teamHeadshots={data.teamHeadshots} />
             <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
         </div>
     </div>
