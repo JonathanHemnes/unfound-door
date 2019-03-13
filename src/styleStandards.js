@@ -4,8 +4,8 @@ const colors = {
     white: `#fffff0`,
     red: `red`,
     black: `black`,
-    grey: `rgb(158, 162, 168)`,
-    yellow: `#f2e12e`
+    grey: `#bebebe`,
+    yellow: `#edb549`
 }
 const StyleStandards = {
     colors,
