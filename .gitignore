@@ -7,3 +7,9 @@ public/
 .DS_Store
 yarn-error.log
 yarn.lock
+
+#vim files
+#
+tags
+tags.lock
+tags.temp
