@@ -7,6 +7,7 @@ import PartnerLogos from '../components/partnerLogos.js'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
 import LetsTalk from '../components/letsTalk'
+import { graphql } from 'gatsby'
 
 const smallerFontOnSmallScreen = css({
     '@media(max-width: 470px)': {

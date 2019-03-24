@@ -1,8 +1,8 @@
 {
-  "name": "The Unfound Door",
+  "name": "unfound-door",
   "description": "Blazing fast site for the greatest company in Colorado",
   "version": "2.0.0",
-  "author": "Jonathan Hemnes",
+  "author": "Jonathan Hemnes <jhemnes@gmail.com>",
   "dependencies": {
     "gatsby": "^2.2.9",
     "gatsby-image": "^2.0.34",
@@ -10,7 +10,7 @@
     "gatsby-plugin-favicon": "^3.1.5",
     "gatsby-plugin-glamor": "^2.0.9",
     "gatsby-plugin-google-analytics": "^2.0.17",
-    "gatsby-plugin-nprogress": "^2.0.10",
+    "gatsby-plugin-layout": "^1.0.13",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.30",
@@ -25,7 +25,6 @@
     "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
     "react-photo-gallery": "^6.3.2",
-    "react-responsive-carousel": "^3.1.47",
     "react-typography": "^0.16.19",
     "typescript": "^3.3.4000",
     "typography": "^0.16.19",

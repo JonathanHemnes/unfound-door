@@ -19,7 +19,7 @@ const listElement = css({
 
 const LinkToList = (props) =>(
     <li {...listElement}>
-        <Link to={props.to}>
+        <Link to={`${ props.to }`}>
             {props.children}
         </Link>
     </li>

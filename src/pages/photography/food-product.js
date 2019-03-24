@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoGallery from '../../components/photoGallery'
+import { graphql } from 'gatsby'
 
 const FoodProductPhotography = ({ data }) => {
 

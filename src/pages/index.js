@@ -7,6 +7,7 @@ import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photoLink'
 import MainServices from '../components/mainServices'
 import CustomerReviews from '../components/customerReviews'
+import { graphql } from 'gatsby'
 
 const photoArray = css({
     display: `flex`,

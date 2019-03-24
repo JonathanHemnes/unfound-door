@@ -7,6 +7,7 @@ import PhotoLink from '../components/photoLink'
 import Address from '../components/address'
 import SocialIcons from '../components/socialIcons'
 import FaIcon from '../components/faIcon'
+import { graphql } from 'gatsby'
 
 const noBottomMargin = css({
     marginBottom: 0

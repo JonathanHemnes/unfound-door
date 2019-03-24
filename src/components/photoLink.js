@@ -32,7 +32,7 @@ const PhotoLink = (props) => {
     return (
         <div {...container}>
             { props.to ?
-                <Link to={props.to}>
+                <Link to={`${ props.to }`}>
                     <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} alt={props.alt} />
                     {props.text && <div {...textBlock}>
                         <h2 {...white} {...props.textStyle}>{props.text}</h2>

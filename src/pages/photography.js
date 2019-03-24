@@ -6,6 +6,7 @@ import PartnerLogos from '../components/partnerLogos.js'
 import CustomerReviews from '../components/customerReviews'
 import LetsTalk from '../components/letsTalk'
 import StyleStandards from '../styleStandards'
+import { graphql } from 'gatsby'
 
 const container = css({
     margin: '75px 0 75px 0',

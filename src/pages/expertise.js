@@ -11,6 +11,7 @@ import AboutHeader from '../components/aboutHeader'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import PartnerLogos from '../components/partnerLogos'
 import StyleStandards from '../styleStandards'
+import { graphql } from 'gatsby'
 
 const center = css({
   textAlign: 'center'
