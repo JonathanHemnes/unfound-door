@@ -198,21 +198,21 @@ query contactQuery {
   splash: file (relativePath: {eq: "img/header/ContactUsHeader.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   whoWeArePhoto: file (relativePath: {eq: "img/Main-WhoWeAre-Header.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   },

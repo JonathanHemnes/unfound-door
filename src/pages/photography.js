@@ -170,14 +170,14 @@ query photographyQuery {
   splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
@@ -186,7 +186,7 @@ query photographyQuery {
         node {
             childImageSharp {
                fluid (maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -197,7 +197,7 @@ query photographyQuery {
         node {
             childImageSharp {
                fluid (maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -206,84 +206,84 @@ query photographyQuery {
   headshot: file(relativePath: {eq: "img/Photography_Sections/Headshot_Portrait.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   eventsMeetings: file(relativePath: {eq: "img/Photography_Sections/Events_Meetings.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   marketingLifestyle: file(relativePath: {eq: "img/Photography_Sections/Marketing_Lifestyle.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   nonProfit: file(relativePath: {eq: "img/Photography_Sections/Nonprofit.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   engineeringConstruction: file(relativePath: {eq: "img/Photography_Sections/Engineering_Construction.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   architecture: file(relativePath: {eq: "img/Photography_Sections/Architecture_Project.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   aerial: file(relativePath: {eq: "img/Photography_Sections/Aerial_Photography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   foodProduct: file(relativePath: {eq: "img/Photography_Sections/Food_and_Product.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   wedding: file(relativePath: {eq: "img/Photography_Sections/Weddings_Couple_Portraits.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   families: file(relativePath: {eq: "img/Photography_Sections/Families_babies.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   boudoir: file(relativePath: {eq: "img/Photography_Sections/Boudoir_Photography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   portraits: file(relativePath: {eq: "img/Photography_Sections/Portraits_Seniors.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 

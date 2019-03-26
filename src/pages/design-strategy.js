@@ -153,77 +153,77 @@ query designStrategyQuery {
   splash: file (relativePath: {eq: "img/Design_Strategy/Header.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   elevate: file(relativePath: {eq: "img/Design_Strategy/Elevate_Marketing_Materials.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   account: file(relativePath: {eq: "img/Design_Strategy/Account_Management.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   graphic: file(relativePath: {eq: "img/Design_Strategy/Graphic_Design_and_Branding.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   creative: file(relativePath: {eq: "img/Design_Strategy/Creative_Suite.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   contentCreation: file(relativePath: {eq: "img/Design_Strategy/Content_Creation_and_SEO.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   socialMedia: file(relativePath: {eq: "img/Design_Strategy/Social_Media.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   webDesign: file(relativePath: {eq: "img/Design_Strategy/WebDesign_and_Website_Maintenence.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   businessDevelopment: file(relativePath: {eq: "img/Design_Strategy/Business_Development.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   smallBusinessFoundation: file(relativePath: {eq: "img/Design_Strategy/Small_Business_Foundation.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 

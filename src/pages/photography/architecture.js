@@ -23,7 +23,7 @@ query ArchitectureQuery {
         node {
             childImageSharp {
                 fixed(width:600) {
-                    ...GatsbyImageSharpFixed_withWebp_tracedSVG
+                    ...GatsbyImageSharpFixed_tracedSVG
                 }
             }
         }

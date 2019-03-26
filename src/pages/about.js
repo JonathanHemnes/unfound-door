@@ -62,28 +62,28 @@ query aboutQuery {
   splash: file (relativePath: {eq: "img/header/OurStoryHeader.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   founderHeadshot: file(relativePath: {eq: "img/Ely_Hemnes_CEO_Founder_Headshot.jpeg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
@@ -92,7 +92,7 @@ query aboutQuery {
         node {
             childImageSharp {
                fluid (maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -104,7 +104,7 @@ query aboutQuery {
             name
             childImageSharp {
                fluid (maxWidth: 1200) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
