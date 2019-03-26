@@ -68,7 +68,7 @@ const iconStyle = css({
 const Splash = props => {
     return (
         <div {...imgWrapper}>
-            <GreyImage src={props.src} sizes={props.sizes} fixed={props.fixed} alt={props.alt} />
+            <GreyImage src={props.src} fluid={props.fluid} fixed={props.fixed} alt={props.alt} />
             <div {...logoStyle}>
                 <img src={props.logo.sizes.src} alt="Door with text below: The Unfound Door" />
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>

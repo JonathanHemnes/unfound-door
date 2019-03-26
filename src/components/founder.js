@@ -55,7 +55,7 @@ const Founder = (props) => (
         </div>
         <div {...photos}>
             <div {...leftPhotoStyle}>
-                <Img sizes={props.img.sizes} />
+                <Img fluid={props.img.sizes} />
             </div>
             <div {...rightPhotoStyle}>
                 <PhotoWithTextOverlay src={rightPhoto} text={overlayText} textStyle={overlayTextStyle} />

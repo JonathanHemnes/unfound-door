@@ -75,49 +75,49 @@ const how = 'will your video(s) be narrated?';
 const Videography = ({ data }) => {
     const videographyImages = [
         {
-            sizes: data.companyCustomer.childImageSharp.sizes,
+            sizes: data.companyCustomer.childImageSharp.fluid,
             to: '/contact',
             text: 'Company & Customer Spotlight'
         },
         {
-            sizes: data.training.childImageSharp.sizes,
+            sizes: data.training.childImageSharp.fluid,
             to: '/contact',
             text: 'Training & Technical'
         },
         {
-            sizes: data.social.childImageSharp.sizes,
+            sizes: data.social.childImageSharp.fluid,
             to: '/contact',
             text: 'Social Campaigns'
         },
         {
-            sizes: data.event.childImageSharp.sizes,
+            sizes: data.event.childImageSharp.fluid,
             to: '/contact',
             text: 'Event Highlight'
         },
         {
-            sizes: data.sloMo.childImageSharp.sizes,
+            sizes: data.sloMo.childImageSharp.fluid,
             to: '/contact',
             text: 'Slow-Mo Video Booth'
         },
         {
-            sizes: data.products.childImageSharp.sizes,
+            sizes: data.products.childImageSharp.fluid,
             to: '/contact',
             text: 'Products'
         },
         {
-            sizes: data.aerial.childImageSharp.sizes,
+            sizes: data.aerial.childImageSharp.fluid,
             to: '/contact',
             text: 'Aerial'
         },
         {
-            sizes: data.walkThru.childImageSharp.sizes,
+            sizes: data.walkThru.childImageSharp.fluid,
             to: '/contact',
             text: '360 Space Walk-Thru'
         }
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Videography" email={data.site.siteMetadata.mainEmail} alt="People standing reviewing samples on tables"/>
+            <Splash fluid={data.splash.childImageSharp.fluid} logo={data.logo.childImageSharp} subText="Videography" email={data.site.siteMetadata.mainEmail} alt="People standing reviewing samples on tables"/>
             <div {...center} {...StyleStandards.marginTop} {...StyleStandards.marginBottom}>
                 <h1 {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>Videography</h1>
                 <p>The future of reaching new customers and showing your value is through visual storytelling. Whether you are looking to document an important event, provide a 360 Degree Virtual Tour experience, or boast your company culture, videography is a powerful tool.</p>
@@ -125,7 +125,7 @@ const Videography = ({ data }) => {
             </div>
             <PhotoLinkArray images={videographyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
             <div {...StyleStandards.marginTop}>
-                <PhotoLink sizes={data.portfolio.childImageSharp.sizes} text="Check Out Our Recent Portfolio" href="https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA" containerStyle={largeContainerPhoto} textStyle={portfolioBanner} />
+                <PhotoLink fluid={data.portfolio.childImageSharp.fluid} text="Check Out Our Recent Portfolio" href="https://www.youtube.com/channel/UC5byxo-QMxPd2S-jXDhIeeA" containerStyle={largeContainerPhoto} textStyle={portfolioBanner} />
             </div>
             <div {...greyBackground} {...conception}>
                 <h1 {...StyleStandards.uppercase} {...StyleStandards.noBottomMargin} {...smallerFontOnSmallScreen}>Conception</h1>
@@ -153,15 +153,15 @@ query videographyQuery {
   },
   splash: file (relativePath: {eq: "img/Videography/VideographyHeader.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
@@ -169,8 +169,8 @@ query videographyQuery {
     edges {
         node {
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -178,64 +178,64 @@ query videographyQuery {
   } 
   portfolio: file(relativePath: {eq: "img/Videography/Recent_Portfolio_Videography_Icon.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   companyCustomer: file(relativePath: {eq: "img/Videography/Company_Customer_Spotlight_Videography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   training: file(relativePath: {eq: "img/Videography/Training_Technical_Videography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   social: file(relativePath: {eq: "img/Videography/Social_Campaigns_Videography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   event: file(relativePath: {eq: "img/Videography/Event_Highlight_Videography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   sloMo: file(relativePath: {eq: "img/Videography/Slow_Mo_Video_Booth.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   products: file(relativePath: {eq: "img/Videography/Product_Videography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   aerial: file(relativePath: {eq: "img/Videography/Aerial_Videography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   walkThru: file(relativePath: {eq: "img/Videography/360_Space_Walk_Thru.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 

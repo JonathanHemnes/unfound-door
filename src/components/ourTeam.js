@@ -55,7 +55,7 @@ class OurTeam extends React.Component {
         const newPhoto = this.state.teamHeadshots.edges[randomPhotoIndex];
         let newLogoArray = this.state.displayHeadshots;
 
-        if(!this.isLogoAlreadyShown(newPhoto.node.childImageSharp.sizes.src)) {
+        if(!this.isLogoAlreadyShown(newPhoto.node.childImageSharp.fluid.src)) {
             newLogoArray[randomArrayIndex] = newPhoto;
             this.setState({
                 displayHeadshots: newLogoArray 
@@ -64,7 +64,7 @@ class OurTeam extends React.Component {
     }
 
     isLogoAlreadyShown(src) {
-        return this.state.displayHeadshots.find(logo => logo.node.childImageSharp.sizes.src === src)
+        return this.state.displayHeadshots.find(logo => logo.node.childImageSharp.fluid.src === src)
     }
 
     getRandomIndex(maxIndex) {
@@ -91,8 +91,8 @@ class OurTeam extends React.Component {
                 <div {...headshotStyles}>
                     {
                         this.state.displayHeadshots.map((file, i) => {
-                            const element =  <TitledHeadshot key={file.node.childImageSharp.sizes.src} sizes={file.node.childImageSharp.sizes} name={getTeamMemberName(file.node.name)} title={getTeamMemberTitle(file.node.name)} /> 
-                            return <BlurOnEnterAndExit key={file.node.childImageSharp.sizes.src} element={element} />
+                            const element =  <TitledHeadshot key={file.node.childImageSharp.fluid.src} fluid={file.node.childImageSharp.fluid} name={getTeamMemberName(file.node.name)} title={getTeamMemberTitle(file.node.name)} /> 
+                            return <BlurOnEnterAndExit key={file.node.childImageSharp.fluid.src} element={element} />
                         })
                     }
                 </div>

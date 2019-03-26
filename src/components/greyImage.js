@@ -6,8 +6,8 @@ import Img from 'gatsby-image'
 const GreyImage = props => {
     if (props.src) {
         return (<img src={props.src} alt={props.alt} {...props.imgStyle} />)
-    } else if (props.sizes) {
-        return (<Img sizes={props.sizes} className={props.imgStyle} alt={props.alt}/>)
+    } else if (props.fluid) {
+        return (<Img fluid={props.fluid} className={props.imgStyle} alt={props.alt}/>)
     } else if (props.fixed) {
         return (<Img fixed={props.fixed} className={props.imgStyle} alt={props.alt}/>)
     }

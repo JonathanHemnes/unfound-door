@@ -36,11 +36,11 @@ const textStyle = css({
 const IndexPage = ({ data }) => {
     return (
         <div>
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText={data.site.siteMetadata.mainPageSubText} email={data.site.siteMetadata.mainEmail} alt="Three escalators"/>
+            <Splash fluid={data.file.childImageSharp.fluid} logo={data.logo.childImageSharp} subText={data.site.siteMetadata.mainPageSubText} email={data.site.siteMetadata.mainEmail} alt="Three escalators"/>
             <WhatWeDo email={data.site.siteMetadata.mainEmail} />
             <MainServices />
             <div {...photoArray}>
-                <PhotoLink to={'/about'} sizes={data.whoWeArePhoto.childImageSharp.sizes} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} textStyle={textStyle} subTextStyle={subTextStyle} imgStyle={imageStyle} />
+                <PhotoLink to={'/about'} fluid={data.whoWeArePhoto.childImageSharp.fluid} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} textStyle={textStyle} subTextStyle={subTextStyle} imgStyle={imageStyle} />
             </div>
             <CustomerReviews />
         </div>
@@ -59,22 +59,22 @@ export const query = graphql`
     },
     file (relativePath: {eq: "img/header/MainPageHeader.jpg"}) {
       childImageSharp {
-        sizes (maxWidth: 2400) {
-          ...GatsbyImageSharpSizes
+        fluid (maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
         }
       }
     },
     whoWeArePhoto: file (relativePath: {eq: "img/Main-WhoWeAre-Header.jpg"}) {
       childImageSharp {
-        sizes (maxWidth: 2400) {
-          ...GatsbyImageSharpSizes
+        fluid (maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
         }
       }
     },
     logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
       childImageSharp {
-        sizes (maxWidth: 2400) {
-          ...GatsbyImageSharpSizes
+        fluid (maxWidth: 1200) {
+          ...GatsbyImageSharpFluid
         }
     }
   } 

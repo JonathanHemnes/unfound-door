@@ -23,7 +23,7 @@ query HeadshotQuery {
         node {
             childImageSharp {
                 fixed(width:600) {
-                    ...GatsbyImageSharpFixed_withWebp
+                    ...GatsbyImageSharpFixed
                 }
             }
         }

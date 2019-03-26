@@ -49,7 +49,7 @@ const Expertise = ({props, data}) => {
                     { name: 'description', content: what }
                 ]}
             />
-            <Splash sizes={data.file.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail} alt="Man in grey suit standing holding a drink"/>
+            <Splash fluid={data.file.childImageSharp.fluid} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail} alt="Man in grey suit standing holding a drink"/>
             <div> 
                 <div {...header}>
                     <AboutHeader />
@@ -83,22 +83,22 @@ query expertiseQuery {
     },
   file (relativePath: {eq: "img/header/expertise.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
   strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid
       }
     }
   } 
@@ -106,8 +106,8 @@ query expertiseQuery {
     edges {
         node {
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -117,8 +117,8 @@ query expertiseQuery {
     edges {
         node {
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

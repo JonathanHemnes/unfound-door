@@ -23,7 +23,7 @@ const noMargin = css({
 const TitledHeadshot = props => (
     <div {...container}>
         <div {...imageStyles}>
-            <Img sizes={props.sizes} />
+            <Img fluid={props.fluid} />
         </div>
         <div {...title}>
             <h5 {...noMargin}>{props.name}<br />{props.title}</h5>

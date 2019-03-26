@@ -22,8 +22,8 @@ query EngineeringQuery {
       edges {
         node {
             childImageSharp {
-                fixed(width:1200) {
-                    ...GatsbyImageSharpFixed_withWebp
+                fixed(width:600) {
+                    ...GatsbyImageSharpFixed
                 }
             }
         }
