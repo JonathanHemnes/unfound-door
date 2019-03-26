@@ -36,7 +36,7 @@ class PartnerLogos extends React.Component {
         const newPhoto = this.state.partnerLogos.edges[randomPhotoIndex];
         let newLogoArray = this.state.displayLogos;
 
-        if(!this.isLogoAlreadyShown(newPhoto.node.childImageSharp.sizes.src)) {
+        if(!this.isLogoAlreadyShown(newPhoto.node.childImageSharp.fluid.src)) {
             newLogoArray[randomArrayIndex] = newPhoto;
             this.setState({
                 displayLogos: newLogoArray 
@@ -45,7 +45,7 @@ class PartnerLogos extends React.Component {
     }
 
     isLogoAlreadyShown(src) {
-        return this.state.displayLogos.find(logo => logo.node.childImageSharp.sizes.src === src)
+        return this.state.displayLogos.find(logo => logo.node.childImageSharp.fluid.src === src)
     }
 
     getRandomIndex(maxIndex) {
@@ -66,9 +66,9 @@ class PartnerLogos extends React.Component {
         return (
             <div {...logoArray}>
                 {this.state.displayLogos.map((file, i) => {
-                    const element = <Img sizes={file.node.childImageSharp.sizes} /> 
+                    const element = <Img fluid={file.node.childImageSharp.fluid} /> 
                     return (
-                        <div key={file.node.childImageSharp.sizes.src} {...imageStyle}>
+                        <div key={file.node.childImageSharp.fluid.src} {...imageStyle}>
                             <BlurOnEnterAndExit element={element} />
                         </div>
                     )   

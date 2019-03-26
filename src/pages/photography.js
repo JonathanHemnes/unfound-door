@@ -6,6 +6,7 @@ import PartnerLogos from '../components/partnerLogos.js'
 import CustomerReviews from '../components/customerReviews'
 import LetsTalk from '../components/letsTalk'
 import StyleStandards from '../styleStandards'
+import { graphql } from 'gatsby'
 
 const container = css({
     margin: '75px 0 75px 0',
@@ -67,71 +68,71 @@ const smallerFontOnSmallScreen = css({
 const Photography = ({ data }) => {
     const professionalImages=[
         {
-            sizes: data.headshot.childImageSharp.sizes,
+            fluid: data.headshot.childImageSharp.fluid,
             to: '/photography/headshots',
             text: 'Headshots & Portraits'
         },
         {
-            sizes: data.eventsMeetings.childImageSharp.sizes,
+            fluid: data.eventsMeetings.childImageSharp.fluid,
             to: '/photography/events-meetings',
             text: 'Events & Meetings'
         },
         {
-            sizes: data.marketingLifestyle.childImageSharp.sizes,
+            fluid: data.marketingLifestyle.childImageSharp.fluid,
             to: '/photography/marketing-lifestyle',
             text: 'Marketing Lifestyle'
         },
         {
-            sizes: data.nonProfit.childImageSharp.sizes,
+            fluid: data.nonProfit.childImageSharp.fluid,
             to: '/contact',
             text: 'Non-Profit Giving Back'
         },
         {
-            sizes: data.engineeringConstruction.childImageSharp.sizes,
+            fluid: data.engineeringConstruction.childImageSharp.fluid,
             to: '/photography/engineering-construction',
             text: 'Engineering / Construction'
         },
         {
-            sizes: data.architecture.childImageSharp.sizes,
+            fluid: data.architecture.childImageSharp.fluid,
             to: '/photography/architecture',
             text: 'Architecture & Project Progress'
         },
         {
-            sizes: data.aerial.childImageSharp.sizes,
+            fluid: data.aerial.childImageSharp.fluid,
             to: '/contact',
             text: 'Aerial'
         },
         {
-            sizes: data.foodProduct.childImageSharp.sizes,
+            fluid: data.foodProduct.childImageSharp.fluid,
             to: '/photography/food-product',
             text: 'Food & Product'
         }
     ]
     const personalImages = [
         {
-            sizes: data.wedding.childImageSharp.sizes,
+            fluid: data.wedding.childImageSharp.fluid,
             to: '/contact',
             text: 'Weddings & Couples Portraits'
         },
         {
-            sizes: data.families.childImageSharp.sizes,
+            fluid: data.families.childImageSharp.fluid,
             to: '/contact',
             text: 'Families & Babies'
         },
         {
-            sizes: data.portraits.childImageSharp.sizes,
+            fluid: data.portraits.childImageSharp.fluid,
             to: '/contact',
             text: 'Portraits & Seniors'
         },
         {
-            sizes: data.boudoir.childImageSharp.sizes,
+            fluid: data.boudoir.childImageSharp.fluid,
             to: '/contact',
             text: 'Boudoir'
         },
     ]
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Photography" email={data.site.siteMetadata.mainEmail} alt="Woman wearing flourescent yellow shirt holding beam above her head"/>
+            <Splash fluid={data.splash.childImageSharp.fluid} logo={data.logo.childImageSharp} subText="Photography" email={data.site.siteMetadata.mainEmail} alt="Woman wearing flourescent yellow shirt holding beam above her head"/>
             <div {...center} {...bottomPadding} {...StyleStandards.marginTop}>
                 <h1 {...header} {...smallerFontOnSmallScreen}>Professional Photography</h1>
                 <p>Elevate your company photography with the photographer that suits your vision, style, and budget. Discover unique opportunities to work with a variety of photographic geniuses.</p>
@@ -168,15 +169,15 @@ query photographyQuery {
   },
   splash: file (relativePath: {eq: "img/PhotographyHeader.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
@@ -184,8 +185,8 @@ query photographyQuery {
     edges {
         node {
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -195,8 +196,8 @@ query photographyQuery {
     edges {
         node {
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -204,85 +205,85 @@ query photographyQuery {
   } 
   headshot: file(relativePath: {eq: "img/Photography_Sections/Headshot_Portrait.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   eventsMeetings: file(relativePath: {eq: "img/Photography_Sections/Events_Meetings.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   marketingLifestyle: file(relativePath: {eq: "img/Photography_Sections/Marketing_Lifestyle.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   nonProfit: file(relativePath: {eq: "img/Photography_Sections/Nonprofit.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   engineeringConstruction: file(relativePath: {eq: "img/Photography_Sections/Engineering_Construction.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   architecture: file(relativePath: {eq: "img/Photography_Sections/Architecture_Project.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   aerial: file(relativePath: {eq: "img/Photography_Sections/Aerial_Photography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   foodProduct: file(relativePath: {eq: "img/Photography_Sections/Food_and_Product.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   wedding: file(relativePath: {eq: "img/Photography_Sections/Weddings_Couple_Portraits.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   families: file(relativePath: {eq: "img/Photography_Sections/Families_babies.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   boudoir: file(relativePath: {eq: "img/Photography_Sections/Boudoir_Photography.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   portraits: file(relativePath: {eq: "img/Photography_Sections/Portraits_Seniors.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 

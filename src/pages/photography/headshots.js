@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoGallery from '../../components/photoGallery'
+import { graphql } from 'gatsby'
 
 const HeadshotPhotography = ({ data }) => {
 
@@ -21,8 +22,8 @@ query HeadshotQuery {
       edges {
         node {
             childImageSharp {
-                resolutions(width:600) {
-                    ...GatsbyImageSharpResolutions
+                fixed(width:600) {
+                    ...GatsbyImageSharpFixed_tracedSVG
                 }
             }
         }

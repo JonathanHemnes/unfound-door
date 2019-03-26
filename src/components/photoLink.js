@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import Link from 'gatsby-link'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import GreyImage from './greyImage'
 import StyleStandards from '../styleStandards.js'
 
@@ -32,8 +32,8 @@ const PhotoLink = (props) => {
     return (
         <div {...container}>
             { props.to ?
-                <Link to={props.to}>
-                    <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} alt={props.alt} />
+                <Link to={`${ props.to }`}>
+                    <GreyImage src={props.src} fluid={props.fluid} imgStyle={props.imgStyle} alt={props.alt} />
                     {props.text && <div {...textBlock}>
                         <h2 {...white} {...props.textStyle}>{props.text}</h2>
                         <h3 {...white} {...props.subTextStyle}>{props.subText}</h3>
@@ -41,7 +41,7 @@ const PhotoLink = (props) => {
                 </Link>
                 :
                 <a href={props.href} target="_blank">
-                    <GreyImage src={props.src} sizes={props.sizes} imgStyle={props.imgStyle} />
+                    <GreyImage src={props.src} fluid={props.fluid} imgStyle={props.imgStyle} />
                     {props.text && <div {...textBlock}>
                         <h2 {...white} {...props.textStyle}>{props.text}</h2>
                         <h3 {...white} {...props.subTextStyle}>{props.subText}</h3>
@@ -53,10 +53,10 @@ const PhotoLink = (props) => {
 }
 
 PhotoLink.propTypes = {
-    to: PropTypes.string,
-    src: PropTypes.string,
-    text: PropTypes.string,
-    subText: PropTypes.string
+    to: propTypes.string,
+    src: propTypes.string,
+    text: propTypes.string,
+    subText: propTypes.string
 }
 
 export default PhotoLink

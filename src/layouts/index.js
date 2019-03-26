@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
@@ -22,10 +22,11 @@ const TemplateWrapper = ({ children, data }) => (
   >
       <meta name="theme-color" content="#9ea2a8"/>
       <html lang="en" />
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </Helmet>
     <Header />
     <div>
-      {children()}
+      {children}
     </div>
     <ContactUs />
     <Footer />
@@ -33,7 +34,7 @@ const TemplateWrapper = ({ children, data }) => (
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: propTypes.object,
 }
 
 export default TemplateWrapper

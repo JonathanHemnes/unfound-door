@@ -7,6 +7,7 @@ import PhotoLink from '../components/photoLink'
 import Address from '../components/address'
 import SocialIcons from '../components/socialIcons'
 import FaIcon from '../components/faIcon'
+import { graphql } from 'gatsby'
 
 const noBottomMargin = css({
     marginBottom: 0
@@ -142,7 +143,7 @@ class Contact extends React.Component {
     render () {
         return (
             <div>
-                <Splash sizes={this.data.splash.childImageSharp.sizes} logo={this.data.logo.childImageSharp} subText={this.state.subText} email={this.data.site.siteMetadata.mainEmail} alt="Man sitting in with computers in front of him"/>
+                <Splash fluid={this.data.splash.childImageSharp.fluid} logo={this.data.logo.childImageSharp} subText={this.state.subText} email={this.data.site.siteMetadata.mainEmail} alt="Man sitting in with computers in front of him"/>
                 <div {...StyleStandards.marginTop} {...header}>
                     <h1 {...noBottomMargin} {...uppercase}>Contact Us</h1>
                     <p>Start your journey towards creative freedom by contacting us today. Discover what happens when creativity meets efficiency.</p>
@@ -177,7 +178,7 @@ class Contact extends React.Component {
                 </div>
                 <MainServices />
                 <div {...photoArray}>
-                    <PhotoLink to={'/about'} sizes={this.data.whoWeArePhoto.childImageSharp.sizes} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} textStyle={textStyle} subTextStyle={subTextStyle} imgStyle={imageStyle} />
+                    <PhotoLink to={'/about'} fluid={this.data.whoWeArePhoto.childImageSharp.fluid} text={'Who We Are'} subText={'Artists, Innovators, Professionals'} textStyle={textStyle} subTextStyle={subTextStyle} imgStyle={imageStyle} />
                 </div>
             </div>
         )
@@ -196,22 +197,22 @@ query contactQuery {
   },
   splash: file (relativePath: {eq: "img/header/ContactUsHeader.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   whoWeArePhoto: file (relativePath: {eq: "img/Main-WhoWeAre-Header.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   },

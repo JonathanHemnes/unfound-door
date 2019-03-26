@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import Link from 'gatsby-link'
 import LetsTalk from '../components/letsTalk'
 
@@ -46,8 +46,8 @@ const WhatWeDo = ( props ) => (
     </div>
 )
 
-WhatWeDo.PropTypes = {
-    email: PropTypes.string.isRequired
+WhatWeDo.propTypes = {
+    email: propTypes.string.isRequired
 }
 
 export default WhatWeDo

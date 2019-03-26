@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import Link from 'gatsby-link'
 import { css } from 'glamor'
 import StyleStandards from '../styleStandards'
@@ -19,7 +19,7 @@ const listElement = css({
 
 const LinkToList = (props) =>(
     <li {...listElement}>
-        <Link to={props.to}>
+        <Link to={`${ props.to }`}>
             {props.children}
         </Link>
     </li>

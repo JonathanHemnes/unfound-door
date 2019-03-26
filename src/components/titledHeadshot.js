@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import { css } from 'glamor'
 import Img from 'gatsby-image'
 
@@ -23,7 +23,7 @@ const noMargin = css({
 const TitledHeadshot = props => (
     <div {...container}>
         <div {...imageStyles}>
-            <Img sizes={props.sizes} />
+            <Img fluid={props.fluid} />
         </div>
         <div {...title}>
             <h5 {...noMargin}>{props.name}<br />{props.title}</h5>
@@ -31,9 +31,9 @@ const TitledHeadshot = props => (
     </div>
 )
 
-TitledHeadshot.PropTypes = {
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+TitledHeadshot.propTypes = {
+    name: propTypes.string.isRequired,
+    title: propTypes.string.isRequired
 }
 
 export default TitledHeadshot

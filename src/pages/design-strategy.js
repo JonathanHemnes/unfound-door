@@ -7,6 +7,7 @@ import PartnerLogos from '../components/partnerLogos.js'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
 import LetsTalk from '../components/letsTalk'
+import { graphql } from 'gatsby'
 
 const subTextStyle = css({
     fontSize: '30px',
@@ -69,22 +70,22 @@ const headerStyle = css({
 const DesignStrategy = ({ data }) => {
     const designImages = [
         {
-            sizes: data.graphic.childImageSharp.sizes,
+            sizes: data.graphic.childImageSharp.fluid,
             to: '/contact',
             text: 'Graphic Design & Branding'
         },
         {
-            sizes: data.webDesign.childImageSharp.sizes,
+            sizes: data.webDesign.childImageSharp.fluid,
             to: '/contact',
             text: 'Web Design & Website Maintenance'
         },
         {
-            sizes: data.socialMedia.childImageSharp.sizes,
+            sizes: data.socialMedia.childImageSharp.fluid,
             to: '/contact',
             text: 'Social Media'
         },
         {
-            sizes: data.contentCreation.childImageSharp.sizes,
+            sizes: data.contentCreation.childImageSharp.fluid,
             to: '/contact',
             text: 'Content Creation & SEO'
         }
@@ -92,22 +93,22 @@ const DesignStrategy = ({ data }) => {
 
     const strategyImages = [
         {
-            sizes: data.account.childImageSharp.sizes,
+            sizes: data.account.childImageSharp.fluid,
             to: '/contact',
             text: 'Account Management'
         },
         {
-            sizes: data.smallBusinessFoundation.childImageSharp.sizes,
+            sizes: data.smallBusinessFoundation.childImageSharp.fluid,
             to: '/contact',
             text: 'Small Business Foundation'
         },
         {
-            sizes: data.businessDevelopment.childImageSharp.sizes,
+            sizes: data.businessDevelopment.childImageSharp.fluid,
             to: '/contact',
             text: 'Business Development'
         },
         {
-            sizes: data.creative.childImageSharp.sizes,
+            sizes: data.creative.childImageSharp.fluid,
             to: '/contact',
             text: 'Creative Blueprint'
         }
@@ -115,7 +116,7 @@ const DesignStrategy = ({ data }) => {
 
     return (
         <div>
-            <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" email={data.site.siteMetadata.mainEmail} alt="Man reviewing architectural plans"/>
+            <Splash fluid={data.splash.childImageSharp.fluid} logo={data.logo.childImageSharp} textStyle={subTextStyle} subText="Design & Strategy" email={data.site.siteMetadata.mainEmail} alt="Man reviewing architectural plans"/>
             <div {...center} {...StyleStandards.marginTop}>
                 <h1 {...uppercase} {...noMarginBottom}>Purpose</h1>
                 <p>Your most important marketing assets should support your brand strategy. Whether you are reconstructing your image or building foundational tools to further your message, let us help you find the right path.</p>
@@ -132,7 +133,7 @@ const DesignStrategy = ({ data }) => {
             </div>
             <div {...StyleStandards.marginBottom}>
                 <PhotoLinkArray images={strategyImages} photoStyle={photoStyle} arrayStyle={arrayStyle} textStyle={textStyle} />
-                <PhotoLink sizes={data.elevate.childImageSharp.sizes} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} textStyle={headerStyle} />
+                <PhotoLink fluid={data.elevate.childImageSharp.fluid} text="Elevate your marketing with custom visuals" to="/" containerStyle={largeContainerPhoto} textStyle={headerStyle} />
         </div>
         </div>
     )
@@ -151,78 +152,78 @@ query designStrategyQuery {
   },
   splash: file (relativePath: {eq: "img/Design_Strategy/Header.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   elevate: file(relativePath: {eq: "img/Design_Strategy/Elevate_Marketing_Materials.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   account: file(relativePath: {eq: "img/Design_Strategy/Account_Management.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   graphic: file(relativePath: {eq: "img/Design_Strategy/Graphic_Design_and_Branding.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   creative: file(relativePath: {eq: "img/Design_Strategy/Creative_Suite.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   contentCreation: file(relativePath: {eq: "img/Design_Strategy/Content_Creation_and_SEO.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   socialMedia: file(relativePath: {eq: "img/Design_Strategy/Social_Media.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   webDesign: file(relativePath: {eq: "img/Design_Strategy/WebDesign_and_Website_Maintenence.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   businessDevelopment: file(relativePath: {eq: "img/Design_Strategy/Business_Development.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   smallBusinessFoundation: file(relativePath: {eq: "img/Design_Strategy/Small_Business_Foundation.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 

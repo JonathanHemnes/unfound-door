@@ -7,6 +7,7 @@ import AboutHeader from '../components/aboutHeader'
 import StrategicPartnership from '../components/strategicPartnership'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
+import { graphql } from 'gatsby'
 
 const container = css({
     marginBottom: '75px'
@@ -35,7 +36,7 @@ const About = ({ data }) => (
                 { name: 'description', content: who },
             ]}
         ></Helmet>
-        <Splash sizes={data.splash.childImageSharp.sizes} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail} alt="People walking through field with sun at their back"/>
+        <Splash fluid={data.splash.childImageSharp.fluid} logo={data.logo.childImageSharp} subText="Our Story" email={data.site.siteMetadata.mainEmail} alt="People walking through field with sun at their back"/>
         <div>
             <div {...header}>
                 <AboutHeader />
@@ -60,29 +61,29 @@ query aboutQuery {
   },
   splash: file (relativePath: {eq: "img/header/OurStoryHeader.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   founderHeadshot: file(relativePath: {eq: "img/Ely_Hemnes_CEO_Founder_Headshot.jpeg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
     childImageSharp {
-      sizes (maxWidth: 2400) {
-        ...GatsbyImageSharpSizes
+      fluid (maxWidth: 1200) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
@@ -90,8 +91,8 @@ query aboutQuery {
     edges {
         node {
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -102,8 +103,8 @@ query aboutQuery {
         node {
             name
             childImageSharp {
-               sizes (maxWidth: 2400) {
-                ...GatsbyImageSharpSizes
+               fluid (maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }

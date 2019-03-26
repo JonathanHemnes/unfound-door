@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoGallery from '../../components/photoGallery'
+import { graphql } from 'gatsby'
 
 const EventPhotography = ({ data }) => {
     return (
@@ -20,8 +21,8 @@ query ImagesQuery {
       edges {
         node {
             childImageSharp {
-                resolutions(width:1200) {
-                    ...GatsbyImageSharpResolutions
+                fixed(width:600) {
+                    ...GatsbyImageSharpFixed_tracedSVG
                 }
             }
         }

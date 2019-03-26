@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import PhotoLink from './photoLink'
 
 const PhotoLinkArray = props => {
@@ -9,7 +9,7 @@ const PhotoLinkArray = props => {
             { props.images.map(( image, key ) => {
                 return (
                     <div key={key}>
-                        <PhotoLink src={image.src} sizes={image.sizes} text={image.text} subText={image.subText} to={image.to} imgStyle={props.photoStyle} textStyle={props.textStyle}/>
+                        <PhotoLink src={image.src} fluid={image.fluid} text={image.text} subText={image.subText} to={image.to} imgStyle={props.photoStyle} textStyle={props.textStyle}/>
                     </div>
                 )
             })
