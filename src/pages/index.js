@@ -60,21 +60,21 @@ export const query = graphql`
     file (relativePath: {eq: "img/header/MainPageHeader.jpg"}) {
       childImageSharp {
         fluid (maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     },
     whoWeArePhoto: file (relativePath: {eq: "img/Main-WhoWeAre-Header.jpg"}) {
       childImageSharp {
         fluid (maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     },
     logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
       childImageSharp {
         fluid (maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
     }
   } 

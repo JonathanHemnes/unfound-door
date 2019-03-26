@@ -23,7 +23,7 @@ query EngineeringQuery {
         node {
             childImageSharp {
                 fixed(width:600) {
-                    ...GatsbyImageSharpFixed
+                    ...GatsbyImageSharpFixed_withWebp_tracedSVG
                 }
             }
         }
