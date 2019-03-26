@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import { css } from 'glamor'
 import StyleStandards from '../styleStandards'
 import logo from '../img/TUD_logo_white.png'
@@ -68,7 +68,7 @@ const iconStyle = css({
 const Splash = props => {
     return (
         <div {...imgWrapper}>
-            <GreyImage src={props.src} sizes={props.sizes} resolutions={props.resolutions} alt={props.alt} />
+            <GreyImage src={props.src} sizes={props.sizes} fixed={props.fixed} alt={props.alt} />
             <div {...logoStyle}>
                 <img src={props.logo.sizes.src} alt="Door with text below: The Unfound Door" />
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>
@@ -83,8 +83,8 @@ const Splash = props => {
 )
 }
 Splash.propTypes = {
-    src: PropTypes.string,
-    alt: PropTypes.string
+    src: propTypes.string,
+    alt: propTypes.string
 }
 
 export default Splash

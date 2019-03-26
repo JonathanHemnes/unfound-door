@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from 'glamor'
 import Link from 'gatsby-link'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import GreyImage from './greyImage'
 import StyleStandards from '../styleStandards.js'
 
@@ -53,10 +53,10 @@ const PhotoLink = (props) => {
 }
 
 PhotoLink.propTypes = {
-    to: PropTypes.string,
-    src: PropTypes.string,
-    text: PropTypes.string,
-    subText: PropTypes.string
+    to: propTypes.string,
+    src: propTypes.string,
+    text: propTypes.string,
+    subText: propTypes.string
 }
 
 export default PhotoLink

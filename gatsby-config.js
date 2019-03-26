@@ -1,49 +1,75 @@
 module.exports = {
-    siteMetadata: {
-        title: `The Unfound Door`,
-        mainEmail: `ely@theunfounddoor.com`,
-        mainPageSubText: 'Discover Your Creative Possibilities'
+  siteMetadata: {
+    title: `The Unfound Door`,
+    mainEmail: `ely@theunfounddoor.com`,
+    mainPageSubText: 'Discover Your Creative Possibilities'
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
     },
-    plugins: [
-        `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-glamor`,
-        `gatsby-transformer-sharp`,
-        {
-            resolve: `gatsby-plugin-typography`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
             options: {
-                pathToConfigModule: `src/utils/typography.js`,
-            }
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `src`,
-                path: `${__dirname}/src/`,
+              maxWidth: 590,
             },
-        },
-        {
-            resolve: `gatsby-plugin-favicon`,
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
             options: {
-                logo: "./src/favicon.png",
-                injectHTML: true,
-                icons: {
-                    android: true,
-                    appleIcon: true,
-                    appleStartup: true,
-                    coast: false,
-                    favicons: true,
-                    firefox: true,
-                    twitter: false,
-                    yandex: false,
-                    windows: false
-                }
-            }
-        },
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: "UA-74121258-1",
+              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
-        }
-    ]
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-74121258-1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Starter Blog`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/gatsby-icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-glamor`,
+    `gatsby-plugin-layout`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+  ],
 }

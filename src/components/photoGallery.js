@@ -21,9 +21,9 @@ const headerFontStyle = css({
 
 const PhotoGallery = props => {
     const PHOTO_SET = props.photos
-        .filter(edge => edge.node.childImageSharp && edge.node.childImageSharp.resolutions)
+        .filter(edge => edge.node.childImageSharp && edge.node.childImageSharp.fixed)
         .map(edge => {
-            const photo = edge.node.childImageSharp.resolutions
+            const photo = edge.node.childImageSharp.fixed
             return {
                 src: photo.src,
                 srcSet: photo.srcSet.split(','),

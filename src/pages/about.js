@@ -7,6 +7,7 @@ import AboutHeader from '../components/aboutHeader'
 import StrategicPartnership from '../components/strategicPartnership'
 import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
+import { graphql } from 'gatsby'
 
 const container = css({
     marginBottom: '75px'

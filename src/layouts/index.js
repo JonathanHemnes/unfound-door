@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
@@ -25,7 +25,7 @@ const TemplateWrapper = ({ children, data }) => (
   </Helmet>
     <Header />
     <div>
-      {children()}
+      {children}
     </div>
     <ContactUs />
     <Footer />
@@ -33,7 +33,7 @@ const TemplateWrapper = ({ children, data }) => (
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: propTypes.func,
 }
 
 export default TemplateWrapper

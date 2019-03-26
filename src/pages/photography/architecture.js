@@ -22,8 +22,8 @@ query ArchitectureQuery {
       edges {
         node {
             childImageSharp {
-                resolutions(width:1200) {
-                    ...GatsbyImageSharpResolutions
+                fixed(width:1200) {
+                    ...GatsbyImageSharpFixed_withWebp
                 }
             }
         }

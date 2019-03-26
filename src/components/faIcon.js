@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import { css } from 'glamor'
 import animations from '../animations'
 
@@ -15,10 +15,10 @@ const FaIcon = props => (
     </a>
 )
 
-FaIcon.PropTypes = {
-    size: PropTypes.string,
-    iconName: PropTypes.string.isRequired,
-    link: PropTypes.string
+FaIcon.propTypes = {
+    size: propTypes.string,
+    iconName: propTypes.string.isRequired,
+    link: propTypes.string
 }
 
 export default FaIcon

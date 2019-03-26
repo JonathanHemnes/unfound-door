@@ -22,8 +22,8 @@ query HeadshotQuery {
       edges {
         node {
             childImageSharp {
-                resolutions(width:600) {
-                    ...GatsbyImageSharpResolutions
+                fixed(width:600) {
+                    ...GatsbyImageSharpFixed_withWebp
                 }
             }
         }

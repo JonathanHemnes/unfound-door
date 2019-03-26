@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import FaIcon from './faIcon'
 import StyleStandards from '../styleStandards'
 
@@ -77,10 +77,10 @@ const WhoWhatWhere = props => (
 export default WhoWhatWhere
 
 WhoWhatWhere.propTypes = {
-    who: PropTypes.string.isRequired,
-    what: PropTypes.string.isRequired,
-    where: PropTypes.string.isRequired,
-    why: PropTypes.string.isRequired,
-    how: PropTypes.string.isRequired,
+    who: propTypes.string.isRequired,
+    what: propTypes.string.isRequired,
+    where: propTypes.string.isRequired,
+    why: propTypes.string.isRequired,
+    how: propTypes.string.isRequired,
 }
 
