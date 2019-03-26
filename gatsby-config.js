@@ -52,7 +52,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-glamor`,
     `gatsby-plugin-layout`,
-    'gatsby-plugin-netlify-cache',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
