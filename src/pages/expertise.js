@@ -84,21 +84,21 @@ query expertiseQuery {
   file (relativePath: {eq: "img/header/expertise.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   }
   logo: file(relativePath: {eq: "img/TUD_Main_Page_Logo.png"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
   strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
   } 
@@ -107,7 +107,7 @@ query expertiseQuery {
         node {
             childImageSharp {
                fluid (maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -118,7 +118,7 @@ query expertiseQuery {
         node {
             childImageSharp {
                fluid (maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }

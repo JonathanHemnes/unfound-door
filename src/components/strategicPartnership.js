@@ -25,7 +25,7 @@ const strategyPhotoStyle = css({
 const StrategicPartnership = props => {
     return (
         <div>
-            <PhotoWithTextOverlay fluid={props.img.sizes} textStyle={textStyle} subTextStyle={subTextStyle} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} imgStyle={strategyPhotoStyle} />
+            <PhotoWithTextOverlay fluid={props.img.fluid} textStyle={textStyle} subTextStyle={subTextStyle} text={'Strategic Partnerships'} subText={'Organizations and businesses we work with to bring you value'} imgStyle={strategyPhotoStyle} />
             <PartnerLogos partnerLogos={props.partnerLogos} />
         </div>
     )

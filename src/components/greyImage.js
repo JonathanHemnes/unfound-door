@@ -1,5 +1,4 @@
 import React from 'react'
-import { css } from 'glamor'
 import propTypes from 'prop-types'
 import Img from 'gatsby-image'
 
@@ -10,6 +9,8 @@ const GreyImage = props => {
         return (<Img fluid={props.fluid} className={props.imgStyle} alt={props.alt}/>)
     } else if (props.fixed) {
         return (<Img fixed={props.fixed} className={props.imgStyle} alt={props.alt}/>)
+    } else {
+        return null
     }
 }
 

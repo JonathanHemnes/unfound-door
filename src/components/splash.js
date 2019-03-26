@@ -70,7 +70,7 @@ const Splash = props => {
         <div {...imgWrapper}>
             <GreyImage src={props.src} fluid={props.fluid} fixed={props.fixed} alt={props.alt} />
             <div {...logoStyle}>
-                <img src={props.logo.sizes.src} alt="Door with text below: The Unfound Door" />
+                <img src={props.logo.fluid.src} alt="Door with text below: The Unfound Door" />
                 <h2 {...subTextStyle} {...props.textStyle}>{props.subText}</h2>
             </div>
             <div {...callToAction}>
