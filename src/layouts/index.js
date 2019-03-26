@@ -22,6 +22,7 @@ const TemplateWrapper = ({ children, data }) => (
   >
       <meta name="theme-color" content="#9ea2a8"/>
       <html lang="en" />
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </Helmet>
     <Header />
     <div>
