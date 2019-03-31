@@ -68,3 +68,8 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 node_modules
+
+tags
+tags.lock
+tags.temp
+tags.temp.tmp
