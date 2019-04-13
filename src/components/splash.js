@@ -21,15 +21,6 @@ const logoStyle = css({
   width: "65vw",
 })
 
-const subTextStyle = css({
-  color: "white",
-  textTransform: "uppercase",
-  fontWeight: "200",
-  "@media(max-width: 730px)": {
-    display: "none",
-  },
-})
-
 const bottomCenter = css({
   position: "absolute",
   bottom: "0",
@@ -75,9 +66,6 @@ const Splash = props => {
           src={props.logo.fluid.src}
           alt="Door with text below: The Unfound Door"
         />
-        <h2 {...subTextStyle} {...props.textStyle}>
-          {props.subText}
-        </h2>
       </div>
       <div {...callToAction}>
       </div>
