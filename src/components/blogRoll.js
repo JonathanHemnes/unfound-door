@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import React from "react"
+import PropTypes from "prop-types"
+import { Link, graphql, StaticQuery } from "gatsby"
 
 class BlogRoll extends React.Component {
   render() {
@@ -15,7 +15,8 @@ class BlogRoll extends React.Component {
               <article className="tile is-child box notification">
                 <p>
                   <Link
-                    className="title has-text-primary is-size-4" to={post.fields.slug} 
+                    className="title has-text-primary is-size-4"
+                    to={post.fields.slug}
                   >
                     {post.frontmatter.title}
                   </Link>
@@ -51,11 +52,11 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-     query BlogRollQuery {
+      query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          # filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        ) {
+        ) # filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        {
           edges {
             node {
               excerpt(pruneLength: 400)
@@ -70,7 +71,7 @@ export default () => (
             }
           }
         }
-      } 
+      }
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
