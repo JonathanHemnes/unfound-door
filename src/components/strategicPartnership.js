@@ -1,8 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
 import PhotoWithTextOverlay from './photoWithTextOverlay'
-import PhotoLink from './photoLink'
-import StyleStandards from '../styleStandards.js'
 import PartnerLogos from './partnerLogos'
 
 

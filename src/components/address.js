@@ -1,6 +1,5 @@
 import React from 'react'
 import { css } from 'glamor'
-import logo from '../img/TUD_logo_black.png'
 
 const container = css({
     display: 'flex',

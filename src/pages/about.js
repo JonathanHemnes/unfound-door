@@ -19,10 +19,6 @@ const header = css({
     marginTop: '40px'
 })
 
-const noBottomMargin = css({
-    marginBottom: '0px'
-})
-
 const who = 'We are a creative consultancy firm working the best creatives in every industry with services ranging from photography and videography to design and content creation.';
 const what = 'We are dedicated to creating the ultimate seamless experience by offering a diversity of creative services with precision, technique, and passion.';
 const why = 'We believe that you should have a designated team focused on aiding you throughout the process of crafting and implementing your vision.';
@@ -73,7 +69,7 @@ query aboutQuery {
       }
     }
   } 
-  founderHeadshot: file(relativePath: {eq: "img/Ely_Hemnes_CEO_Founder_Headshot.jpeg"}) {
+  founderHeadshot: file(relativePath: {eq: "img/Ely_Hemnes_CEO_Founder_Headshot.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG

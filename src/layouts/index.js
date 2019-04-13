@@ -1,11 +1,9 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import ContactUs from '../components/contactUs'
 import Footer from '../components/footer'
-import { css, parent } from 'glamor'
 import './index.css'
 
 const TemplateWrapper = ({ children, data }) => (

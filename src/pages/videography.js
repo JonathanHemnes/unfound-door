@@ -47,10 +47,6 @@ const center = css({
     marginRight: '4%',
 })
 
-const marginBottom = css({
-    marginBottom: '20px'
-})
-
 const greyBackground = css({
     backgroundColor: StyleStandards.colors.grey,
     textAlign: 'center',

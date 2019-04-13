@@ -3,7 +3,6 @@ import { css } from 'glamor'
 import rightPhoto from '../img/Founder_Tagline_Photo_TheUnfoundDoor.jpg'
 import PhotoWithTextOverlay from './photoWithTextOverlay'
 import Img from 'gatsby-image'
-import StyleStandards from '../styleStandards'
 
 const container = css({
     padding: '75px 0 75px 0'
@@ -39,12 +38,11 @@ const rightPhotoStyle = css({
 
 const overlayTextStyle = css({
     color: `white`,
-    fontSize: '18px',
     width: '134%',
     fontSize: '16px',
     lineHeight: 1.5
 })
-
+// eslint-disable-next-line
 const overlayText = '\"I want to live in a world where hot air balloon travel is the only option, calories don’t lead to weight gain and people spontaneously break out into song and dance at least once a day. My name is Ely, pronounced Ellie, and plot twist: I am not a natural redhead.\"';
 
 const Founder = (props) => (

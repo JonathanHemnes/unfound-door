@@ -3,8 +3,6 @@ import { css } from 'glamor'
 import Splash from '../components/splash'
 import PhotoLinkArray from '../components/photoLinkArray'
 import PhotoLink from '../components/photoLink'
-import PartnerLogos from '../components/partnerLogos.js'
-import WhoWhatWhere from '../components/whoWhatWhere'
 import StyleStandards from '../styleStandards'
 import LetsTalk from '../components/letsTalk'
 import { graphql } from 'gatsby'
@@ -36,18 +34,8 @@ const uppercase = css({
     textTransform: 'uppercase'
 })
 
-const marginBottom = css({
-    marginBottom: '20px'
-})
-
 const noMarginBottom = css({
     marginBottom: 0 
-})
-
-const greyBackground = css({
-    backgroundColor: StyleStandards.colors.grey,
-    textAlign: 'center',
-    paddingTop: '20px'
 })
 
 const largeContainerPhoto = {

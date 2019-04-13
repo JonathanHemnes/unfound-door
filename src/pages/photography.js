@@ -12,11 +12,6 @@ const container = css({
     margin: '75px 0 75px 0',
 })
 
-const subTextStyle = css({
-    fontSize: '30px',
-    textTransform: 'uppercase'
-})
-
 const uppercase = css({
     textTransform: 'uppercase'
 })
