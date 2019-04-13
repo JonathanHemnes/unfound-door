@@ -1,5 +1,4 @@
 import React from "react"
-
 import TemplateWrapper from "../layouts/index"
 import BlogRoll from "../components/BlogRoll"
 

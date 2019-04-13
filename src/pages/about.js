@@ -8,6 +8,7 @@ import StrategicPartnership from "../components/strategicPartnership"
 import WhoWhatWhere from "../components/whoWhatWhere"
 import StyleStandards from "../styleStandards"
 import { graphql } from "gatsby"
+import TemplateWrapper from "../layouts/index"
 
 const container = css({
   marginBottom: "75px",
@@ -30,7 +31,7 @@ const how =
   "Schedule a meeting to discuss how you can discover your creative possibilities that best reflect your vision with creatives that will surpass your expectations today."
 
 const About = ({ data }) => (
-  <div {...container}>
+  <TemplateWrapper {...container}>
     <Helmet meta={[{ name: "description", content: who }]} />
     <Splash
       fluid={data.splash.childImageSharp.fluid}
@@ -50,7 +51,7 @@ const About = ({ data }) => (
         partnerLogos={data.partnerLogos}
       />
     </div>
-  </div>
+  </TemplateWrapper>
 )
 
 export default About

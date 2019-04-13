@@ -6,6 +6,7 @@ import PhotoLink from "../components/photoLink"
 import StyleStandards from "../styleStandards"
 import LetsTalk from "../components/letsTalk"
 import { graphql } from "gatsby"
+import TemplateWrapper from "../layouts/index.js"
 
 const subTextStyle = css({
   fontSize: "30px",
@@ -102,7 +103,7 @@ const DesignStrategy = ({ data }) => {
   ]
 
   return (
-    <div>
+    <TemplateWrapper>
       <Splash
         fluid={data.splash.childImageSharp.fluid}
         logo={data.logo.childImageSharp}
@@ -167,7 +168,7 @@ const DesignStrategy = ({ data }) => {
           textStyle={headerStyle}
         />
       </div>
-    </div>
+    </TemplateWrapper>
   )
 }
 

@@ -7,6 +7,7 @@ import CustomerReviews from "../components/customerReviews"
 import LetsTalk from "../components/letsTalk"
 import StyleStandards from "../styleStandards"
 import { graphql } from "gatsby"
+import TemplateWrapper from "../layouts/index"
 
 const container = css({
   margin: "75px 0 75px 0",
@@ -126,7 +127,7 @@ const Photography = ({ data }) => {
     },
   ]
   return (
-    <div>
+    <TemplateWrapper>
       <Splash
         fluid={data.splash.childImageSharp.fluid}
         logo={data.logo.childImageSharp}
@@ -178,7 +179,7 @@ const Photography = ({ data }) => {
         />
       </div>
       <CustomerReviews />
-    </div>
+    </TemplateWrapper>
   )
 }
 

@@ -8,6 +8,7 @@ import WhoWhatWhere from "../components/whoWhatWhere"
 import StyleStandards from "../styleStandards"
 import LetsTalk from "../components/letsTalk"
 import { graphql } from "gatsby"
+import TemplateWrapper from "../layouts/index"
 
 const smallerFontOnSmallScreen = css({
   "@media(max-width: 470px)": {
@@ -112,7 +113,7 @@ const Videography = ({ data }) => {
     },
   ]
   return (
-    <div>
+    <TemplateWrapper>
       <Splash
         fluid={data.splash.childImageSharp.fluid}
         logo={data.logo.childImageSharp}
@@ -181,7 +182,7 @@ const Videography = ({ data }) => {
         </h1>
         <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
       </div>
-    </div>
+    </TemplateWrapper>
   )
 }
 

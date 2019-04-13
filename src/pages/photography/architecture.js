@@ -1,12 +1,15 @@
 import React from 'react';
 import PhotoGallery from '../../components/photoGallery'
 import { graphql } from 'gatsby'
+import TemplateWrapper from "../../layouts/index"
 
 const ArchitecturePhotography = ({ data }) => {
 
-    return (
-        <PhotoGallery title="Architecture Photography" photos={data.allFile.edges} />
-    )
+  return (
+    <TemplateWrapper>
+      <PhotoGallery title="Architecture Photography" photos={data.allFile.edges} />
+    </TemplateWrapper>
+  )
 }
 
 export default ArchitecturePhotography

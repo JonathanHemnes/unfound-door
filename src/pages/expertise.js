@@ -9,6 +9,7 @@ import WhoWhatWhere from "../components/whoWhatWhere"
 import PartnerLogos from "../components/partnerLogos"
 import StyleStandards from "../styleStandards"
 import { graphql } from "gatsby"
+import TemplateWrapper from "../layouts/index.js"
 
 const center = css({
   textAlign: "center",
@@ -44,7 +45,7 @@ const how =
 
 const Expertise = ({ props, data }) => {
   return (
-    <div>
+    <TemplateWrapper>
       <Helmet meta={[{ name: "description", content: what }]} />
       <Splash
         fluid={data.file.childImageSharp.fluid}
@@ -80,7 +81,7 @@ const Expertise = ({ props, data }) => {
         img={data.strategicPartnership.childImageSharp}
         partnerLogos={data.partnerLogos}
       />
-    </div>
+    </TemplateWrapper>
   )
 }
 

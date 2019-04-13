@@ -8,6 +8,7 @@ import Address from "../components/address"
 import SocialIcons from "../components/socialIcons"
 import FaIcon from "../components/faIcon"
 import { graphql } from "gatsby"
+import TemplateWrapper from "../layouts/index"
 
 const noBottomMargin = css({
   marginBottom: 0,
@@ -134,7 +135,7 @@ class NotFound extends React.Component {
   }
   render() {
     return (
-      <div>
+      <TemplateWrapper>
         <Splash
           fluid={this.data.splash.childImageSharp.fluid}
           logo={this.data.logo.childImageSharp}
@@ -207,7 +208,7 @@ class NotFound extends React.Component {
             imgStyle={imageStyle}
           />
         </div>
-      </div>
+      </TemplateWrapper>
     )
   }
 }
