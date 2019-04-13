@@ -20,10 +20,6 @@ const uppercase = css({
     textTransform: 'uppercase'
 })
 
-const center = css({
-    margin: 'auto'
-})
-
 const contactSection = css({
     display: 'flex',
     flexDirection: 'row',

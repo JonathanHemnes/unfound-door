@@ -1,7 +1,6 @@
 import React from 'react'
 import LinkToList from '../components/linkToList'
 import { css } from 'glamor'
-import StyleStandards from '../styleStandards'
 
 const headerStyle = css({
     width: `100vw`,

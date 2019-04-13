@@ -1,6 +1,4 @@
 import React from 'react'
-import { css } from 'glamor'
-import propTypes from 'prop-types'
 import PhotoLink from './photoLink'
 
 const PhotoLinkArray = props => {

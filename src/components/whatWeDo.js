@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from 'glamor'
 import propTypes from 'prop-types'
-import Link from 'gatsby-link'
 import LetsTalk from '../components/letsTalk'
 
 const container = css({

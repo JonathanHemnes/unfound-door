@@ -1,8 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import { css } from 'glamor'
 import Splash from '../components/splash'
-import mainSplashLogo from '../img/header/MainPageHeader.jpg'
 import WhatWeDo from '../components/whatWeDo'
 import PhotoLink from '../components/photoLink'
 import MainServices from '../components/mainServices'

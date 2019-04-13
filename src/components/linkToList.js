@@ -1,5 +1,4 @@
 import React from 'react'
-import propTypes from 'prop-types'
 import Link from 'gatsby-link'
 import { css } from 'glamor'
 import StyleStandards from '../styleStandards'

@@ -24,7 +24,7 @@ const LetsTalk = ( props ) => {
     
     return (
         <div {...callToAction}>
-            <a href={`mailto:${props.email}`} target="_blank" {...letsTalk}>Let's Talk</a>
+            <a href={`mailto:${props.email}`} target="_blank" {...letsTalk} rel="noopener noreferrer">Let's Talk</a>
         </div>
     )
 }

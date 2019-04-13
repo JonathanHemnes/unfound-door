@@ -40,7 +40,7 @@ const PhotoLink = (props) => {
                     </div>}
                 </Link>
                 :
-                <a href={props.href} target="_blank">
+                <a href={props.href} target="_blank" rel="noopener noreferrer">
                     <GreyImage src={props.src} fluid={props.fluid} imgStyle={props.imgStyle} />
                     {props.text && <div {...textBlock}>
                         <h2 {...white} {...props.textStyle}>{props.text}</h2>
