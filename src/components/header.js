@@ -23,9 +23,8 @@ const headerLinks = css({
 const Header = () => (
   <div {...headerStyle}>
     <ul {...headerLinks}>
-      <LinkToList to="/">Home</LinkToList>
-      <LinkToList to="/expertise/">Expertise</LinkToList>
-      <LinkToList to="/about/">Our Story</LinkToList>
+      <LinkToList to="/about/">About</LinkToList>
+      <LinkToList to="/expertise/">Services</LinkToList>
       <LinkToList to="/contact">Contact</LinkToList>
     </ul>
   </div>
