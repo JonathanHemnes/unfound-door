@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "glamor"
-import LetsTalk from "./letsTalk"
+import LetsTalk from "./LetsTalk"
 import StyleStandards from "../styleStandards"
 
 const title = css({

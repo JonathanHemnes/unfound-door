@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "glamor"
-import FaIcon from "./faIcon"
+import FaIcon from "./FaIcon"
 
 const iconContainer = css({
   height: "150px",

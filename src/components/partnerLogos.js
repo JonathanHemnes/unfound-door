@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "glamor"
 import Img from "gatsby-image"
-import BlurOnEnterAndExit from "./blurOnEnterAndExit.js"
+import BlurOnEnterAndExit from "./BlurOnEnterAndExit.js"
 
 const logoArray = css({
   display: "flex",

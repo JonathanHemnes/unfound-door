@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "glamor"
 import PhotoWithTextOverlay from "./photoWithTextOverlay"
-import PartnerLogos from "./partnerLogos"
+import PartnerLogos from "./PartnerLogos"
 
 const textStyle = css({
   fontSize: "1.7rem",

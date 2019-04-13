@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "glamor"
 import propTypes from "prop-types"
-import LetsTalk from "../components/letsTalk"
+import LetsTalk from "./LetsTalk"
 
 const container = css({
   padding: "75px 0 75px 0",

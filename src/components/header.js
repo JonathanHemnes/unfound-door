@@ -1,6 +1,7 @@
 import React from "react"
-import LinkToList from "../components/linkToList"
+import LinkToList from "./LinkToList"
 import { css } from "glamor"
+import hoverMenu from './HoverMenu'
 
 const headerStyle = css({
   width: `100vw`,

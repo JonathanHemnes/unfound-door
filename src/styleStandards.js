@@ -3,9 +3,12 @@ import { css } from 'glamor'
 const colors = {
     white: `#fffff0`,
     red: `red`,
-    black: `black`,
+    black: `#00000`,
     grey: `#bebebe`,
-    yellow: `#edb549`
+    lightGrey: `#bebebe`,
+    mediumGrey: `#464646`,
+    yellow: `#edb549`,
+    blue: '#153956'
 }
 const StyleStandards = {
     colors,

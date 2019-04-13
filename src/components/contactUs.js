@@ -1,8 +1,8 @@
 import React from "react"
 import { css } from "glamor"
-import SocialIcons from "./socialIcons"
-import Address from "./address"
-import FaIcon from "./faIcon.js"
+import SocialIcons from "./SocialIcons"
+import Address from "./Address"
+import FaIcon from "./FaIcon.js"
 import StyleStandards from "../styleStandards.js"
 
 const headerText = css({

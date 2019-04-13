@@ -1,9 +1,9 @@
 import React from "react"
 import propTypes from "prop-types"
 import Helmet from "react-helmet"
-import Header from "../components/header"
-import ContactUs from "../components/contactUs"
-import Footer from "../components/footer"
+import Header from "../components/Header"
+import ContactUs from "../components/ContactUs"
+import Footer from "../components/Footer"
 import "./index.css"
 
 const TemplateWrapper = ({ children, data }) => (

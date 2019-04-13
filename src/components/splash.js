@@ -1,8 +1,8 @@
 import React from "react"
 import propTypes from "prop-types"
 import { css } from "glamor"
-import GreyImage from "./greyImage"
-import FaIcon from "../components/faIcon"
+import GreyImage from "./GreyImage"
+import FaIcon from "./FaIcon"
 import animations from "../animations"
 
 const imgWrapper = css({

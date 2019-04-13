@@ -4,7 +4,7 @@ import Splash from "../components/splash"
 import WhatWeDo from "../components/whatWeDo"
 import PhotoLink from "../components/photoLink"
 import MainServices from "../components/mainServices"
-import CustomerReviews from "../components/customerReviews"
+import CustomerReviews from "../components/CustomerReviews"
 import { graphql } from "gatsby"
 import TemplateWrapper from "../layouts/index.js"
 

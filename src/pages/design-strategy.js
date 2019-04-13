@@ -4,7 +4,7 @@ import Splash from "../components/splash"
 import PhotoLinkArray from "../components/photoLinkArray"
 import PhotoLink from "../components/photoLink"
 import StyleStandards from "../styleStandards"
-import LetsTalk from "../components/letsTalk"
+import LetsTalk from "../components/LetsTalk"
 import { graphql } from "gatsby"
 import TemplateWrapper from "../layouts/index.js"
 

@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "glamor"
 import propTypes from "prop-types"
-import FaIcon from "./faIcon"
+import FaIcon from "./FaIcon"
 import StyleStandards from "../styleStandards"
 
 const container = css({

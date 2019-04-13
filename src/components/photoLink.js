@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "glamor"
 import Link from "gatsby-link"
 import propTypes from "prop-types"
-import GreyImage from "./greyImage"
+import GreyImage from "./GreyImage"
 import StyleStandards from "../styleStandards.js"
 
 const textBlock = css({
