@@ -6,6 +6,7 @@ import PhotoLink from "../components/photoLink"
 import MainServices from "../components/mainServices"
 import CustomerReviews from "../components/customerReviews"
 import { graphql } from "gatsby"
+import TemplateWrapper from '../layouts/index.js'
 
 const photoArray = css({
   display: `flex`,
@@ -33,7 +34,7 @@ const textStyle = css({
 
 const IndexPage = ({ data }) => {
   return (
-    <div>
+    <TemplateWrapper>
       <Splash
         fluid={data.file.childImageSharp.fluid}
         logo={data.logo.childImageSharp}
@@ -55,7 +56,7 @@ const IndexPage = ({ data }) => {
         />
       </div>
       <CustomerReviews />
-    </div>
+    </TemplateWrapper>
   )
 }
 
