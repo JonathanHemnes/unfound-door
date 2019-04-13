@@ -38,7 +38,6 @@ const IndexPage = ({ data }) => {
       <Splash
         fluid={data.file.childImageSharp.fluid}
         logo={data.logo.childImageSharp}
-        subText={data.site.siteMetadata.mainPageSubText}
         email={data.site.siteMetadata.mainEmail}
         alt="Three escalators"
       />
@@ -68,7 +67,6 @@ export const query = graphql`
       siteMetadata {
         title
         mainEmail
-        mainPageSubText
       }
     }
     file(relativePath: { eq: "img/header/MainPageHeader.jpg" }) {
@@ -85,7 +83,7 @@ export const query = graphql`
         }
       }
     }
-    logo: file(relativePath: { eq: "img/TUD_Main_Page_Logo.png" }) {
+    logo: file(relativePath: { eq: "img/TUD_logo_xray.png" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_tracedSVG
