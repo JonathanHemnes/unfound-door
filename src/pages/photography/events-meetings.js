@@ -22,7 +22,7 @@ query ImagesQuery {
         node {
             childImageSharp {
                 fixed(width:600) {
-                    ...GatsbyImageSharpFixed_tracedSVG
+                    ...GatsbyImageSharpFixed
                 }
             }
         }
