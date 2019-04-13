@@ -1,10 +1,8 @@
 import React from "react"
 import propTypes from "prop-types"
 import { css } from "glamor"
-import StyleStandards from "../styleStandards"
 import GreyImage from "./greyImage"
 import FaIcon from "../components/faIcon"
-import LetsTalk from "../components/letsTalk"
 import animations from "../animations"
 
 const imgWrapper = css({
@@ -82,11 +80,6 @@ const Splash = props => {
         </h2>
       </div>
       <div {...callToAction}>
-        <LetsTalk
-          email={props.email}
-          borderColor={StyleStandards.colors.white}
-          textColor={StyleStandards.colors.white}
-        />
       </div>
       <div {...bottomCenter}>
         <FaIcon iconName="angle-down" size="fa-4x" style={iconStyle} />
