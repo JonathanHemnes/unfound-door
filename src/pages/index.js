@@ -6,7 +6,7 @@ import PhotoLink from "../components/photoLink"
 import MainServices from "../components/mainServices"
 import CustomerReviews from "../components/customerReviews"
 import { graphql } from "gatsby"
-import TemplateWrapper from '../layouts/index.js'
+import TemplateWrapper from "../layouts/index.js"
 
 const photoArray = css({
   display: `flex`,
