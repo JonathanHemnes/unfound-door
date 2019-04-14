@@ -67,8 +67,7 @@ const Splash = props => {
           alt="Door with text below: The Unfound Door"
         />
       </div>
-      <div {...callToAction}>
-      </div>
+      <div {...callToAction} />
       <div {...bottomCenter}>
         <FaIcon iconName="angle-down" size="fa-4x" style={iconStyle} />
       </div>

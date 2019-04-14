@@ -72,7 +72,7 @@ export const query = graphql`
         }
       }
     }
-    logo: file(relativePath: { eq: "img/TUD_Main_Page_Logo.png" }) {
+    logo: file(relativePath: { eq: "img/TUD_logo_xray.png" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_tracedSVG
