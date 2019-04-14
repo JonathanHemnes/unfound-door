@@ -4,6 +4,7 @@ import { css } from "glamor"
 import GreyImage from "./GreyImage"
 import FaIcon from "./FaIcon"
 import animations from "../animations"
+import styleStandards from "../styleStandards"
 
 const imgWrapper = css({
   maxHeight: `100vh`,
@@ -48,7 +49,7 @@ const callToAction = css({
 
 const iconStyle = css({
   animation: `${animations.bounce} 2s`,
-  color: "white",
+  color: styleStandards.colors.white,
   animationIterationCount: "infinite",
 })
 

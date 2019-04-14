@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "glamor"
 import Splash from "../components/Splash"
-import WhatWeDo from "../components/WhatWeDo"
+import CreativityEfficiency from "../components/CreativityEfficiency"
 import PhotoLink from "../components/PhotoLink"
 import MainServices from "../components/MainServices"
 import CustomerReviews from "../components/CustomerReviews"
@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
         email={data.site.siteMetadata.mainEmail}
         alt="Three escalators"
       />
-      <WhatWeDo email={data.site.siteMetadata.mainEmail} />
+      <CreativityEfficiency />
       <MainServices />
       <div {...photoArray}>
         <PhotoLink
