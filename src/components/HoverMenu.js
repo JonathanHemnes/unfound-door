@@ -1,25 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
+import { css } from "glamor"
 import Link from "gatsby-link"
 
 function HoverMenu(props) {
-    const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
-    const handleOnMouseEnter = () => {
-        setShowMenu(true)
-    }
+  const handleOnMouseEnter = () => {
+    setShowMenu(true)
+  }
 
-    const handleOnMouseLeave = () => {
-        setShowMenu(false)
-    }
+  const handleOnMouseLeave = () => {
+    setShowMenu(false)
+  }
 
-    return (
-        <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
-            <p>{props.meta.title}</p>
-            {showMenu ? props.meta.items.map((item, key) => {
-                return (<Link key={key} to={`${item.to}`}>{item.name}</Link>)
-            }) : (null)}
+  const menuItems = css({
+    position: 'absolute'
+  })
+
+  return (
+    <div {...props.style} onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
+      <div>{props.meta.title}</div>
+      <div {...menuItems}>
+        {showMenu
+          ? props.meta.items.map((item, key) => {
+            return (
+              <div key={key}>
+                <Link  to={`${item.to}`}>
+                  {item.name}
+                </Link>
+              </div>
+            )
+          })
+          : null}
         </div>
-    )
+      </div>
+  )
 }
 
 export default HoverMenu
