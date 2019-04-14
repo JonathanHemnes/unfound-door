@@ -1,11 +1,14 @@
 import React from 'react';
-import PhotoGallery from '../../components/photoGallery'
+import PhotoGallery from '../../components/PhotoGallery'
 import { graphql } from 'gatsby'
+import TemplateWrapper from "../../layouts/index"
 
 const EventPhotography = ({ data }) => {
-    return (
-        <PhotoGallery title="Events & Meeting Photography" photos={data.allFile.edges} />
-    )
+  return (
+    <TemplateWrapper>
+      <PhotoGallery title="Events & Meeting Photography" photos={data.allFile.edges} />
+    </TemplateWrapper>
+  )
 }
 
 export default EventPhotography

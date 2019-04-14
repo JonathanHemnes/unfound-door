@@ -8,13 +8,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `src`,
         path: `${__dirname}/src/`,
       },
@@ -52,7 +45,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-glamor`,
-    `gatsby-plugin-layout`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-typography`,
