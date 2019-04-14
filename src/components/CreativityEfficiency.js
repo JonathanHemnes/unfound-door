@@ -4,12 +4,12 @@ import styleStandards from "../styleStandards"
 
 function CreativityEfficiency() {
   const title = css({
-    position: 'absolute',
+    position: "absolute",
     color: styleStandards.colors.yellow,
     fontSize: "3rem",
     marginLeft: "-10%",
     zIndex: 99,
-    marginTop: '10px'
+    marginTop: "10px",
   })
 
   const colorContainer = css({
@@ -17,7 +17,7 @@ function CreativityEfficiency() {
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    marginBottom: "20px"
+    marginBottom: "20px",
   })
 
   const colorBox = css({
@@ -29,7 +29,7 @@ function CreativityEfficiency() {
   return (
     <div>
       <div {...colorContainer}>
-      <h2 {...title}>Creativity Meets Efficiency</h2>
+        <h2 {...title}>Creativity Meets Efficiency</h2>
         <div {...colorBox}>
           Spicy jalapeno bacon ipsum dolor amet spare ribs commodo shankle
           meatball rump capicola. Exercitation dolore deserunt porchetta flank.
