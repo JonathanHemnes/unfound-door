@@ -41,8 +41,4 @@ const TemplateWrapper = ({ children, data }) => (
   </div>
 )
 
-TemplateWrapper.propTypes = {
-  children: propTypes.object,
-}
-
 export default TemplateWrapper

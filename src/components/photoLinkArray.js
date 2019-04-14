@@ -1,5 +1,5 @@
 import React from "react"
-import PhotoLink from "./photoLink"
+import PhotoLink from "./PhotoLink"
 
 const PhotoLinkArray = props => {
   return (

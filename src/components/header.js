@@ -1,7 +1,6 @@
 import React from "react"
-import LinkToList from "./LinkToList"
 import { css } from "glamor"
-import hoverMenu from './HoverMenu'
+import HoverMenu from './HoverMenu'
 
 const headerStyle = css({
   width: `100vw`,
@@ -21,13 +20,51 @@ const headerLinks = css({
   textTransform: "uppercase",
 })
 
+const menuItems = {
+  about: {
+    title: 'About',
+    items: [
+      {
+        to: '/our-story/',
+        name: 'Our Story'
+      }, {
+        to: '/about-ely/',
+        name: 'About Ely'
+      }, {
+        to: '/faq/',
+        name: 'FAQ'
+      }
+    ]
+  },
+  services: {
+    title: 'Services',
+    items: [
+      {
+        to: '/photography/',
+        name: 'Photography'
+      },
+      {
+        to: '/videography/',
+        name: 'Videography'
+      }
+    ]
+  },
+    contact: {
+        title: 'Contact',
+        items: [
+            {
+                to: '/contact/',
+                name: 'Contact Us'
+            }
+        ]
+    }
+}
+
 const Header = () => (
   <div {...headerStyle}>
-    <ul {...headerLinks}>
-      <LinkToList to="/about/">About</LinkToList>
-      <LinkToList to="/expertise/">Services</LinkToList>
-      <LinkToList to="/contact">Contact</LinkToList>
-    </ul>
+    <HoverMenu {...headerLinks} meta={menuItems.about} />
+    <HoverMenu {...headerLinks}meta={menuItems.services} />
+    <HoverMenu {...headerLinks}meta={menuItems.contact} />
   </div>
 )
 
