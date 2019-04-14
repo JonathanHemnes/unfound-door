@@ -22,7 +22,7 @@ const headerLinks = css({
 })
 
 const headerLink = css({
-  paddingRight: '20px',
+  paddingRight: "20px",
 })
 
 const menuItems = {
@@ -53,6 +53,10 @@ const menuItems = {
       {
         to: "/videography/",
         name: "Videography",
+      },
+      {
+        to: "/creative-services/",
+        name: "Creative Services",
       },
     ],
   },
