@@ -24,7 +24,7 @@ function HoverMenu(props) {
   const menuItems = css({
     position: 'absolute',
     backgroundColor: styleStandards.colors.yellow,
-    borderRadius: '10px'
+    borderRadius: '5px'
   })
 
   const menuItem = css({
