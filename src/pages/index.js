@@ -3,6 +3,7 @@ import { css } from "glamor"
 import Splash from "../components/Splash"
 import CreativityEfficiency from "../components/CreativityEfficiency"
 import PhotoLink from "../components/PhotoLink"
+import AboutEly from "../components/AboutEly"
 import MainServices from "../components/MainServices"
 import CustomerReviews from "../components/CustomerReviews"
 import { graphql } from "gatsby"
@@ -43,6 +44,7 @@ const IndexPage = ({ data }) => {
       />
       <CreativityEfficiency />
       <MainServices />
+      <AboutEly />
       <div {...photoArray}>
         <PhotoLink
           to={"/about"}

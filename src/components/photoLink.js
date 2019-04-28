@@ -8,7 +8,7 @@ import StyleStandards from "../styleStandards.js"
 const textBlock = css({
   position: `absolute`,
   textAlign: `center`,
-  top: `50%`,
+  top: `90%`,
   left: `50%`,
   transform: `translate(-50%, -50%)`,
 })
