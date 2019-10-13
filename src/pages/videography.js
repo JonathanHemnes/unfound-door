@@ -71,42 +71,42 @@ const how = 'will your video(s) be narrated?';
 const Videography = ({ data }) => {
     const videographyImages = [
         {
-            sizes: data.companyCustomer.childImageSharp.fluid,
+            fluid: data.companyCustomer.childImageSharp.fluid,
             to: '/contact',
             text: 'Company & Customer Spotlight'
         },
         {
-            sizes: data.training.childImageSharp.fluid,
+            fluid: data.training.childImageSharp.fluid,
             to: '/contact',
             text: 'Training & Technical'
         },
         {
-            sizes: data.social.childImageSharp.fluid,
+            fluid: data.social.childImageSharp.fluid,
             to: '/contact',
             text: 'Social Campaigns'
         },
         {
-            sizes: data.event.childImageSharp.fluid,
+            fluid: data.event.childImageSharp.fluid,
             to: '/contact',
             text: 'Event Highlight'
         },
         {
-            sizes: data.sloMo.childImageSharp.fluid,
+            fluid: data.sloMo.childImageSharp.fluid,
             to: '/contact',
             text: 'Slow-Mo Video Booth'
         },
         {
-            sizes: data.products.childImageSharp.fluid,
+            fluid: data.products.childImageSharp.fluid,
             to: '/contact',
             text: 'Products'
         },
         {
-            sizes: data.aerial.childImageSharp.fluid,
+            fluid: data.aerial.childImageSharp.fluid,
             to: '/contact',
             text: 'Aerial'
         },
         {
-            sizes: data.walkThru.childImageSharp.fluid,
+            fluid: data.walkThru.childImageSharp.fluid,
             to: '/contact',
             text: '360 Space Walk-Thru'
         }
@@ -160,7 +160,7 @@ query videographyQuery {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Videography"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -171,69 +171,69 @@ query videographyQuery {
             }
           }
       }
-  } 
+  }
   portfolio: file(relativePath: {eq: "img/Videography/Recent_Portfolio_Videography_Icon.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   companyCustomer: file(relativePath: {eq: "img/Videography/Company_Customer_Spotlight_Videography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   training: file(relativePath: {eq: "img/Videography/Training_Technical_Videography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   social: file(relativePath: {eq: "img/Videography/Social_Campaigns_Videography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   event: file(relativePath: {eq: "img/Videography/Event_Highlight_Videography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   sloMo: file(relativePath: {eq: "img/Videography/Slow_Mo_Video_Booth.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   products: file(relativePath: {eq: "img/Videography/Product_Videography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   aerial: file(relativePath: {eq: "img/Videography/Aerial_Videography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   walkThru: file(relativePath: {eq: "img/Videography/360_Space_Walk_Thru.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
-} 
+  }
+}
 `
