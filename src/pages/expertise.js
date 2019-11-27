@@ -47,7 +47,7 @@ const Expertise = ({props, data}) => {
                 ]}
             />
             <Splash fluid={data.file.childImageSharp.fluid} logo={data.logo.childImageSharp} subText="Our Expertise" email={data.site.siteMetadata.mainEmail} alt="Man in grey suit standing holding a drink"/>
-            <div> 
+            <div>
                 <div {...header}>
                     <AboutHeader />
                     <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
@@ -62,7 +62,6 @@ const Expertise = ({props, data}) => {
                 </div>
                 <PartnerLogos partnerLogos={data.companyYouKeepLogos} />
         </div>
-        <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
         </div>
     )
 }
@@ -91,14 +90,14 @@ query expertiseQuery {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -109,7 +108,7 @@ query expertiseQuery {
             }
           }
       }
-  } 
+  }
   companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Photography"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -120,6 +119,6 @@ query expertiseQuery {
             }
           }
       }
-  } 
+  }
 }
 `

@@ -39,7 +39,6 @@ const About = ({ data }) => (
                 <WhoWhatWhere who={who} what={what} where={where} why={why} how={how} />
             </div>
             <Founder img={data.founderHeadshot.childImageSharp} />
-            <StrategicPartnership img={data.strategicPartnership.childImageSharp} partnerLogos={data.partnerLogos} />
         </div>
     </div>
 )
@@ -68,21 +67,21 @@ query aboutQuery {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   founderHeadshot: file(relativePath: {eq: "img/Ely_Hemnes_CEO_Founder_Headshot.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   strategicPartnership: file(relativePath: {eq: "img/Strategic_Partnership.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -93,7 +92,7 @@ query aboutQuery {
             }
           }
       }
-  } 
+  }
   teamHeadshots: allFile(filter: {relativeDirectory: {eq: "img/Team_Headshots"}, extension:{regex: "/jpg|png/"}}){
     edges {
         node {
@@ -106,5 +105,5 @@ query aboutQuery {
           }
       }
   }
-} 
+}
 `
