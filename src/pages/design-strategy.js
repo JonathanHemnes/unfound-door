@@ -35,7 +35,7 @@ const uppercase = css({
 })
 
 const noMarginBottom = css({
-    marginBottom: 0 
+    marginBottom: 0
 })
 
 const largeContainerPhoto = {
@@ -58,22 +58,22 @@ const headerStyle = css({
 const DesignStrategy = ({ data }) => {
     const designImages = [
         {
-            sizes: data.graphic.childImageSharp.fluid,
+            fluid: data.graphic.childImageSharp.fluid,
             to: '/contact',
             text: 'Graphic Design & Branding'
         },
         {
-            sizes: data.webDesign.childImageSharp.fluid,
+            fluid: data.webDesign.childImageSharp.fluid,
             to: '/contact',
             text: 'Web Design & Website Maintenance'
         },
         {
-            sizes: data.socialMedia.childImageSharp.fluid,
+            fluid: data.socialMedia.childImageSharp.fluid,
             to: '/contact',
             text: 'Social Media'
         },
         {
-            sizes: data.contentCreation.childImageSharp.fluid,
+            fluid: data.contentCreation.childImageSharp.fluid,
             to: '/contact',
             text: 'Content Creation & SEO'
         }
@@ -81,22 +81,22 @@ const DesignStrategy = ({ data }) => {
 
     const strategyImages = [
         {
-            sizes: data.account.childImageSharp.fluid,
+            fluid: data.account.childImageSharp.fluid,
             to: '/contact',
             text: 'Account Management'
         },
         {
-            sizes: data.smallBusinessFoundation.childImageSharp.fluid,
+            fluid: data.smallBusinessFoundation.childImageSharp.fluid,
             to: '/contact',
             text: 'Small Business Foundation'
         },
         {
-            sizes: data.businessDevelopment.childImageSharp.fluid,
+            fluid: data.businessDevelopment.childImageSharp.fluid,
             to: '/contact',
             text: 'Business Development'
         },
         {
-            sizes: data.creative.childImageSharp.fluid,
+            fluid: data.creative.childImageSharp.fluid,
             to: '/contact',
             text: 'Creative Blueprint'
         }
@@ -151,69 +151,69 @@ query designStrategyQuery {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   elevate: file(relativePath: {eq: "img/Design_Strategy/Elevate_Marketing_Materials.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   account: file(relativePath: {eq: "img/Design_Strategy/Account_Management.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   graphic: file(relativePath: {eq: "img/Design_Strategy/Graphic_Design_and_Branding.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   creative: file(relativePath: {eq: "img/Design_Strategy/Creative_Suite.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   contentCreation: file(relativePath: {eq: "img/Design_Strategy/Content_Creation_and_SEO.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   socialMedia: file(relativePath: {eq: "img/Design_Strategy/Social_Media.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   webDesign: file(relativePath: {eq: "img/Design_Strategy/WebDesign_and_Website_Maintenence.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   businessDevelopment: file(relativePath: {eq: "img/Design_Strategy/Business_Development.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   smallBusinessFoundation: file(relativePath: {eq: "img/Design_Strategy/Small_Business_Foundation.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
-} 
+  }
+}
 `
