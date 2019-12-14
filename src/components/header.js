@@ -26,7 +26,6 @@ const Header = () => (
             <LinkToList to="/">Home</LinkToList>
             <LinkToList to="/expertise/">Expertise</LinkToList>
             <LinkToList to="/about/">Our Story</LinkToList>
-            <LinkToList to="/contact">Contact</LinkToList>
         </ul>
     </div>
 )

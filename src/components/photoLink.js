@@ -31,7 +31,8 @@ const PhotoLink = (props) => {
 
     return (
         <div {...container}>
-            { props.to ?
+            { props.to || props.href ?
+                props.to ?
                 <Link to={`${ props.to }`}>
                     <GreyImage src={props.src} fluid={props.fluid} imgStyle={props.imgStyle} alt={props.alt} />
                     {props.text && <div {...textBlock}>
@@ -47,6 +48,15 @@ const PhotoLink = (props) => {
                         <h3 {...white} {...props.subTextStyle}>{props.subText}</h3>
                     </div>}
                 </a>
+                :
+                <div>
+                <GreyImage src={props.src} fluid={props.fluid} imgStyle={props.imgStyle} />
+                {props.text && <div {...textBlock}>
+                        <h2 {...white} {...props.textStyle}>{props.text}</h2>
+                        <h3 {...white} {...props.subTextStyle}>{props.subText}</h3>
+                        </div>}
+                            </div>
+
             }
         </div>
     )
@@ -60,4 +70,3 @@ PhotoLink.propTypes = {
 }
 
 export default PhotoLink
-

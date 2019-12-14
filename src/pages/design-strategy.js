@@ -59,22 +59,18 @@ const DesignStrategy = ({ data }) => {
     const designImages = [
         {
             fluid: data.graphic.childImageSharp.fluid,
-            to: '/contact',
             text: 'Graphic Design & Branding'
         },
         {
             fluid: data.webDesign.childImageSharp.fluid,
-            to: '/contact',
             text: 'Web Design & Website Maintenance'
         },
         {
             fluid: data.socialMedia.childImageSharp.fluid,
-            to: '/contact',
             text: 'Social Media'
         },
         {
             fluid: data.contentCreation.childImageSharp.fluid,
-            to: '/contact',
             text: 'Content Creation & SEO'
         }
     ]
@@ -82,22 +78,18 @@ const DesignStrategy = ({ data }) => {
     const strategyImages = [
         {
             fluid: data.account.childImageSharp.fluid,
-            to: '/contact',
             text: 'Account Management'
         },
         {
             fluid: data.smallBusinessFoundation.childImageSharp.fluid,
-            to: '/contact',
             text: 'Small Business Foundation'
         },
         {
             fluid: data.businessDevelopment.childImageSharp.fluid,
-            to: '/contact',
             text: 'Business Development'
         },
         {
             fluid: data.creative.childImageSharp.fluid,
-            to: '/contact',
             text: 'Creative Blueprint'
         }
     ]
