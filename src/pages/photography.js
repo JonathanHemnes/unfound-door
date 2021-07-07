@@ -79,7 +79,6 @@ const Photography = ({ data }) => {
         },
         {
             fluid: data.nonProfit.childImageSharp.fluid,
-            to: '/contact',
             text: 'Non-Profit Giving Back'
         },
         {
@@ -94,7 +93,6 @@ const Photography = ({ data }) => {
         },
         {
             fluid: data.aerial.childImageSharp.fluid,
-            to: '/contact',
             text: 'Aerial'
         },
         {
@@ -106,22 +104,18 @@ const Photography = ({ data }) => {
     const personalImages = [
         {
             fluid: data.wedding.childImageSharp.fluid,
-            to: '/contact',
             text: 'Weddings & Couples Portraits'
         },
         {
             fluid: data.families.childImageSharp.fluid,
-            to: '/contact',
             text: 'Families & Babies'
         },
         {
             fluid: data.portraits.childImageSharp.fluid,
-            to: '/contact',
             text: 'Portraits & Seniors'
         },
         {
             fluid: data.boudoir.childImageSharp.fluid,
-            to: '/contact',
             text: 'Boudoir'
         },
     ]
@@ -175,7 +169,7 @@ query photographyQuery {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   partnerLogos:  allFile(filter: {relativeDirectory: {eq: "img/Partner_Logos"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -186,7 +180,7 @@ query photographyQuery {
             }
           }
       }
-  } 
+  }
   companyYouKeepLogos:  allFile(filter: {relativeDirectory: {eq: "img/COMPANY_YOU_KEEP_LOGOS/Photography"}, extension: {regex: "/jpg|png/"}}){
     edges {
         node {
@@ -197,90 +191,90 @@ query photographyQuery {
             }
           }
       }
-  } 
+  }
   headshot: file(relativePath: {eq: "img/Photography_Sections/Headshot_Portrait.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   eventsMeetings: file(relativePath: {eq: "img/Photography_Sections/Events_Meetings.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   marketingLifestyle: file(relativePath: {eq: "img/Photography_Sections/Marketing_Lifestyle.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   nonProfit: file(relativePath: {eq: "img/Photography_Sections/Nonprofit.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   engineeringConstruction: file(relativePath: {eq: "img/Photography_Sections/Engineering_Construction.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   architecture: file(relativePath: {eq: "img/Photography_Sections/Architecture_Project.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   aerial: file(relativePath: {eq: "img/Photography_Sections/Aerial_Photography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   foodProduct: file(relativePath: {eq: "img/Photography_Sections/Food_and_Product.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   wedding: file(relativePath: {eq: "img/Photography_Sections/Weddings_Couple_Portraits.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   families: file(relativePath: {eq: "img/Photography_Sections/Families_babies.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   boudoir: file(relativePath: {eq: "img/Photography_Sections/Boudoir_Photography.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
+  }
   portraits: file(relativePath: {eq: "img/Photography_Sections/Portraits_Seniors.jpg"}) {
     childImageSharp {
       fluid (maxWidth: 1200) {
         ...GatsbyImageSharpFluid_tracedSVG
       }
     }
-  } 
-} 
+  }
+}
 `

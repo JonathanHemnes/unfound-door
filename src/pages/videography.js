@@ -72,42 +72,34 @@ const Videography = ({ data }) => {
     const videographyImages = [
         {
             fluid: data.companyCustomer.childImageSharp.fluid,
-            to: '/contact',
             text: 'Company & Customer Spotlight'
         },
         {
             fluid: data.training.childImageSharp.fluid,
-            to: '/contact',
             text: 'Training & Technical'
         },
         {
             fluid: data.social.childImageSharp.fluid,
-            to: '/contact',
             text: 'Social Campaigns'
         },
         {
             fluid: data.event.childImageSharp.fluid,
-            to: '/contact',
             text: 'Event Highlight'
         },
         {
             fluid: data.sloMo.childImageSharp.fluid,
-            to: '/contact',
             text: 'Slow-Mo Video Booth'
         },
         {
             fluid: data.products.childImageSharp.fluid,
-            to: '/contact',
             text: 'Products'
         },
         {
             fluid: data.aerial.childImageSharp.fluid,
-            to: '/contact',
             text: 'Aerial'
         },
         {
             fluid: data.walkThru.childImageSharp.fluid,
-            to: '/contact',
             text: '360 Space Walk-Thru'
         }
     ]
